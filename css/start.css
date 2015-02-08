@@ -1,0 +1,23 @@
+#start{
+  position:fixed;
+  top:0;
+  right: 0;
+  bottom:0;
+  left:0;
+  background:url(../images/start-bg.jpg);
+  background-size:16%;
+  z-index: 8;
+}
+#start-kv{
+  width:75%;
+  margin: 10px auto;
+}
+#start-kv img,
+#start-btn img{
+  display: block;
+  width: 100%;
+}
+#start-btn{
+  width: 71.875%;
+  margin: 20px auto;
+}

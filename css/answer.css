@@ -1,0 +1,244 @@
+#answer{
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  overflow: hidden;
+  background-color:#fcecef;
+  z-index: 999;
+  /* display: none;   */
+}
+
+#answer-header{
+  position: absolute;
+  left:0;
+  top:0;
+  height:82px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#answer-inner{
+  height: 82px;
+  width: 300%;
+}
+
+#answer-header img{
+  height: 82px;
+  display: block;
+  float: left;
+} 
+
+/* 题号 */
+#que-num{
+  position: absolute;
+  width: 185.5px;
+  height: 109px;
+  background: url(../images/que-num.png) no-repeat;
+  background-size: 100%;
+  left:50%;
+  margin-left: -92.75px;
+  margin-top: 10px;
+}
+
+#que-num span{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  left: 50%;
+  margin-left: -10px;
+  top: 70px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+#que-num img{
+  display: block;
+  width:100%;
+}
+
+/* 问题 */
+#question{
+  position: absolute;
+  left:4%;
+  right: 4%;
+  width: 92%;
+  top:25%;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-weight: 800;
+}
+
+#question img{
+  width:16px;
+  height: 16px;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+
+/* 文字选项 */
+#answer .answerA,
+#answer .answerB,
+#answer .answerC{
+  width: 75%;
+  background-color: #fbd8de;
+  border-radius: 10px;
+  position: absolute;
+  font-size: 12px;
+  line-height: 1.5em;
+  padding: 10px;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+}
+
+#answer .xx .text img{
+  width:14px;
+  height: 14px;
+  margin: 2px;
+  vertical-align: middle;
+  position: relative;
+  top:-2px;  
+}
+
+#answer .answerA,
+#answer .answerC{
+  right:6%;
+}
+
+#answer .answerB{
+  left:6%;
+}
+
+#answer .answerA{
+  top:41%;
+}
+
+#answer .answerB{
+  top:62%;
+}
+
+#answer .answerC{
+  top:83%;
+}
+
+#answer .answerA .qq,
+#answer .answerC .qq{
+  position: absolute;
+  right: -10px;
+  top:-40px;
+  width: 39px;
+  height: 48px;
+}
+
+#answer .answerB .qq{
+  position: absolute;
+  left: -10px;
+  top:-40px;
+  width: 39px;
+  height: 48px;
+}
+
+#answer .xx .qq img{
+  width: 39px;
+}
+
+/* 图片选项 */
+#answer .pic{
+  width: 26%;
+  height: 45%;
+  padding: 0;
+}
+
+#answer .pic-a{
+  top:40%;
+  left:6%;
+}
+
+#answer .pic-b{
+  top:35%;
+  left:37%;
+  right: 37%;
+}
+
+#answer .pic-c{
+  right:6%;
+  top:40%;
+}
+
+#answer .pic .qq{
+  width: 39px;
+  height: 48px;
+  left:50%;
+  margin-left:-19.5px;
+  top:-42px;
+}
+
+
+#answer .pic .text{
+  position:absolute;
+  left: 10px;
+  right: 10px;
+  top: 12px;
+  bottom: 8px;
+}
+
+#answer .pic .text img{
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+#answer-bottom{
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height: 14px;
+  background:url(../images/answer-bottom.jpg) repeat-x;
+  background-size: 10%;
+}
+
+
+
+/* 魅力值 */
+#mlz-wrap{
+  position: absolute;
+  top:5%;
+  right: 4%;
+  height: 42px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#mlz-total img{
+  width: 20px;
+  height: 20px;
+}
+
+#mlz-cur{
+  color: #fff;
+  text-align: center;
+  height: 18px;
+}
+
+#mlz-total{
+  color: #ff2d54;
+}
+
+#mlz-total .lab,
+#mlz-total .icon{
+  float: left;
+  margin-right: 3px;
+}
+
+
+#answer .xx-touch{
+  background-color:#ff7d95;
+  color: #fff;
+}

@@ -1,0 +1,66 @@
+#happy{
+  position:fixed;
+  top:0;
+  right: 0;
+  bottom:0;
+  left:0;
+  background-color:#f799aa;
+  z-index: 6;
+  display: none;
+  /* z-index:999; */
+}
+
+#happy-inner{
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  max-width:320px;
+  background:url(../images/happy-bg.jpg) no-repeat top center;
+  background-size: 100%;
+  position: relative;
+}
+
+#happy-kv{
+  width:85.625%;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+#happy-kv img{
+  display: block;
+  width: 100%;
+}
+
+#happy-content{
+  width: 70%;
+  margin:0 auto;
+  margin-top: 10px;
+  color:#1e1e1e;
+  font-size: 14px;
+  font-weight:800;
+  line-height:2em;
+}
+
+#happy-btn{
+  display: block;
+  width: 71.875%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#happy-btn img{
+  display: block;
+  width: 100%;
+}
+
+#happy-download{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#happy-download img{
+  display: block;
+  width: 100%;
+}

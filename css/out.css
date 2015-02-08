@@ -1,0 +1,73 @@
+#out{
+  position:fixed;
+  top:0;
+  right: 0;
+  bottom:0;
+  left:0;
+  background:url(../images/out-bg.jpg);
+  background-size:16%;
+  z-index: 6;
+  display: none;  
+  /* z-index: 999; */
+}
+
+#out-inner{
+  margin: 0 auto;
+  height: 100%;
+  max-width:320px;
+  position: relative;
+}
+
+#out-kv{
+  width:100%;
+}
+
+#out-kv img{
+  display: block;
+  width: 100%;
+}
+
+#out-type{
+  margin-top: -125px;
+  color:#ff7d95;
+  font-size: 16px;
+  line-height:2em;
+  text-align: center;
+}
+
+#out-content{
+  margin-top: 5px;
+  color:#fff;
+  font-size: 14px;
+  line-height:2em;
+  padding: 0 13% ;
+}
+
+#out-download{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#out-download img{
+  display: block;
+  width: 100%;
+}
+
+#out-btn-wrap{
+  width: 90%;
+  margin:10px auto; 
+}
+
+#out-btn-wrap .btn{
+  width: 45%;
+  float: left;
+  text-align: center;
+  margin: 0 2.5%;
+}
+
+#out-btn-wrap .btn img{
+  display: block;
+  width: 100%;
+}
