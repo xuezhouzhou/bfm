@@ -1,20 +1,12 @@
 document.ontouchmove = function(e){ e.preventDefault(); }
-
 document.documentElement.style.webkitTouchCallout = "none";
 
 (function($){
-  //初始化魅力值
+  //魅力值
   var mlz = 20;
 
-  //气球出来的时间
+  //气球动画时间
   var qqTime = 500;
-
-  //设备宽度
-  var width = $('body').width();
-  
-  //根据不同设备的宽度重新定位进度条的位置
-  var loadingBarTop = width*0.5625 + 'px';
-  $("#loading-bar-wrap").css({'top':loadingBarTop});
 
   //第1题
   var que1Data = {
@@ -86,7 +78,7 @@ document.documentElement.style.webkitTouchCallout = "none";
   
   //第4题 乙
   var que4bData = {
-    'queNum':'5',
+    'queNum':'4b',
     'queText':'我和小仁终究还是渐行渐远<img src="images/emoji-22.png"><img src="images/emoji-23.png">接下来孤身一人闯江湖，一大波社团面试正在接近<img src="images/emoji-24.png">怎么穿<img src="images/emoji-21.png">',
     'anAtext':'<img src="images/ques-4b-a.png">',
     'anBtext':'<img src="images/ques-4b-b.png">',
@@ -415,39 +407,7 @@ document.documentElement.style.webkitTouchCallout = "none";
     'start-btn.png',
     'start-btn-touch.png',
 
-    'answer-header.jpg',
-    'answer-bottom.jpg',
-    'answer-icon-mlz.png',
-    'que-num.png',
     
-    //图片选项人物图
-    'ques-4a-a.png',
-    'ques-4a-b.png',
-    'ques-4a-c.png',
-    'ques-4b-a.png',
-    'ques-4b-b.png',
-    'ques-10-a.png',
-    'ques-10-b.png',
-    'ques-10-c.png',
-    'ques-11b-a.png',
-    'ques-11b-b.png',
-    'ques-11b-c.png',
-    'ques-12-a.png',
-    'ques-12-b.png',
-    'ques-12-c.png',
-
-
-    'qq-a.png',
-    'qq-b.png',
-    'qq-c.png',
-
-    'out-bg.jpg',
-    'out-btn-start.png',
-    'out-btn-start-touch.png',
-    'out-btn-tc.png',
-    'out-btn-tc-touch.png',
-    'out-download.png',
-    'out-kv.png',
 
     'emoji-1.png',
     'emoji-2.png',
@@ -574,45 +534,71 @@ document.documentElement.style.webkitTouchCallout = "none";
     'emoji-123.png',
     'emoji-124.png',
 
+    'ques-4a-a.png',
+    'ques-4a-b.png',
+    'ques-4a-c.png',
+    'ques-4b-a.png',
+    'ques-4b-b.png',
+    'ques-10-a.png',
+    'ques-10-b.png',
+    'ques-10-c.png',
+    'ques-11b-a.png',
+    'ques-11b-b.png',
+    'ques-11b-c.png',
+    'ques-12-a.png',
+    'ques-12-b.png',
+    'ques-12-c.png',
+
+    'answer-header.jpg',
+    'answer-bottom.png',
+    'answer-icon-mlz.png',
+    'que-num.png',
+    'qq-a.png',
+    'qq-b.png',
+    'qq-c.png',
+
+    'out-bg.jpg',
+    'out-btn-start.png',
+    'out-btn-start-touch.png',
+    'out-btn-tc.png',
+    'out-btn-tc-touch.png',
+    'out-download.png',
+    'out-kv.png',
+
     'happy-bg.jpg',
+
+    
   ];
+
   
-  //开始页 重回18岁按钮
-  $("#start-btn").on('touchstart',function(){
-    $(this).find('img').attr('src','images/start-btn-touch.png');
-  }).on('touchend',function(){
-    $(this).find('img').attr('src','images/start-btn.png');
-    initStart();
-  });
 
 
-
-  //资源总数量
-  var totalRes = imgs.length;
-  
-  //当前加载的资源的index
-  var curResNum  = 0;
 
   //加载资源
+  var totalRes = imgs.length;
+  var curResNum  = 0;
+  
   for(var i=0;i<totalRes;i++){
     var image = new Image(); 
     image.src = "images/" + imgs[i];
 
     image.onload = function(){
-      
       curResNum++;
-      
       var bfb = (curResNum/totalRes)*98 + '%';
-      
       $('#loading-bar-inner').css({width:bfb})
 
       if(curResNum==totalRes){
         setTimeout(function(){
-          $('#loading-bar-wrap,#loading').hide();  
+          $('#loading-bar-wrap,#loading-hover').hide();  
         },500);
       }
     }
   }
+  
+
+  
+  
+
 
   //题目选项
   $('#answer .xx').on('touchstart',function(){
@@ -628,104 +614,10 @@ document.documentElement.style.webkitTouchCallout = "none";
     changeMlz(dataMlz);
   });
 
-  //切换题目
-  function changeQue(dataKey){
-    //隐藏选项
-    $("#answer .xx").hide();
-    
-    switch(dataKey){
-      //第1题ABC都切第2题
-      case 'que1-an-a':
-      case 'que1-an-b':
-      case 'que1-an-c':
-        
-        break;
+  
 
+  
 
-      //第2题ABC都切第3题
-      case 'que2-an-a':
-      case 'que2-an-b':
-      case 'que2-an-c':
-        
-        break;
-
-      //第3题A切第4题甲
-      case 'que3-an-a':
-        
-        break;
-
-      //第3题BC切第4题乙
-      case 'que3-an-b':  
-      case 'que3-an-c':
-        
-        break;
-
-      //第4题甲 ABC 切第5题甲 
-      case 'que4a-an-a':
-      case 'que4a-an-b':
-      case 'que4a-an-c':
-        
-        break;
-
-      //第4题乙 ABC 切第5题乙 
-      case 'que4b-an-a':
-      case 'que4b-an-b':
-      case 'que4b-an-c':
-        
-        break;
-
-      //第5题甲 AB 切第6题甲 
-      case 'que5a-an-a':
-      case 'que5a-an-b':
-        showQue({
-          
-        },'text');
-        break;
-
-      //第5题甲 C out
-      case 'que5a-an-c':
-        showOut({
-          'type':'被任性的出题人抛弃了',
-          'content':'万万没想到，出题的人也这么任性，就是让你out!'
-        });
-        break; 
-
-      //第5题乙 A out
-      case 'que5b-an-a':
-        showOut({
-          'type':'被我是歌手淘汰了',
-          'content':'真是想太多，既没有AngelaBaby的颜值，也没有韩红大姐的气魄，请问自信是吃白米饭来的吗？'
-        });
-        break; 
-      
-      //第5题乙 BC 切第六题乙 
-      case 'que5b-an-b':
-      case 'que5b-an-c':
-        
-        break;
-
-      //第6题甲乙 ABC 切第七题
-      case 'que6a-an-a':
-      case 'que6a-an-b':
-      case 'que6a-an-c':
-      case 'que6b-an-a':
-      case 'que6b-an-b':
-      case 'que6b-an-c': 
-        showQue({
-          'queText':'',
-          'anAtext':'',
-          'anBtext':'',
-          'anCtext':'',
-          'anAdataKey':'que7-an-a',
-          'anBdataKey':'que7-an-b',
-          'anCdataKey':'que7-an-c',
-          'anAdataMlz':'+10',
-          'anBdataMlz':'-10',
-          'anCdataMlz':'+10',
-        },'text');
-        break;
-    }
-  }
 
   //改变魅力值
   function changeMlz(dataMlz){
@@ -816,6 +708,12 @@ document.documentElement.style.webkitTouchCallout = "none";
 
   //显示OUT页
   function showOut(option){
+
+    $('#out-download').hide();
+    setTimeout(function(){
+      $('#out-download').show();
+    },2000);
+
     $("#out-type").text(option.type);
     $("#out-content").text(option.content);
     $("#answer").hide();
@@ -836,8 +734,163 @@ document.documentElement.style.webkitTouchCallout = "none";
     showQue(que1Data);
   }
 
-  $('#happy-download').on('touchend',function(){
-    window.location.herf = 'download.html';
+  //显示题目
+  function showQue(option){
+    //更新题号
+    $('#que-num span').text(option.queNum);
+    
+    $_quetion = $('#question');
+    $_answerA = $("#answer .answerA");
+    $_answerB = $("#answer .answerB");
+    $_answerC = $("#answer .answerC");
+
+    $_quetion.empty().append(option.queText);
+
+    if(option.type=='pic'){
+      $_answerA.addClass('pic pic-a');
+      $_answerB.addClass('pic pic-b');
+      $_answerC.addClass('pic pic-c');
+      var topA = "52%";
+      var topB = "47%";
+      var topC = "52%";
+    }else if(option.type=='text'){
+      $_answerA.removeClass('pic pic-a');
+      $_answerB.removeClass('pic pic-b');
+      $_answerC.removeClass('pic pic-c');
+      var topA = "41%";
+      var topB = "62%";
+      var topC = "83%";
+    }
+
+    if(option.anNum==2){
+      $_answerC.hide();
+    }else if(option.anNum==3){
+      $_answerC.show();
+    }
+
+    $_answerA.css({top:'110%','display':'block'})
+             .attr('data-key',option.anAdataKey)
+             .attr('data-mlz',option.anAdataMlz);
+    $_answerB.css({top:'110%','display':'block'})
+             .attr('data-key',option.anBdataKey)
+             .attr('data-mlz',option.anBdataMlz);
+
+    $_answerA.find('.text').empty().append(option.anAtext);
+    $_answerB.find('.text').empty().append(option.anBtext);         
+
+    if(option.anNum==3){
+      $_answerC.css({top:'110%','display':'block'})
+             .attr('data-key',option.anCdataKey)
+             .attr('data-mlz',option.anCdataMlz);
+
+      $_answerC.find('.text').empty().append(option.anCtext);       
+    }
+
+    $_answerA.animate({top:topA},qqTime,function(){
+      $_answerB.animate({top:topB},qqTime,function(){
+        if(option.anNum==3){
+          $_answerC.animate({top:topC},qqTime);
+        }
+      });
+    });
+  }
+
+
+
+
+
+  //开始页 重回18岁按钮
+  $("#start-btn").on('touchstart',function(){
+    $(this).find('img').attr('src','images/start-btn-touch.png');
+  }).on('touchend',function(){
+    $(this).find('img').attr('src','images/start-btn.png');
+    initStart();
   });
+
+
+
+  //切换题目
+  function changeQue(dataKey){
+    //隐藏选项
+    $("#answer .xx").hide();
+    
+    switch(dataKey){
+      //第1题ABC都切第2题
+      case 'que1-an-a':
+      case 'que1-an-b':
+      case 'que1-an-c':
+        showQue(que2Data);
+        break;
+
+      //第2题ABC都切第3题
+      case 'que2-an-a':
+      case 'que2-an-b':
+      case 'que2-an-c':
+        showQue(que3Data);
+        break;
+
+      //第3题A切第4题甲
+      case 'que3-an-a':
+        showQue(que4aData);
+        break;
+
+      //第3题BC切第4题乙
+      case 'que3-an-b':  
+      case 'que3-an-c':
+        showQue(que4bData);
+        break;
+
+      //第4题甲 ABC 切第5题甲 
+      case 'que4a-an-a':
+      case 'que4a-an-b':
+      case 'que4a-an-c':
+        showQue(que5aData);
+        break;
+
+      //第4题乙 ABC 切第5题乙 
+      case 'que4b-an-a':
+      case 'que4b-an-b':
+      case 'que4b-an-c':
+        showQue(que5bData);
+        break;
+
+      //第5题甲 AB 切第6题甲 
+      case 'que5a-an-a':
+      case 'que5a-an-b':
+        showQue(que6aData);
+        break;
+
+      //第5题甲 C out
+      case 'que5a-an-c':
+        showOut({
+          'type':'被任性的出题人抛弃了',
+          'content':'万万没想到，出题的人也这么任性，就是让你out!'
+        });
+        break; 
+
+      //第5题乙 A out
+      case 'que5b-an-a':
+        showOut({
+          'type':'被我是歌手淘汰了',
+          'content':'真是想太多，既没有AngelaBaby的颜值，也没有韩红大姐的气魄，请问自信是吃白米饭来的吗？'
+        });
+        break; 
+      
+      //第5题乙 BC 切第六题乙 
+      case 'que5b-an-b':
+      case 'que5b-an-c':
+        showQue(que6bData);
+        break;
+
+      /*//第6题甲乙 ABC 切第七题
+      case 'que6a-an-a':
+      case 'que6a-an-b':
+      case 'que6a-an-c':
+      case 'que6b-an-a':
+      case 'que6b-an-b':
+      case 'que6b-an-c': 
+        break;
+*/    }
+  }
 
 })(jQuery);

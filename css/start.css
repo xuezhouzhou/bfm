@@ -6,18 +6,28 @@
   left:0;
   background:url(../images/start-bg.jpg);
   background-size:16%;
-  z-index: 8;
+  z-index:8;
 }
+
+#start-inner{
+  margin: 0 auto;
+  width: 320px;
+  height:100%;
+
+}
+
 #start-kv{
   width:75%;
   margin: 10px auto;
 }
+
 #start-kv img,
 #start-btn img{
   display: block;
   width: 100%;
 }
+
 #start-btn{
   width: 71.875%;
-  margin: 20px auto;
+  margin: 15px auto;
 }

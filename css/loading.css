@@ -12,7 +12,8 @@ img{
   -webkit-user-select:none;
 }
 
-#loading{
+/* 半透明遮罩层 */
+#loading-hover{
   position: fixed;
   top:0;
   right: 0;
@@ -25,6 +26,15 @@ img{
 }
 
 #loading-bar-wrap{
+  width: 320px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  z-index: 9;
+}
+
+
+#loading-bar{
   position: absolute;
   width: 62.5%;
   left:18.75%;

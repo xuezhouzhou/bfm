@@ -14,76 +14,90 @@
 
 
 <!-- Loadind页遮罩层 -->
-<div id="loading"></div>
+<div id="loading-hover"></div>
 
 
 <!-- 进度条 -->
 <div id="loading-bar-wrap">
-  <div id="loading-bar-inner">
-    <div class="hdj">
-      <img src="images/loading-hdj.png">
+  <div id="loading-bar">
+    <div id="loading-bar-inner">
+      <div class="hdj"><img src="images/loading-hdj.png"></div>
     </div>
   </div>
 </div>
 
 
 
+
 <!-- 开始页 -->
 <div id="start">
-  <div id="start-kv">
-    <img src="images/start-kv.png">
+  <div id="start-inner">
+    <div id="start-kv"><img src="images/start-kv.png"></div>
+    <div id="start-btn"><img src="images/start-btn.png"></div>  
   </div>
-  <div id="start-btn">
-    <img src="images/start-btn.png">
-  </div> 
 </div>
 
 
 
 <!-- 答题页面 -->
 <div id="answer">
+
   <!-- 头部背景 -->
   <div id="answer-header">
-    <div id="answer-inner">
+    <div id="answer-header-inner">
+      <img src="images/answer-header.jpg">
+      <img src="images/answer-header.jpg">
+      <img src="images/answer-header.jpg">
       <img src="images/answer-header.jpg">
       <img src="images/answer-header.jpg">
       <img src="images/answer-header.jpg">    
     </div>
   </div>
-  
-  <!-- 题号 -->
-  <div id="que-num">
-    <span>1</span>  
-  </div>
+
+  <div id="answer-inner">
+    <!-- 题号 -->
+    <div id="que-num"><span>1</span></div>
+
+    <!-- 魅力值 -->
+    <div id="mlz-wrap">
+      <div id="mlz-cur"></div>
+      <div id="mlz-total">
+        <div class="icon"><img src="images/answer-icon-mlz.png"></div>
+        <div class="lab">魅力值&nbsp;<span id="mlz-total-num">20</span></div>
+      </div>
+    </div>
+
+    <!-- 问题 -->
+    <div id="question"></div>
+
+    <!-- 选项 -->
+    <div class="answerA xx">
+      <div class="text"></div> 
+      <div class="qq"><img src="images/qq-a.png"></div>
+    </div>
     
-  <!-- 魅力值 -->
-  <div id="mlz-wrap">
-    <div id="mlz-cur"></div>
-    <div id="mlz-total">
-      <div class="icon"><image src="images/answer-icon-mlz.png" /></div>
-      <div class="lab">魅力值&nbsp;<span id="mlz-total-num">20</span></div>
+    <div class="answerB xx">
+      <div class="text"></div>
+      <div class="qq"><img src="images/qq-b.png"></div>
+    </div>
+
+    <div class="answerC xx">
+      <div class="text"></div>
+      <div class="qq"><img src="images/qq-c.png"></div>
     </div>
   </div>
-
-  <!-- 问题 -->
-  <div id="question"></div>
-
-  <!-- 选项 -->
-  <div class="answerA xx">
-    <div class="text"></div> 
-    <div class="qq"><img src="images/qq-a.png"></div>
-  </div>
-  <div class="answerB xx">
-    <div class="text"></div>
-    <div class="qq"><img src="images/qq-b.png"></div>
-  </div>
-  <div class="answerC xx">
-    <div class="text"></div>
-    <div class="qq"><img src="images/qq-c.png"></div>
-  </div>
-
+  
   <!-- 底部花纹 -->
-  <div id="answer-bottom"></div>
+  <div id="answer-bottom">
+    <div id="answer-bottom-inner">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png"> 
+    </div>
+  </div>
 </div>
 
 
