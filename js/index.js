@@ -1,13 +1,15 @@
-document.ontouchmove = function(e){ e.preventDefault(); }
+document.ontouchmove = function(e){ e.preventDefault();}
 document.documentElement.style.webkitTouchCallout = "none";
-
 (function($){
   //魅力值
   var mlz = 20;
 
   //气球动画时间
-  var qqTime = 500;
-
+  var qqTime = 300;
+	
+	//记录用户每部选择的选项
+	var step = [];
+	
   //第1题
   var que1Data = {
     'queNum':'1',
@@ -53,7 +55,7 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anBdataKey':'que3-an-b',
     'anCdataKey':'que3-an-c',
     'anAdataMlz':'+10',
-    'anBdataMlz':'+5',
+    'anBdataMlz':'+0',
     'anCdataMlz':'-5',
     'type':'text',
     'anNum':3
@@ -71,7 +73,7 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anCdataKey':'que4a-an-c',
     'anAdataMlz':'+10',
     'anBdataMlz':'-5',
-    'anCdataMlz':'0',
+    'anCdataMlz':'+0',
     'type':'pic',
     'anNum':3
   }
@@ -86,7 +88,7 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anAdataKey':'que4b-an-a',
     'anBdataKey':'que4b-an-b',
     'anCdataKey':'que4b-an-c',
-    'anAdataMlz':'0',
+    'anAdataMlz':'+0',
     'anBdataMlz':'+10',
     'anCdataMlz':'+5',
     'type':'pic',
@@ -105,7 +107,7 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anCdataKey':'que5a-an-c',
     'anAdataMlz':'+10',
     'anBdataMlz':'+5',
-    'anCdataMlz':'0',
+    'anCdataMlz':'+0',
     'type':'text',
     'anNum':3
   }
@@ -120,9 +122,9 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anAdataKey':'que5b-an-a',
     'anBdataKey':'que5b-an-b',
     'anCdataKey':'que5b-an-c',
-    'anAdataMlz':'0',
+    'anAdataMlz':'+0',
     'anBdataMlz':'+10',
-    'anCdataMlz':'0',
+    'anCdataMlz':'+0',
     'type':'text',
     'anNum':3
   }
@@ -146,7 +148,7 @@ document.documentElement.style.webkitTouchCallout = "none";
   }
 
   //第6题 乙
-  var que6aData = {
+  var que6bData = {
     'queNum':'6b',
     'queText':'热络的社团活动特别容易营造恋爱氛围<img src="images/emoji-42.png"><img src="images/emoji-43.png"><img src="images/emoji-10.png">我也遇见了那个他...我们互生情愫<img src="images/emoji-44.png">除了是小花园的常客，周末也要一起去看电影<img src="images/emoji-45.png">',
     'anAtext':'坚持自己的休闲风<img src="images/emoji-46.png">自然真实最重要',
@@ -187,9 +189,8 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anBtext':'让穿衣助手(logo)帮我改头换面<img src="images/emoji-101.png">前男友只有追悔莫及的份<img src="images/emoji-102.png"><img src="images/emoji-102.png">',
     'anAdataKey':'que8b-an-a',
     'anBdataKey':'que8b-an-b',
-    'anAdataMlz':'0',
-    'anBdataMlz':'+5',
-    'anCdataMlz':'0',
+    'anAdataMlz':'+0',
+    'anBdataMlz':'+50',
     'type':'text',
     'anNum':2
   }
@@ -204,9 +205,9 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anAdataKey':'que8b-an-a',
     'anBdataKey':'que8b-an-b',
     'anCdataKey':'que8b-an-c',
-    'anAdataMlz':'0',
+    'anAdataMlz':'+0',
     'anBdataMlz':'+5',
-    'anCdataMlz':'0',
+    'anCdataMlz':'+0',
     'type':'text',
     'anNum':3
   }
@@ -221,9 +222,9 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anAdataKey':'que9-an-a',
     'anBdataKey':'que9-an-b',
     'anCdataKey':'que9-an-c',
-    'anAdataMlz':'0',
-    'anBdataMlz':'+5',
-    'anCdataMlz':'0',
+    'anAdataMlz':'+0',
+    'anBdataMlz':'-5',
+    'anCdataMlz':'+5',
     'type':'text',
     'anNum':3
   }
@@ -272,10 +273,10 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anAdataKey':'que11b-an-a',
     'anBdataKey':'que11b-an-b',
     'anCdataKey':'que11b-an-c',
-    'anAdataMlz':'0',
+    'anAdataMlz':'+0',
     'anBdataMlz':'+10',
-    'anCdataMlz':'0',
-    'type':'text',
+    'anCdataMlz':'+0',
+    'type':'pic',
     'anNum':3
   }
   
@@ -291,7 +292,7 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anCdataKey':'que12-an-c',
     'anAdataMlz':'+5',
     'anBdataMlz':'+10',
-    'anCdataMlz':'0',
+    'anCdataMlz':'+0',
     'type':'pic',
     'anNum':3
   }
@@ -307,8 +308,8 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anBdataKey':'que13a-an-b',
     'anCdataKey':'que13a-an-c',
     'anAdataMlz':'+20',
-    'anBdataMlz':'0',
-    'anCdataMlz':'0',
+    'anBdataMlz':'+0',
+    'anCdataMlz':'+0',
     'type':'text',
     'anNum':3
   }
@@ -324,8 +325,8 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anBdataKey':'que13b-an-b',
     'anCdataKey':'que13b-an-c',
     'anAdataMlz':'+20',
-    'anBdataMlz':'0',
-    'anCdataMlz':'0',
+    'anBdataMlz':'+0',
+    'anCdataMlz':'+0',
     'type':'text',
     'anNum':3
   }
@@ -340,9 +341,9 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anAdataKey':'que14a-an-a',
     'anBdataKey':'que14a-an-b',
     'anCdataKey':'que14a-an-c',
-    'anAdataMlz':'+20',
-    'anBdataMlz':'0',
-    'anCdataMlz':'0',
+    'anAdataMlz':'+0',
+    'anBdataMlz':'+0',
+    'anCdataMlz':'+0',
     'type':'text',
     'anNum':3
   }
@@ -357,8 +358,8 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anAdataKey':'que14b-an-a',
     'anBdataKey':'que14b-an-b',
     'anCdataKey':'que14b-an-c',
-    'anAdataMlz':'+20',
-    'anBdataMlz':'0',
+    'anAdataMlz':'+0',
+    'anBdataMlz':'+10',
     'anCdataMlz':'0',
     'type':'text',
     'anNum':3
@@ -368,15 +369,15 @@ document.documentElement.style.webkitTouchCallout = "none";
   var que15aData = {
     'queNum':'15a',
     'queText':'一切努力都是值得的，老板最后给了我升职的机会<img src="images/emoji-118.png">为了感谢大家，我一定要组织一场庆祝party<img src="images/emoji-119.png">',
-    'anAtext':'',
-    'anBtext':'',
-    'anCtext':'',
+    'anAtext':'<img src="images/ques-15a-a.png">',
+    'anBtext':'<img src="images/ques-15a-b.png">',
+    'anCtext':'<img src="images/ques-15a-c.png">',
     'anAdataKey':'que15a-an-a',
     'anBdataKey':'que15a-an-b',
     'anCdataKey':'que15a-an-c',
-    'anAdataMlz':'+20',
-    'anBdataMlz':'0',
-    'anCdataMlz':'0',
+    'anAdataMlz':'+0',
+    'anBdataMlz':'+0',
+    'anCdataMlz':'+0',
     'type':'pic',
     'anNum':3
   }
@@ -391,9 +392,9 @@ document.documentElement.style.webkitTouchCallout = "none";
     'anAdataKey':'que15b-an-a',
     'anBdataKey':'que15b-an-b',
     'anCdataKey':'que15b-an-c',
-    'anAdataMlz':'+20',
-    'anBdataMlz':'0',
-    'anCdataMlz':'0',
+    'anAdataMlz':'+0',
+    'anBdataMlz':'+0',
+    'anCdataMlz':'+0',
     'type':'text',
     'anNum':3
   }
@@ -406,8 +407,54 @@ document.documentElement.style.webkitTouchCallout = "none";
     'start-kv.png',
     'start-btn.png',
     'start-btn-touch.png',
+		
+		'ques-4a-a.png',
+    'ques-4a-b.png',
+    'ques-4a-c.png',
+    'ques-4b-a.png',
+    'ques-4b-b.png',
+    'ques-10-a.png',
+    'ques-10-b.png',
+    'ques-10-c.png',
+    'ques-11b-a.png',
+    'ques-11b-b.png',
+    'ques-11b-c.png',
+    'ques-12-a.png',
+    'ques-12-b.png',
+    'ques-12-c.png',
+		'ques-15a-a.png',
+		'ques-15a-b.png',
+		'ques-15a-c.png',
+		
+		'answer-header.jpg',
+    'answer-bottom.png',
+    'answer-icon-mlz.png',
+    'que-num.png',
+    'qq-a.png',
+    'qq-b.png',
+    'qq-c.png',
+		'qq-bom.png',
 
-    
+    'out-bg.jpg',
+    'out-btn-start.png',
+    'out-btn-start-touch.png',
+    'out-btn-tc.png',
+    'out-btn-tc-touch.png',
+    'out-download.png',
+    'out-kv.png',
+
+    'happy-bg.jpg',
+		'happy-btn.png',
+		'happy-btn-touch.png',
+		'happy-download.png',
+		'happy-gl.png',
+		'happy-hyf.png',
+		'happy-ljl.png',
+		'happy-max.png',
+		'happy-qsy.png',
+		'happy-xln.png',
+		'happy-xs.png',
+		'happy-zms.png',
 
     'emoji-1.png',
     'emoji-2.png',
@@ -533,48 +580,10 @@ document.documentElement.style.webkitTouchCallout = "none";
     'emoji-122.png',
     'emoji-123.png',
     'emoji-124.png',
-
-    'ques-4a-a.png',
-    'ques-4a-b.png',
-    'ques-4a-c.png',
-    'ques-4b-a.png',
-    'ques-4b-b.png',
-    'ques-10-a.png',
-    'ques-10-b.png',
-    'ques-10-c.png',
-    'ques-11b-a.png',
-    'ques-11b-b.png',
-    'ques-11b-c.png',
-    'ques-12-a.png',
-    'ques-12-b.png',
-    'ques-12-c.png',
-
-    'answer-header.jpg',
-    'answer-bottom.png',
-    'answer-icon-mlz.png',
-    'que-num.png',
-    'qq-a.png',
-    'qq-b.png',
-    'qq-c.png',
-
-    'out-bg.jpg',
-    'out-btn-start.png',
-    'out-btn-start-touch.png',
-    'out-btn-tc.png',
-    'out-btn-tc-touch.png',
-    'out-download.png',
-    'out-kv.png',
-
-    'happy-bg.jpg',
-
-    
-  ];
+	];
 
   
-
-
-
-  //加载资源
+	//加载资源
   var totalRes = imgs.length;
   var curResNum  = 0;
   
@@ -595,103 +604,37 @@ document.documentElement.style.webkitTouchCallout = "none";
     }
   }
   
-
-  
-  
-
-
-  //题目选项
+	
+	//题目选项
   $('#answer .xx').on('touchstart',function(){
     $(this).addClass('xx-touch');
+
+    //气球爆掉
+    $(this).find('.qq img').attr('src','images/qq-bom.png');
+  
   }).on('touchend',function(){
     $(this).removeClass('xx-touch');
     var dataKey = $(this).attr('data-key');
     var dataMlz = $(this).attr('data-mlz');
+
+    //还原
+    $("#answer .answerA .qq img").attr('src','images/qq-a.png');
+    $("#answer .answerB .qq img").attr('src','images/qq-b.png');
+    $("#answer .answerC .qq img").attr('src','images/qq-c.png');
+    
+		//记录用户的操作
+		step.push(dataKey);
+		
     //切题
     changeQue(dataKey);
     
     //更新魅力值
     changeMlz(dataMlz);
+
   });
 
   
-
-  
-
-
-  //改变魅力值
-  function changeMlz(dataMlz){
-    mlz = mlz + parseInt(dataMlz);
-    $_mlzCur = $('#mlz-cur');
-    $_mlzCur.css({'opacity':1}).text(dataMlz+'分');
-    $_mlzCur.animate({'opacity':0},500,function(){
-      $('#mlz-total-num').text(mlz);
-    });
-  }
-
-  //显示题目
-  function showQue(option){
-    //更新题号
-    $('#que-num span').text(option.queNum);
-    
-    $_quetion = $('#question');
-    $_answerA = $("#answer .answerA");
-    $_answerB = $("#answer .answerB");
-    $_answerC = $("#answer .answerC");
-
-    $_quetion.empty().append(option.queText);
-
-    if(option.type=='pic'){
-      $_answerA.addClass('pic pic-a');
-      $_answerB.addClass('pic pic-b');
-      $_answerC.addClass('pic pic-c');
-      var topA = "52%";
-      var topB = "47%";
-      var topC = "52%";
-    }else if(option.type=='text'){
-      $_answerA.removeClass('pic pic-a');
-      $_answerB.removeClass('pic pic-b');
-      $_answerC.removeClass('pic pic-c');
-      var topA = "41%";
-      var topB = "62%";
-      var topC = "83%";
-    }
-
-    if(option.anNum==2){
-      $_answerC.hide();
-    }else if(option.anNum==3){
-      $_answerC.show();
-    }
-
-    $_answerA.css({top:'110%','display':'block'})
-             .attr('data-key',option.anAdataKey)
-             .attr('data-mlz',option.anAdataMlz);
-    $_answerB.css({top:'110%','display':'block'})
-             .attr('data-key',option.anBdataKey)
-             .attr('data-mlz',option.anBdataMlz);
-
-    $_answerA.find('.text').empty().append(option.anAtext);
-    $_answerB.find('.text').empty().append(option.anBtext);         
-
-    if(option.anNum==3){
-      $_answerC.css({top:'110%','display':'block'})
-             .attr('data-key',option.anCdataKey)
-             .attr('data-mlz',option.anCdataMlz);
-
-      $_answerC.find('.text').empty().append(option.anCtext);       
-    }
-
-    $_answerA.animate({top:topA},qqTime,function(){
-      $_answerB.animate({top:topB},qqTime,function(){
-        if(option.anNum==3){
-          $_answerC.animate({top:topC},qqTime);
-        }
-      });
-    });
-  }
-
-
-  //OUT页 回到18岁
+	//OUT页 回到18岁
   $("#out-btn-start").on('touchstart',function(){
     $(this).find('img').attr('src','images/out-btn-start-touch.png');
   }).on('touchend',function(){
@@ -704,37 +647,41 @@ document.documentElement.style.webkitTouchCallout = "none";
     $(this).find('img').attr('src','images/out-btn-tc-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/out-btn-tc.png');
+		//我要吐槽后续处理程序。。。
   });
+	
+	
+	//HAPPY页炫耀身份
+	$("#happy-btn").on('touchstart',function(){
+		$(this).find('img').attr('src','images/happy-btn-touch.png');
+	}).on('touchend',function(){
+		$(this).find('img').attr('src','images/happy-btn.png');
+		//炫耀身份后续处理程序。。。。
+	});
 
   //显示OUT页
   function showOut(option){
-
-    $('#out-download').hide();
-    setTimeout(function(){
-      $('#out-download').show();
-    },2000);
-
-    $("#out-type").text(option.type);
+		$('#out-download').hide();
+		//防止点C选项 OUT的时候 误点下载
+    setTimeout(function(){$('#out-download').fadeIn(500)},500);
+		$("#out-type").text(option.type);
     $("#out-content").text(option.content);
     $("#answer").hide();
     $("#out").show();
   }
+	
+	//显示happy页
+	function showHappy(option){
+		$('#happy-download').hide();
+		setTimeout(function(){$('#happy-download').fadeIn(500)},500);
+    $("#happy-content").text(option.content);
+		$("#happy-kv img").attr('src',option.kv);
+    $("#answer").hide();
+    $("#happy").show();
+	}
 
-  //重新开始
-  function initStart(){
-    mlz = 20;
-    queNum = 1;
-
-    $('#mlz-total-num').text(mlz);
-    $("#out,#start").hide();
-    $('#que-num span').text(queNum);
-    $('#answer').show();
-    
-    //显示第一题
-    showQue(que1Data);
-  }
-
-  //显示题目
+  
+	//显示题目
   function showQue(option){
     //更新题号
     $('#que-num span').text(option.queNum);
@@ -787,19 +734,16 @@ document.documentElement.style.webkitTouchCallout = "none";
     }
 
     $_answerA.animate({top:topA},qqTime,function(){
-      $_answerB.animate({top:topB},qqTime,function(){
+      $_answerB.animate({top:topB},qqTime+100,function(){
         if(option.anNum==3){
-          $_answerC.animate({top:topC},qqTime);
+          $_answerC.animate({top:topC},qqTime+200);
         }
       });
     });
   }
 
 
-
-
-
-  //开始页 重回18岁按钮
+	//开始页 重回18岁按钮
   $("#start-btn").on('touchstart',function(){
     $(this).find('img').attr('src','images/start-btn-touch.png');
   }).on('touchend',function(){
@@ -807,9 +751,8 @@ document.documentElement.style.webkitTouchCallout = "none";
     initStart();
   });
 
-
-
-  //切换题目
+	
+	//切换题目
   function changeQue(dataKey){
     //隐藏选项
     $("#answer .xx").hide();
@@ -882,15 +825,256 @@ document.documentElement.style.webkitTouchCallout = "none";
         showQue(que6bData);
         break;
 
-      /*//第6题甲乙 ABC 切第七题
+      //第6题甲 ABC 切第7题
       case 'que6a-an-a':
-      case 'que6a-an-b':
-      case 'que6a-an-c':
-      case 'que6b-an-a':
-      case 'que6b-an-b':
-      case 'que6b-an-c': 
+			case 'que6a-an-b':
+			case 'que6a-an-c':
+        showQue(que7Data);  
         break;
-*/    }
-  }
 
+      //第7题ABC 切第8题(需根据4、6题的选择进一步确定)
+      case 'que7-an-a':
+      case 'que7-an-b':
+      case 'que7-an-c':
+				//4甲BC or 6甲BC 切8题甲		
+				if(step[3]=='que4a-an-b' || step[3]=='que4a-an-c' || step[5]=='que6a-an-b' || step[5]=='que6a-an-c'){
+					showQue(que8aData);
+				//4甲A 且 6甲A  切8题乙
+				}else if(step[3]=='que4a-an-a' && step[5]=='que6a-an-a'){
+					showQue(que8bData);
+				}
+        break;
+				
+			//8题甲 A out
+			case 'que8a-an-a':
+				showOut({
+          'type':'被天真的小盆友嫌弃了',
+          'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...'
+        });
+        break;
+				
+			//第8题乙 A out
+      case 'que8b-an-a': 
+        showOut({
+          'type':'被天真的小盆友嫌弃了',
+          'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...'
+        });
+        break;
+				
+			//第8题 甲B 乙BC  切第9题
+			case 'que8a-an-b':
+			case 'que8b-an-b':
+			case 'que8b-an-c':
+				showQue(que9Data);
+				break;
+			
+			//第9题 A out	
+			case 'que9-an-a':
+				showOut({
+          'type':'被城管临检了',
+          'content':'座山雕？一个字？太爱演了吧...记得好好做个正常人拒绝黄赌毒'
+        });
+        break;
+				
+			//第9题 BC 切第10题	
+			case 'que9-an-b':
+			case 'que9-an-c':
+				showQue(que10Data);
+        break;
+				
+			//第10题 ABC 切第11题(需根据第八题答 甲or乙 做进一步判断)
+			case 'que10-an-a':
+			case 'que10-an-b':
+			case 'que10-an-c':
+				//第八题答甲 切11题甲
+				if(step[7]=='que8a-an-a' || step[7]=='que8a-an-b'){
+					showQue(que11aData);
+				//第八题答乙 切11题乙
+				}else if(step[7]=='que8b-an-a' || step[7]=='que8b-an-b' || step[7]=='que8b-an-c'){
+					showQue(que11bData);
+				}
+				break;
+
+			//第11题 甲ABC 乙AB 切12题
+			case 'que11a-an-a':
+			case 'que11a-an-b':
+			case 'que11a-an-c':
+    	case 'que11b-an-a':
+			case 'que11b-an-b':
+				showQue(que12Data);
+				break;
+				
+			//第11题乙 C out
+    	case 'que11b-an-c':
+				showOut({
+          'type':'被大水冲了龙王庙了',
+          'content':'虽然你的婆婆不是雪姨，但也忍不了儿媳妇的裙子那么短吧...真要是雪姨你穿比基尼也没她美'
+        });
+        break;
+			
+			//第12题AB 切13题(需要进一步判断11题 答 甲or乙)
+			case 'que12-an-a':
+			case 'que12-an-b':
+				//11题答甲 切13题甲
+				if(step[10]=='que11a-an-a' || step[10]=='que11a-an-b' || step[10]=='que11a-an-c'){
+					showQue(que13bData);	
+				//11题答乙 切13题乙
+				}else if(step[10]=='que11b-an-a' || step[10]=='que11b-an-b' || step[10]=='que11b-an-c'){
+					showQue(que13bData);	
+				}
+				break;
+				
+			//第12题C out	
+			case 'que12-an-c':
+				showOut({
+          'type':'被老板撕逼了',
+          'content':'这位小主定是得了失心疯，哪来的疯丫头，乳臭未干就敢穿小皮草...内心戏太过，抢了老板的风头，就等着老板撕逼吧，拉出去斩了'
+        });
+        break;
+				
+			//13题甲 A 切 14题甲
+			case 'que13a-an-a':	
+				showQue(que14aData);
+				break;
+				
+			//13题甲 BC OUT
+			case 'que13a-an-a':	
+				showOut({
+          'type':'被洗衣店敲诈了',
+          'content':'羊绒外套只能用专业的药水干洗，太傻太天真，就等着老板发飙炒鱿鱼吧'
+        });
+        break;	
+			
+			//13题乙 A 切 14题乙
+			case 'que13b-an-a':	
+				showQue(que14bData);
+				break;		
+			
+			//13题乙 BC OUT
+			case 'que13b-an-b':	
+			case 'que13b-an-c':
+				showOut({
+          'type':'被围观群众丢臭鸡蛋了',
+          'content':'人贵在有自知之明，缺点是用来隐藏的，谁让你秀给大家看的...'
+        });
+        break;
+				
+			//14题甲 A 切 15题甲
+			case 'que14a-an-a':	
+				showQue(que15aData);
+				break;
+				
+			//14题甲 B endingG
+			case 'que14a-an-b':	
+				showHappy({
+					'kv':'images/happy-ljl.png',//你就是精致优雅的刘嘉玲
+					'content':'就是时刻都保持精致的你，认真的时刻最美，最后收获事业爱情双丰收，人生赢家！小衣以你为榜样'	
+				});
+				break;
+				
+			//14题甲 C OUT
+			case 'que14a-an-c':
+				showOut({
+					'type':'被自己蠢哭了',
+					'content':'千万不能成为随风倒的墙头草，活了一把年纪却还想不清楚自己究竟要什么，多半是废了'
+				});
+				break;			
+			
+			//14题乙 A 切 endingH	
+			case 'que14b-an-a':
+				showHappy({
+					'kv':'images/happy-xs.png',//你就是的鬼灵精怪的小S
+					'content':'没想到派对最后未婚夫突然出现，化身蝙蝠侠，上演浪漫求婚桥段，向所有人宣告你属于他，小衣也想赤条条秀恩爱！'	
+				});
+				break;
+				
+			//14题乙 B 切 OUT	
+			case 'que14b-an-b':
+				showOut({
+					'type':'被婚纱勒晕了',
+					'content':'都要成为人妻了，还想着不醉不归，难道不怕宿醉错过吉时吗...还有温馨小提示：未婚夫是不能存档的'
+				});
+				break;	
+				
+			//14题乙 C 切 15题乙	
+			case 'que14b-an-c':
+				showQue(que15bData);
+				break;
+				
+			//15题甲 A 切 endingA
+			case 'que15a-an-a':
+				showHappy({
+					'kv':'images/happy-max.png',//你就是独立自强的Max
+					'content':'你的时尚品味卓越而又出众，自己打造的独立品牌也在火热筹备中，小衣无限看好你！'	
+				});
+				break;
+				
+			//15题甲 B 切 endingB
+			case 'que15a-an-b':
+				showHappy({
+					'kv':'images/happy-gl.png',//你就是的霸气干练顾里
+					'content':'人美能力强的并不一定就是女魔头，小衣觉得内外兼修的你很快就会当上CEO迎娶高富帅~'	
+				});
+				break;
+				
+			//15题甲 C 切 endingC
+			case 'que15a-an-c':
+				showHappy({
+					'kv':'images/happy-zms.png',//你就是温柔善良的赵默笙
+					'content':'不明争不暗斗，那么恬静亲和的你每个人都爱啊，小衣虽然是女的但也忍不住喜欢你，羞羞~'	
+				});
+				break;		
+				
+			//15题乙 A 切 endingA
+			case 'que15b-an-a':
+				showHappy({
+					'kv':'images/happy-xln.png',//你就是超凡脱俗的小龙女
+					'content':'或许相濡以沫就是两人相处的最高境界，小衣也要向你们学习！'	
+				});
+				break;
+				
+			//15题乙 B 切 endingB
+			case 'que15b-an-b':
+				showHappy({
+					'kv':'images/happy-qsy.png',//你就是敢爱敢恨的千颂伊
+					'content':'爱就是要全世界都知道，有一种秀恩爱叫羡煞旁人，小衣也是羡慕嫉妒但不恨，满满都是祝福~'	
+				});
+				break;
+			
+			//15题乙 C 切 endingC
+			case 'que15b-an-c':
+				showHappy({
+					'kv':'images/happy-hyf.png',//你就是率真果断的胡一菲
+					'content':'爱他就是要跟他一起追寻自由，一步步走遍全世界，看山看水看彼此，小衣坐等集齐全球明信片~'	
+				});
+				break;
+		}
+  }
+	
+	
+	//改变魅力值
+  function changeMlz(dataMlz){
+    mlz = mlz + parseInt(dataMlz);
+    $_mlzCur = $('#mlz-cur');
+    $_mlzCur.css({'opacity':1}).text(dataMlz+'分');
+    $_mlzCur.animate({'opacity':0},500,function(){
+      $('#mlz-total-num').text(mlz);
+    });
+  }
+	
+	//重新开始
+  function initStart(){
+		//初始化魅力值和用户答题记录
+    mlz = 20;
+    step = [];
+		
+		$('#mlz-total-num').text(mlz);
+    $("#out,#start").hide();
+    $('#que-num span').text('1');
+    $('#answer').show();
+    
+    //显示第一题
+    showQue(que1Data);
+  }
+	
 })(jQuery);

@@ -41,7 +41,7 @@ img{
   right:18.75%;
   background: #fff;
   height: 16px;
-  top:185px;
+  top:182px;
   z-index: 10;
   border-radius: 8px;
 }
@@ -60,7 +60,7 @@ img{
 
 #loading-bar-inner .hdj{
   position:absolute;
-  right: -18px;
+  right: -22px;
   top:-1px;
   height: 13.5px;
   width: 35px;
