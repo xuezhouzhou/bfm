@@ -17,9 +17,9 @@ var step = [];
 var que1Data = {
   'queNum':'1',
   'queText':'18生日寿宴<img src="images/emoji-1.png"><img src="images/emoji-1.png">妈咪给了我500块<img src="images/emoji-2.png">自由发挥，揣着五张毛爷爷想想还有点小激动呢！！',
-  'anAtext':'买一条blingbling项链作为18岁的礼物<img src="images/emoji-3.png">“跟着我左手右手，一个慢动作”',
-  'anBtext':'生日PA一定要打扮得美美美<img src="images/emoji-4.png">买条漂亮的<img src="images/emoji-5.png">吧',
-  'anCtext':'妈妈从小对我说，勤俭节约是美德，红票子存<img src="images/emoji-6.png">起来~',
+  'anAtext':'<p class="line3">买一条 blingbling 项链作为18岁的礼物<img src="images/emoji-3.png">“跟着我左手右手，一个慢动作”</p>',
+  'anBtext':'<p class="line2">生日PA一定要打扮得美美美<img src="images/emoji-4.png">买条漂亮的<img src="images/emoji-5.png">吧</p>',
+  'anCtext':'<p class="line2">妈妈从小对我说，勤俭节约是美德，红票子存<img src="images/emoji-6.png">起来~</p>',
   'anAdataKey':'que1-an-a',
   'anBdataKey':'que1-an-b',
   'anCdataKey':'que1-an-c',
@@ -34,9 +34,9 @@ var que1Data = {
 var que2Data = {
   'queNum':'2',
   'queText':'人生就如此的幸运<img src="images/emoji-7.png">谁都不要羡慕我~ 竟然和青梅竹马的李小仁考上了同一所大学<img src="images/emoji-8.png">今天是报道第一天...',
-  'anAtext':'小学妹要配萌萌哒小裙子，箱子什么的就交给学长啦<img src="images/emoji-9.png">',
-  'anBtext':'说好的青梅竹马<img src="images/emoji-10.png">当然要穿同款T恤',
-  'anCtext':'“大河向东流啊”卷起裤脚管<img src="images/emoji-11.png"><img src="images/emoji-11.png">行李箱肩上扛。',
+  'anAtext':'<p class="line2">小学妹要配萌萌哒小裙子，箱子什么的就交给学长啦<img src="images/emoji-9.png"></p>',
+  'anBtext':'<p class="line2">说好的青梅竹马<img src="images/emoji-10.png">当然要穿同款T恤</p>',
+  'anCtext':'<p class="line2">“大河向东流啊”卷起裤脚管<img src="images/emoji-11.png"><img src="images/emoji-11.png">行李箱肩上扛。</p>',
   'anAdataKey':'que2-an-a',
   'anBdataKey':'que2-an-b',
   'anCdataKey':'que2-an-c',
@@ -51,9 +51,9 @@ var que2Data = {
 var que3Data = {
   'queNum':'3',
   'queText':'在一个月黑风高的夜晚<img src="images/emoji-12.png">小仁打电话叫我下楼...',
-  'anAtext':'小鹿乱撞少女怀春<img src="images/emoji-7.png"><img src="images/emoji-13.png">换上蕾丝小连衣裙<img src="images/emoji-14.png">娇羞扭捏地下楼去。',
-  'anBtext':'跟好兄弟夜宵撸串<img src="images/emoji-15.png"><img src="images/emoji-16.png"><img src="images/emoji-17.png">必备宽松大T恤！',
-  'anCtext':'只是下楼拿外卖<img src="images/emoji-18.png"><img src="images/emoji-18.png">睡衣就好啦...',
+  'anAtext':'<p class="line2">小鹿乱撞少女怀春<img src="images/emoji-7.png"><img src="images/emoji-13.png">换上蕾丝小连衣裙<img src="images/emoji-14.png">娇羞扭捏地下楼去。</p>',
+  'anBtext':'<p class="line2">跟好兄弟夜宵撸串<img src="images/emoji-15.png"><img src="images/emoji-16.png"><img src="images/emoji-17.png">必备宽松大T恤！</p>',
+  'anCtext':'<p class="line2">只是下楼拿外卖<img src="images/emoji-18.png"><img src="images/emoji-18.png">睡衣就好啦...</p>',
   'anAdataKey':'que3-an-a',
   'anBdataKey':'que3-an-b',
   'anCdataKey':'que3-an-c',
@@ -102,9 +102,9 @@ var que4bData = {
 var que5aData = {
   'queNum':'5a',
   'queText':'大学生活远比想象中五光十色丰富多彩<img src="images/emoji-25.png">小仁参加了学生会叫我一起去...',
-  'anAtext':'我只想安静低调地当个小学妹，默默陪伴<img src="images/emoji-26.png">小仁<img src="images/emoji-26.png">',
-  'anBtext':'我和小仁是CP<img src="images/emoji-27.png">情侣装穿起来',
-  'anCtext':'不喜欢学生会的氛围<img src="images/emoji-28.png">就是任性，不想去<img src="images/emoji-29.png">',
+  'anAtext':'<p class="line2">我只想安静低调地当个小学妹，默默陪伴<img src="images/emoji-26.png">小仁<img src="images/emoji-26.png"></p>',
+  'anBtext':'<p class="line1">我和小仁是CP<img src="images/emoji-27.png">情侣装穿起来</p>',
+  'anCtext':'<p class="line2">不喜欢学生会的氛围<img src="images/emoji-28.png">就是任性，不想去<img src="images/emoji-29.png"></p>',
   'anAdataKey':'que5a-an-a',
   'anBdataKey':'que5a-an-b',
   'anCdataKey':'que5a-an-c',
@@ -119,9 +119,9 @@ var que5aData = {
 var que5bData = {
   'queNum':'5b',
   'queText':'从小就觉得自己有艺术家的气质<img src="images/emoji-30.png">万丈光芒挡不住<img src="images/emoji-31.png"><img src="images/emoji-31.png">明天就要在社团登台表演啦...怎么装扮自己呢<img src="images/emoji-21.png">',
-  'anAtext':'天生丽质难自弃<img src="images/emoji-32.png">日常服也能HOLD住全场',
-  'anBtext':'省吃俭用特地准备一条美裙备战<img src="images/emoji-33.png"><img src="images/emoji-33.png">',
-  'anCtext':'虽然有点不合身<img src="images/emoji-34.png">但还借了美女室友的小套装',
+  'anAtext':'<p class="line2">天生丽质难自弃<img src="images/emoji-32.png">日常服也能HOLD住全场</p>',
+  'anBtext':'<p class="line2">省吃俭用特地准备一条美裙备战<img src="images/emoji-33.png"><img src="images/emoji-33.png"></p>',
+  'anCtext':'<p class="line2">虽然有点不合身<img src="images/emoji-34.png">但还借了美女室友的小套装</p>',
   'anAdataKey':'que5b-an-a',
   'anBdataKey':'que5b-an-b',
   'anCdataKey':'que5b-an-c',
@@ -137,9 +137,9 @@ var que5bData = {
 var que6aData = {
   'queNum':'6a',
   'queText':'感情不断升温<img src="images/emoji-35.png"><img src="images/emoji-36.png"><img src="images/emoji-37.png"><img src="images/emoji-38.png">我们就是彼此的JackRose。小仁决定要带我去见他最好的兄弟——小明<img src="images/emoji-39.png">这下要穿<img src="images/emoji-21.png">',
-  'anAtext':'当然要给小仁涨面子雪纺<img src="images/emoji-40.png">最容易营造小鸟依人感<img src="images/emoji-40.png">',
-  'anBtext':'怎么美怎么穿<img src="images/emoji-5.png">新买了V领连衣裙呀',
-  'anCtext':'小仁的兄弟就是我的兄弟！又到了夜宵撸串之时<img src="images/emoji-41.png"><img src="images/emoji-41.png">',
+  'anAtext':'<p class="line2">当然要给小仁涨面子雪纺<img src="images/emoji-40.png">最容易营造小鸟依人感<img src="images/emoji-40.png"></p>',
+  'anBtext':'<p class="line2">怎么美怎么穿<img src="images/emoji-5.png">新买了V领连衣裙呀</p>',
+  'anCtext':'<p class="line2">小仁的兄弟就是我的兄弟！又到了夜宵撸串之时<img src="images/emoji-41.png"><img src="images/emoji-41.png"></p>',
   'anAdataKey':'que6a-an-a',
   'anBdataKey':'que6a-an-b',
   'anCdataKey':'que6a-an-c',
@@ -153,10 +153,10 @@ var que6aData = {
 //第6题 乙
 var que6bData = {
   'queNum':'6b',
-  'queText':'热络的社团活动特别容易营造恋爱氛围<img src="images/emoji-42.png"><img src="images/emoji-43.png"><img src="images/emoji-10.png">我也遇见了那个他...我们互生情愫<img src="images/emoji-44.png">除了是小花园的常客，周末也要一起去看电影<img src="images/emoji-45.png">',
-  'anAtext':'坚持自己的休闲风<img src="images/emoji-46.png">自然真实最重要',
-  'anBtext':'听说学长喜欢萝莉风<img src="images/emoji-47.png">这次就为他打造一番<img src="images/emoji-48.png">',
-  'anCtext':'未曾有过约会经验<img src="images/emoji-49.png"><img src="images/emoji-49.png">淑女的感觉应该没有男生会拒绝吧。',
+  'queText':'<p style="font-size:14px">热闹的社团活动特别容易营造恋爱氛围<img src="images/emoji-42.png"><img src="images/emoji-43.png"><img src="images/emoji-10.png">我也遇见了那个他...我们互生情愫<img src="images/emoji-44.png">除了是小花园的常客，周末也要一起去看电影<img src="images/emoji-45.png"></p>',
+  'anAtext':'<p class="line2">坚持自己的休闲风<img src="images/emoji-46.png">自然真实最重要</p>',
+  'anBtext':'<p class="line2">听说学长喜欢萝莉风<img src="images/emoji-47.png">这次就为他打造一番<img src="images/emoji-48.png"></p>',
+  'anCtext':'<p class="line2">未曾有过约会经验<img src="images/emoji-49.png"><img src="images/emoji-49.png">淑女的感觉应该没有男生会拒绝吧。</p>',
   'anAdataKey':'que6b-an-a',
   'anBdataKey':'que6b-an-b',
   'anCdataKey':'que6b-an-c',
@@ -170,10 +170,10 @@ var que6bData = {
 //第7题
 var que7Data = {
   'queNum':'7',
-  'queText':'青春就是耐不住寂寞，忍不住骚动<img src="images/emoji-50.png">一群大学生昂首阔步地踏上了海滩度假之旅<img src="images/emoji-51.png"><img src="images/emoji-52.png"><img src="images/emoji-53.png">天之蓝海之蓝都不及海边的女郎儿~',
-  'anAtext':'海边=<img src="images/emoji-54.png">当然要秀身材。',
-  'anBtext':'翻箱倒柜也只找到连体泳衣<img src="images/emoji-55.png"><img src="images/emoji-55.png">年轻貌美就算是妈妈款也可以驾驭！',
-  'anCtext':'虽然不会游泳<img src="images/emoji-56.png"><img src="images/emoji-56.png">但是也要美美美<img src="images/emoji-57.png">让海风吹起我的长裙摆<img src="images/emoji-58.png">',
+  'queText':'<p style="font-size:14px">青春就是耐不住寂寞，忍不住骚动<img src="images/emoji-50.png">一群大学生昂首阔步地踏上了海滩度假之旅<img src="images/emoji-51.png"><img src="images/emoji-52.png"><img src="images/emoji-53.png">天之蓝海之蓝都不及海边的女郎儿~</p>',
+  'anAtext':'<p class="line1">海边=<img src="images/emoji-54.png">当然要秀身材。</p>',
+  'anBtext':'<p class="line3">翻箱倒柜也只找到连体泳衣<img src="images/emoji-55.png"><img src="images/emoji-55.png">年轻貌美就算是妈妈款也可以驾驭！</p>',
+  'anCtext':'<p class="line2">虽然不会游泳<img src="images/emoji-56.png"><img src="images/emoji-56.png">但是也要美美美<img src="images/emoji-57.png">让海风吹起我的长裙摆<img src="images/emoji-58.png"></p>',
   'anAdataKey':'que7-an-a',
   'anBdataKey':'que7-an-b',
   'anCdataKey':'que7-an-c',
@@ -188,8 +188,8 @@ var que7Data = {
 var que8aData = {
   'queNum':'8a',
   'queText':'究竟是哪里出了错，小仁说我总是任性不懂事<img src="images/emoji-96.png">提出了分手，第一次尝到失恋的痛楚<img src="images/emoji-97.png"><img src="images/emoji-97.png">',
-  'anAtext':'再也不相信爱情，该吃吃该喝喝<img src="images/emoji-98.png"><img src="images/emoji-99.png"><img src="images/emoji-100.png">',
-  'anBtext':'让穿衣助手(logo)帮我改头换面<img src="images/emoji-101.png">前男友只有追悔莫及的份<img src="images/emoji-102.png"><img src="images/emoji-102.png">',
+  'anAtext':'<p class="line2">再也不相信爱情，该吃吃该喝喝<img src="images/emoji-98.png"><img src="images/emoji-99.png"><img src="images/emoji-100.png"></p>',
+  'anBtext':'<p class="line2">让穿衣助手(logo)帮我改头换面<img src="images/emoji-101.png">前男友只有追悔莫及的份<img src="images/emoji-102.png"><img src="images/emoji-102.png"></p>',
   'anAdataKey':'que8b-an-a',
   'anBdataKey':'que8b-an-b',
   'anAdataMlz':'+0',
@@ -202,9 +202,9 @@ var que8aData = {
 var que8bData = {
   'queNum':'8b',
   'queText':'游乐园是热恋必备环节<img src="images/emoji-59.png">想到要和男朋友一起坐旋转木马<img src="images/emoji-60.png">甜蜜蜜...',
-  'anAtext':'虽然游乐设施都不能玩，但想穿小裙子的心就是这么执著啊<img src="images/emoji-61.png"><img src="images/emoji-62.png"><img src="images/emoji-63.png">',
-  'anBtext':'<img src="images/emoji-64.png">情侣T+<img src="images/emoji-65.png">是恋爱的最好宣言!',
-  'anCtext':'cosplay小萝莉<img src="images/emoji-66.png">最适合游乐园的画风啦~',
+  'anAtext':'<p class="line2">虽然游乐设施都不能玩，但想穿小裙子的心就是这么执著啊<img src="images/emoji-61.png"><img src="images/emoji-62.png"><img src="images/emoji-63.png"></p>',
+  'anBtext':'<p class="line2"><img src="images/emoji-64.png">情侣T+<img src="images/emoji-65.png">是恋爱的最好宣言!</p>',
+  'anCtext':'<p class="line2">cosplay小萝莉<img src="images/emoji-66.png">最适合游乐园的画风啦~</p>',
   'anAdataKey':'que8b-an-a',
   'anBdataKey':'que8b-an-b',
   'anCdataKey':'que8b-an-c',
@@ -218,10 +218,10 @@ var que8bData = {
 //第9题 
 var que9Data = {
   'queNum':'9',
-  'queText':'学校撒欢的时间总是特别快<img src="images/emoji-67.png">转眼就放寒假惹，过年妈咪喊我回家吃饭！想到亲戚们的十万个为什么<img src="images/emoji-68.png"><img src="images/emoji-68.png">请叫我女王大人',
-  'anAtext':'看我身披座山雕大虎皮<img src="images/emoji-69.png">一个字！谁还敢问我问题？！',
-  'anBtext':'回家过年嘛<img src="images/emoji-70.png">老棉袄最保暖<img src="images/emoji-71.png">还能塞好多<img src="images/emoji-2.png"><img src="images/emoji-2.png"><img src="images/emoji-2.png">',
-  'anCtext':'新年穿新衣<img src="images/emoji-72.png">告诉乡亲父老什么叫fashion',
+  'queText':'<p style="font-size:14px">学校撒欢的时间总是特别快<img src="images/emoji-67.png">转眼就放寒假惹，过年妈咪喊我回家吃饭！想到亲戚们的十万个为什么<img src="images/emoji-68.png"><img src="images/emoji-68.png">请叫我女王大人</p>',
+  'anAtext':'<p class="line2">看我身披座山雕大虎皮<img src="images/emoji-69.png">一个字！谁还敢问我问题？！</p>',
+  'anBtext':'<p class="line2">回家过年嘛<img src="images/emoji-70.png">老棉袄最保暖<img src="images/emoji-71.png">还能塞好多<img src="images/emoji-2.png"><img src="images/emoji-2.png"><img src="images/emoji-2.png"></p>',
+  'anCtext':'<p class="line2">新年穿新衣<img src="images/emoji-72.png">告诉乡亲父老什么叫fashion</p>',
   'anAdataKey':'que9-an-a',
   'anBdataKey':'que9-an-b',
   'anCdataKey':'que9-an-c',
@@ -236,9 +236,9 @@ var que9Data = {
 var que10Data = {
   'queNum':'10',
   'queText':'虽然内心永远12岁，但为了做一个勇往直前自食其力的少女<img src="images/emoji-73.png">正面临第一次的求职面试<img src="images/emoji-74.png">该怎么准备服装呢<img src="images/emoji-21.png">',
-  'anAtext':'<img src="images/ques-10-a.png">',
-  'anBtext':'<img src="images/ques-10-b.png">',
-  'anCtext':'<img src="images/ques-10-c.png">',
+  'anAtext':'<img src="images/ques-10-a.png"></p>',
+  'anBtext':'<img src="images/ques-10-b.png"></p>',
+  'anCtext':'<img src="images/ques-10-c.png"></p>',
   'anAdataKey':'que10-an-a',
   'anBdataKey':'que10-an-b',
   'anCdataKey':'que10-an-c',
@@ -253,9 +253,9 @@ var que10Data = {
 var que11aData = {
   'queNum':'11a',
   'queText':'<img src="images/emoji-75.png"><img src="images/emoji-76.png"><img src="images/emoji-77.png">不知不觉间大家都离开了校园<img src="images/emoji-78.png">今天要参加老同学的聚会，但是听说有前男友...我一定要',
-  'anAtext':'美美美<img src="images/emoji-79.png">',
-  'anBtext':'美美美<img src="images/emoji-80.png">',
-  'anCtext':'美美美<img src="images/emoji-81.png">',
+  'anAtext':'<p class="line1">美美美<img src="images/emoji-79.png"></p>',
+  'anBtext':'<p class="line1">美美美<img src="images/emoji-80.png"></p>',
+  'anCtext':'<p class="line1">美美美<img src="images/emoji-81.png"></p>',
   'anAdataKey':'que11a-an-a',
   'anBdataKey':'que11a-an-b',
   'anCdataKey':'que11a-an-c',
@@ -304,9 +304,9 @@ var que12Data = {
 var que13aData = {
   'queNum':'13a',
   'queText':'不知道是不是年会表现出彩<img src="images/emoji-88.png">得到老板的器重，交给我一件她出席活动要穿的羊绒大衣帮忙清洁<img src="images/emoji-89.png">这可是个表现的机会<img src="images/emoji-90.png">',
-  'anAtext':'送去专业洗衣店干洗',
-  'anBtext':'带回家自己亲自清洁',
-  'anCtext':'我的衣服都是钟点工阿姨洗的，干净又清香',
+  'anAtext':'<p class="line2">送去专业洗衣店干洗</p>',
+  'anBtext':'<p class="line2">带回家自己亲自清洁</p>',
+  'anCtext':'<p class="line2">我的衣服都是钟点工阿姨洗的，干净又清香</p>',
   'anAdataKey':'que13a-an-a',
   'anBdataKey':'que13a-an-b',
   'anCdataKey':'que13a-an-c',
@@ -321,9 +321,9 @@ var que13aData = {
 var que13bData = {
   'queNum':'13b',
   'queText':'终于我的爱情也开花结果<img src="images/emoji-91.png">明天要去拍婚纱照<img src="images/emoji-92.png">可是我腰好粗...',
-  'anAtext':'高腰大蓬裙的设计<img src="images/emoji-93.png"><img src="images/emoji-93.png">胸下面就是腿',
-  'anBtext':'超长鱼尾裙，足以引开注意的焦点<img src="images/emoji-94.png">',
-  'anCtext':'像昆凌一样的露背款<img src="images/emoji-95.png">美到无法抵抗',
+  'anAtext':'<p class="line2">高腰大蓬裙的设计<img src="images/emoji-93.png"><img src="images/emoji-93.png">胸下面就是腿</p>',
+  'anBtext':'<p class="line2">超长鱼尾裙，足以引开注意的焦点<img src="images/emoji-94.png"></p>',
+  'anCtext':'<p class="line2">像昆凌一样的露背款<img src="images/emoji-95.png">美到无法抵抗</p>',
   'anAdataKey':'que13b-an-a',
   'anBdataKey':'que13b-an-b',
   'anCdataKey':'que13b-an-c',
@@ -338,9 +338,9 @@ var que13bData = {
 var que14aData = {
   'queNum':'14a',
   'queText':'工作顺风顺水<img src="images/emoji-103.png"><img src="images/emoji-103.png">母上大人却按捺不住了，着急火燎地给我安排相亲<img src="images/emoji-104.png">',
-  'anAtext':'相亲这种老派的桥段怎么能靠谱<img src="images/emoji-105.png">买菜套装敷衍一下可以吗',
-  'anBtext':'母亲果然懂我，找对象一定要认真对待<img src="images/emoji-106.png"><img src="images/emoji-107.png">要使出桃花妆大绝招啦',
-  'anCtext':'正值工作上升期，可是也不想拒绝他<img src="images/emoji-108.png"><img src="images/emoji-108.png">先保持联系让我考虑考虑',
+  'anAtext':'<p class="line2">相亲这种老派的桥段怎么能靠谱<img src="images/emoji-105.png">买菜套装敷衍一下可以吗</p>',
+  'anBtext':'<p class="line2">母亲果然懂我，找对象一定要认真对待<img src="images/emoji-106.png"><img src="images/emoji-107.png">要使出桃花妆大绝招啦</p>',
+  'anCtext':'<p class="line2">正值工作上升期，可是也不想拒绝他<img src="images/emoji-108.png"><img src="images/emoji-108.png">先保持联系让我考虑考虑</p>',
   'anAdataKey':'que14a-an-a',
   'anBdataKey':'que14a-an-b',
   'anCdataKey':'que14a-an-c',
@@ -355,9 +355,9 @@ var que14aData = {
 var que14bData = {
   'queNum':'14b',
   'queText':'婚期日渐临近<img src="images/emoji-109.png">也是时候准备最后的<img src="images/emoji-110.png"><img src="images/emoji-110.png">单身派对了',
-  'anAtext':'约上自己的闺蜜<img src="images/emoji-111.png"><img src="images/emoji-111.png">搞一场变装PA<img src="images/emoji-112.png">变身性感猫女喵~',
-  'anBtext':'最后的疯狂，先把未婚夫存档<img src="images/emoji-113.png"><img src="images/emoji-114.png"><img src="images/emoji-115.png"><img src="images/emoji-116.png">来个不醉不归！',
-  'anCtext':'以派对为借口，实际上相约闺蜜一起制作婚礼蛋糕<img src="images/emoji-117.png"><img src="images/emoji-117.png">给宝贝一个超级大惊喜',
+  'anAtext':'<p class="line2">约上自己的闺蜜<img src="images/emoji-111.png"><img src="images/emoji-111.png">搞一场变装PA<img src="images/emoji-112.png">变身性感猫女喵~</p>',
+  'anBtext':'<p class="line2">最后的疯狂，先把未婚夫存档<img src="images/emoji-113.png"><img src="images/emoji-114.png"><img src="images/emoji-115.png"><img src="images/emoji-116.png">来个不醉不归！</p>',
+  'anCtext':'<p class="line2">以派对为借口，实际上相约闺蜜一起制作婚礼蛋糕<img src="images/emoji-117.png"><img src="images/emoji-117.png">给宝贝一个超级大惊喜</p>',
   'anAdataKey':'que14b-an-a',
   'anBdataKey':'que14b-an-b',
   'anCdataKey':'que14b-an-c',
@@ -389,9 +389,9 @@ var que15aData = {
 var que15bData = {
   'queNum':'15b',
   'queText':'婚礼上最动人的画面就是交换<img src="images/emoji-120.png">...',
-  'anAtext':'只要光面对戒，里面刻上我们的名字<img src="images/emoji-121.png"><img src="images/emoji-121.png">是独属于我们的意义',
-  'anBtext':'当然要3克拉的<img src="images/emoji-109.png">，满满幸福都要溢出来了',
-  'anCtext':'不需要戒指了<img src="images/emoji-122.png"><img src="images/emoji-123.png"><img src="images/emoji-124.png">简单的仪式后旅行结婚吧',
+  'anAtext':'<p class="line2">只要光面对戒，里面刻上我们的名字<img src="images/emoji-121.png"><img src="images/emoji-121.png">是独属于我们的意义</p>',
+  'anBtext':'<p class="line2">当然要3克拉的<img src="images/emoji-109.png">，满满幸福都要溢出来了</p>',
+  'anCtext':'<p class="line2">不需要戒指了<img src="images/emoji-122.png"><img src="images/emoji-123.png"><img src="images/emoji-124.png">简单的仪式后旅行结婚吧</p>',
   'anAdataKey':'que15b-an-a',
   'anBdataKey':'que15b-an-b',
   'anCdataKey':'que15b-an-c',
@@ -615,9 +615,9 @@ $('#answer .xx').on('touchstart',function(){
   var dataMlz = $(this).attr('data-mlz');
 
   //还原
-  $("#answer .answerA .qq img").attr('src','images/qq-a.png');
-  $("#answer .answerB .qq img").attr('src','images/qq-b.png');
-  $("#answer .answerC .qq img").attr('src','images/qq-c.png');
+  $("#answerA .qq img").attr('src','images/qq-a.png');
+  $("#answerB .qq img").attr('src','images/qq-b.png');
+  $("#answerC .qq img").attr('src','images/qq-c.png');
   
   //记录用户的操作
   step.push(dataKey);
@@ -628,7 +628,7 @@ $('#answer .xx').on('touchstart',function(){
   //更新魅力值
   changeMlz(dataMlz);
 
-});
+})
 
 
 //OUT页 回到18岁
@@ -684,26 +684,26 @@ function showQue(option){
   $('#que-num span').text(option.queNum);
   
   $_quetion = $('#question');
-  $_answerA = $("#answer .answerA");
-  $_answerB = $("#answer .answerB");
-  $_answerC = $("#answer .answerC");
+  $_answerA = $("#answerA");
+  $_answerB = $("#answerB");
+  $_answerC = $("#answerC");
 
   $_quetion.empty().append(option.queText);
 
   if(option.type=='pic'){
-    $_answerA.addClass('pic pic-a');
-    $_answerB.addClass('pic pic-b');
-    $_answerC.addClass('pic pic-c');
-    var topA = "52%";
-    var topB = "47%";
-    var topC = "52%";
+    $_answerA.addClass('pic pic-a').removeClass('text texta');
+    $_answerB.addClass('pic pic-b').removeClass('text textb');
+    $_answerC.addClass('pic pic-c').removeClass('text textc');
+    var topA = "280px";
+    var topB = "260px";
+    var topC = "280px";
   }else if(option.type=='text'){
-    $_answerA.removeClass('pic pic-a');
-    $_answerB.removeClass('pic pic-b');
-    $_answerC.removeClass('pic pic-c');
-    var topA = "41%";
-    var topB = "62%";
-    var topC = "83%";
+    $_answerA.removeClass('pic pic-a').addClass('text texta');
+    $_answerB.removeClass('pic pic-b').addClass('text textb');
+    $_answerC.removeClass('pic pic-c').addClass('text textc');
+    var topA = "208px";
+    var topB = "302px";
+    var topC = "396px";
   }
 
   if(option.anNum==2){
@@ -712,28 +712,28 @@ function showQue(option){
     $_answerC.show();
   }
 
-  $_answerA.css({top:'110%','display':'block'})
+  $_answerA.css({top:'700px','display':'block'})
            .attr('data-key',option.anAdataKey)
            .attr('data-mlz',option.anAdataMlz);
-  $_answerB.css({top:'110%','display':'block'})
+  $_answerB.css({top:'700px','display':'block'})
            .attr('data-key',option.anBdataKey)
            .attr('data-mlz',option.anBdataMlz);
 
-  $_answerA.find('.text').empty().append(option.anAtext);
-  $_answerB.find('.text').empty().append(option.anBtext);         
+  $_answerA.find('.con').empty().append(option.anAtext);
+  $_answerB.find('.con').empty().append(option.anBtext);         
 
   if(option.anNum==3){
-    $_answerC.css({top:'110%','display':'block'})
+    $_answerC.css({top:'700px','display':'block'})
            .attr('data-key',option.anCdataKey)
            .attr('data-mlz',option.anCdataMlz);
 
-    $_answerC.find('.text').empty().append(option.anCtext);       
+    $_answerC.find('.con').empty().append(option.anCtext);       
   }
 
   $_answerA.animate({top:topA},qqTime,function(){
     $_answerB.animate({top:topB},qqTime+100,function(){
       if(option.anNum==3){
-        $_answerC.animate({top:topC},qqTime+200);
+        $_answerC.animate({top:topC},qqTime+100);
       }
     });
   });
@@ -822,22 +822,25 @@ function changeQue(dataKey){
       showQue(que6bData);
       break;
 
-    //第6题甲 ABC 切第7题
+    //第6题甲乙 ABC 切第7题
     case 'que6a-an-a':
     case 'que6a-an-b':
     case 'que6a-an-c':
+    case 'que6b-an-a':
+    case 'que6b-an-b':
+    case 'que6b-an-c':
       showQue(que7Data);  
       break;
 
-    //第7题ABC 切第8题(需根据4、6题的选择进一步确定)
+    //第7题ABC 切第8题(需根据4甲、6甲题的选择进一步确定)
     case 'que7-an-a':
     case 'que7-an-b':
     case 'que7-an-c':
       //4甲BC or 6甲BC 切8题甲   
       if(step[3]=='que4a-an-b' || step[3]=='que4a-an-c' || step[5]=='que6a-an-b' || step[5]=='que6a-an-c'){
         showQue(que8aData);
-      //4甲A 且 6甲A  切8题乙
-      }else if(step[3]=='que4a-an-a' && step[5]=='que6a-an-a'){
+      //4甲A 且 6甲A  或 6乙ABC 切8题乙
+      }else if((step[3]=='que4a-an-a' && step[5]=='que6a-an-a') || step[5]=='que6b-an-a' || step[5]=='que6b-an-b' || step[5]=='que6b-an-c'){
         showQue(que8bData);
       }
       break;
@@ -883,10 +886,10 @@ function changeQue(dataKey){
     case 'que10-an-a':
     case 'que10-an-b':
     case 'que10-an-c':
-      //第八题答甲 切11题甲
+      //第8题答甲 切11题甲
       if(step[7]=='que8a-an-a' || step[7]=='que8a-an-b'){
         showQue(que11aData);
-      //第八题答乙 切11题乙
+      //第8题答乙 切11题乙
       }else if(step[7]=='que8b-an-a' || step[7]=='que8b-an-b' || step[7]=='que8b-an-c'){
         showQue(que11bData);
       }
