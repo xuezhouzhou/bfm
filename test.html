@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>微信TEST</title>
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+  
+<div class="container">
+  <input id="url" style="margin:10px 0" type="text" class="form-control" placeholder="请输入URL地址">
+  <button id="ip4" class="btn btn-success">iPhone4</button>
+  <button id="ip5" class="btn btn-primary">iPhone5</button>
+  <button id="ip6" class="btn btn-danger">iPhone6</button>
+  <button id="ip6p" class="btn btn-default">iPhone6 Plus</button>
+</div>
+
+
+
+<script>
+var oIp4 = document.getElementById('ip4');
+var oIp5 = document.getElementById('ip5');
+var oIp6 = document.getElementById('ip6');
+var oIp6p = document.getElementById('ip6p');
+var oURL = document.getElementById('url');
+
+
+
+oIp4.onclick = function(){
+  var url = oURL.value + ""
+  window.open(url,'iPhone4','status=no,scrollbars=no,resize=no,toolbar=no,height=416,width=320');
+}
+oIp5.onclick = function(){
+  var url = oURL.value + ""
+  window.open(url,'iPhone5','status=no,scrollbars=no,resize=no,toolbar=no,height=504,width=320');
+}
+oIp6.onclick = function(){
+  var url = oURL.value + ""
+  window.open(url,'iPhone6','status=no,scrollbars=no,resize=no,toolbar=no,height=603,width=375');
+}
+oIp6p.onclick = function(){
+  var url = oURL.value + ""
+  window.open(url,'iPhone6p','status=no,scrollbars=no,resize=no,toolbar=no,height=896,width=540');
+}
+
+//window.open(APP_PATH+'/Index/termsAndConditions','name','status=no,scrollbars=yes,resize=yes,toolbar=no,height=400,width=350');
+</script>
+</body>
+</html>
