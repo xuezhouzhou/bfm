@@ -453,6 +453,9 @@ var imgs = [
   'happy-xln.png',
   'happy-xs.png',
   'happy-zms.png',
+  'yy-yx.png',
+  'yy-ys.png',
+  'yy-zx.png',
   'emoji-1.png',
   'emoji-2.png',
   'emoji-3.png',
@@ -1080,5 +1083,6 @@ function initStart(){
   showQue(que1Data);
 }
 
+console.log(imgs.length);
 
 })(jQuery);
