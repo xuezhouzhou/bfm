@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>白富美养成记</title>
+<link href="css/loading.css" rel="stylesheet">
+<link href="css/start.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Loadind页遮罩层 -->
+<div id="loading-hover"></div>
+
+
+<!-- 进度条 -->
+<div id="loading-bar-wrap">
+  <div id="loading-bar">
+    <div id="loading-bar-inner">
+      <div class="hdj"><img src="images/loading-hdj.png"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 开始页 -->
+<div id="start">
+  <div id="start-inner">
+    <div id="start-kv"><img src="images/start-kv.png"></div>
+    <div id="start-btn"><img src="images/start-btn.png"></div>  
+  </div>
+</div>
+
+<script>
+document.ontouchmove = function(e){ e.preventDefault();}
+document.documentElement.style.webkitTouchCallout = "none"; 
+</script>
+</body>
+</html>

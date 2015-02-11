@@ -2,6 +2,7 @@ document.ontouchmove = function(e){ e.preventDefault();}
 document.documentElement.style.webkitTouchCallout = "none";
 
 (function($){
+
 //魅力值
 var mlz = 20;
 
@@ -11,17 +12,17 @@ var qqTime = 300;
 //记录用户每部选择的选项
 var step = [];
 
-//加载资源
+
+//预加载资源
 var totalRes = imgs.length;
 var curResNum  = 0;
-
 for(var i=0;i<totalRes;i++){
   var image = new Image(); 
   image.src = "images/" + imgs[i];
 
   image.onload = function(){
     curResNum++;
-    var bfb = (curResNum/totalRes)*98 + '%';
+    var bfb = (curResNum/totalRes)*100 + '%';
     $('#loading-bar-inner').css({width:bfb})
 
     if(curResNum==totalRes){
@@ -483,7 +484,6 @@ function changeQue(dataKey){
   }
 }
 
-
 //改变魅力值
 function changeMlz(dataMlz){
   mlz = mlz + parseInt(dataMlz);
@@ -510,7 +510,5 @@ function initStart(){
   //显示第一题
   showQue(que1Data);
 }
-
-console.log(imgs.length);
 
 })(jQuery);

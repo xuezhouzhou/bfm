@@ -5,20 +5,20 @@
   bottom:0;
   left:0;
   background:url(../images/start-bg.jpg);
-  background-size:16%;
+  background-size:15%;
   z-index:8;
 }
 
 #start-inner{
   margin: 0 auto;
-  width: 320px;
-  height:100%;
-
+  max-width: 540px;
+  overflow: hidden;
 }
 
 #start-kv{
   width:75%;
-  margin: 10px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #start-kv img,
@@ -28,6 +28,40 @@
 }
 
 #start-btn{
-  width: 71.875%;
-  margin: 15px auto;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* iphone4 微信中可视区域高度416px */
+@media (min-height:0px) and (max-height:416px)  {
+  #start-kv{
+    width:68%;
+    margin-top: 10px;
+  }
+  #start-btn{
+    width: 68%;
+    margin-top: 12px;
+  }
+}
+
+/* iphone5   微信中可视区域高度504px */
+@media (min-height:417px) and (max-height:504px)  {
+  #start-kv{
+    margin-top: 25px;
+  }
+  #start-btn{
+    margin-top: 26px;
+  }
+}  
+
+
+/* iphone6  微信中可视区域高度603px */
+@media  (min-height:505px) and (max-height:603px)  {
+  #start-kv{
+    margin-top: 30px;
+  }
+  #start-btn{
+    margin-top: 36px;
+  }
+} 
