@@ -323,7 +323,8 @@
 #answer .pic .con img{
   width: 66px;
   height: 146px;
-  margin: 7px
+  margin: 7px;
+  border-radius:5px;
 }
 
 #answer .pic-a{

@@ -68,9 +68,9 @@ var que3Data = {
 var que4aData = {
   'queNum':'4a',
   'queText':'夏天夏天悄悄过去留下小秘密<img src="images/emoji-19.png"><img src="images/emoji-19.png">就这样展开了我们的甜蜜爱恋<img src="images/emoji-20.png">好期待第一次约会~该穿什么好呢<img src="images/emoji-21.png">',
-  'anAtext':'<img src="images/ques-4a-a.png">',
-  'anBtext':'<img src="images/ques-4a-b.png">',
-  'anCtext':'<img src="images/ques-4a-c.png">',
+  'anAtext':'<img src="images/ques-4a-a.jpg">',
+  'anBtext':'<img src="images/ques-4a-b.jpg">',
+  'anCtext':'<img src="images/ques-4a-c.jpg">',
   'anAdataKey':'que4a-an-a',
   'anBdataKey':'que4a-an-b',
   'anCdataKey':'que4a-an-c',
@@ -85,9 +85,9 @@ var que4aData = {
 var que4bData = {
   'queNum':'4b',
   'queText':'我和小仁终究还是渐行渐远<img src="images/emoji-22.png"><img src="images/emoji-23.png">接下来孤身一人闯江湖，一大波社团面试正在接近<img src="images/emoji-24.png">怎么穿<img src="images/emoji-21.png">',
-  'anAtext':'<img src="images/ques-4b-a.png">',
-  'anBtext':'<img src="images/ques-4b-b.png">',
-  'anCtext':'<img src="images/ques-4a-c.png">',//与4甲C选项相同
+  'anAtext':'<img src="images/ques-4b-a.jpg">',
+  'anBtext':'<img src="images/ques-4b-b.jpg">',
+  'anCtext':'<img src="images/ques-4a-c.jpg">',//与4甲C选项相同
   'anAdataKey':'que4b-an-a',
   'anBdataKey':'que4b-an-b',
   'anCdataKey':'que4b-an-c',
@@ -236,9 +236,9 @@ var que9Data = {
 var que10Data = {
   'queNum':'10',
   'queText':'虽然内心永远12岁，但为了做一个勇往直前自食其力的少女<img src="images/emoji-73.png">正面临第一次的求职面试<img src="images/emoji-74.png">该怎么准备服装呢<img src="images/emoji-21.png">',
-  'anAtext':'<img src="images/ques-10-a.png"></p>',
-  'anBtext':'<img src="images/ques-10-b.png"></p>',
-  'anCtext':'<img src="images/ques-10-c.png"></p>',
+  'anAtext':'<img src="images/ques-10-a.jpg"></p>',
+  'anBtext':'<img src="images/ques-10-b.jpg"></p>',
+  'anCtext':'<img src="images/ques-10-c.jpg"></p>',
   'anAdataKey':'que10-an-a',
   'anBdataKey':'que10-an-b',
   'anCdataKey':'que10-an-c',
@@ -253,9 +253,9 @@ var que10Data = {
 var que11aData = {
   'queNum':'11a',
   'queText':'<img src="images/emoji-75.png"><img src="images/emoji-76.png"><img src="images/emoji-77.png">不知不觉间大家都离开了校园<img src="images/emoji-78.png">今天要参加老同学的聚会，但是听说有前男友...我一定要',
-  'anAtext':'<p class="line1">美美美<img src="images/emoji-79.png"></p>',
-  'anBtext':'<p class="line1">美美美<img src="images/emoji-80.png"></p>',
-  'anCtext':'<p class="line1">美美美<img src="images/emoji-81.png"></p>',
+  'anAtext':'<p class="line1">美美美<img src="images/emoji-79.jpg"></p>',
+  'anBtext':'<p class="line1">美美美<img src="images/emoji-80.jpg"></p>',
+  'anCtext':'<p class="line1">美美美<img src="images/emoji-81.jpg"></p>',
   'anAdataKey':'que11a-an-a',
   'anBdataKey':'que11a-an-b',
   'anCdataKey':'que11a-an-c',
@@ -270,9 +270,9 @@ var que11aData = {
 var que11bData = {
   'queNum':'11b',
   'queText':'事业爱情都已经走上正轨<img src="images/emoji-82.png">宝贝说周末要带我去见他父母<img src="images/emoji-83.png"><img src="images/emoji-84.png">好紧张，裙子应该穿多长呢？',
-  'anAtext':'<img src="images/ques-11b-a.png">',
-  'anBtext':'<img src="images/ques-11b-b.png">',
-  'anCtext':'<img src="images/ques-11b-c.png">',
+  'anAtext':'<img src="images/ques-11b-a.jpg">',
+  'anBtext':'<img src="images/ques-11b-b.jpg">',
+  'anCtext':'<img src="images/ques-11b-c.jpg">',
   'anAdataKey':'que11b-an-a',
   'anBdataKey':'que11b-an-b',
   'anCdataKey':'que11b-an-c',
@@ -287,9 +287,9 @@ var que11bData = {
 var que12Data = {
   'queNum':'12',
   'queText':'第一次参加公司年会<img src="images/emoji-85.png"><img src="images/emoji-86.png"><img src="images/emoji-87.png">女同事们争奇斗艳百花齐放<img src="images/emoji-81.png">要怎么才可以脱颖而出呢？',
-  'anAtext':'<img src="images/ques-12-a.png">',
-  'anBtext':'<img src="images/ques-12-b.png">',
-  'anCtext':'<img src="images/ques-12-c.png">',
+  'anAtext':'<img src="images/ques-12-a.jpg">',
+  'anBtext':'<img src="images/ques-12-b.jpg">',
+  'anCtext':'<img src="images/ques-12-c.jpg">',
   'anAdataKey':'que12-an-a',
   'anBdataKey':'que12-an-b',
   'anCdataKey':'que12-an-c',
@@ -372,9 +372,9 @@ var que14bData = {
 var que15aData = {
   'queNum':'15a',
   'queText':'一切努力都是值得的，老板最后给了我升职的机会<img src="images/emoji-118.png">为了感谢大家，我一定要组织一场庆祝party<img src="images/emoji-119.png">',
-  'anAtext':'<img src="images/ques-15a-a.png">',
-  'anBtext':'<img src="images/ques-15a-b.png">',
-  'anCtext':'<img src="images/ques-15a-c.png">',
+  'anAtext':'<img src="images/ques-15a-a.jpg">',
+  'anBtext':'<img src="images/ques-15a-b.jpg">',
+  'anCtext':'<img src="images/ques-15a-c.jpg">',
   'anAdataKey':'que15a-an-a',
   'anBdataKey':'que15a-an-b',
   'anCdataKey':'que15a-an-c',
@@ -409,23 +409,23 @@ var imgs = [
   'start-kv.png',
   'start-btn.png',
   'start-btn-touch.png',
-  'ques-4a-a.png',
-  'ques-4a-b.png',
-  'ques-4a-c.png',
-  'ques-4b-a.png',
-  'ques-4b-b.png',
-  'ques-10-a.png',
-  'ques-10-b.png',
-  'ques-10-c.png',
-  'ques-11b-a.png',
-  'ques-11b-b.png',
-  'ques-11b-c.png',
-  'ques-12-a.png',
-  'ques-12-b.png',
-  'ques-12-c.png',
-  'ques-15a-a.png',
-  'ques-15a-b.png',
-  'ques-15a-c.png',
+  'ques-4a-a.jpg',
+  'ques-4a-b.jpg',
+  'ques-4a-c.jpg',
+  'ques-4b-a.jpg',
+  'ques-4b-b.jpg',
+  'ques-10-a.jpg',
+  'ques-10-b.jpg',
+  'ques-10-c.jpg',
+  'ques-11b-a.jpg',
+  'ques-11b-b.jpg',
+  'ques-11b-c.jpg',
+  'ques-12-a.jpg',
+  'ques-12-b.jpg',
+  'ques-12-c.jpg',
+  'ques-15a-a.jpg',
+  'ques-15a-b.jpg',
+  'ques-15a-c.jpg',
   'answer-header.jpg',
   'answer-bottom.png',
   'answer-icon-mlz.png',
@@ -730,13 +730,14 @@ function showQue(option){
     $_answerC.find('.con').empty().append(option.anCtext);       
   }
 
-  $_answerA.animate({top:topA},qqTime,function(){
-    $_answerB.animate({top:topB},qqTime+100,function(){
-      if(option.anNum==3){
-        $_answerC.animate({top:topC},qqTime+100);
-      }
-    });
-  });
+
+  
+  $_answerA.animate({top:topA},qqTime);
+  $_answerB.animate({top:topB},qqTime);
+
+  if(option.anNum==3){
+    $_answerC.animate({top:topC},qqTime);
+  }  
 }
 
 
@@ -1057,9 +1058,11 @@ function changeMlz(dataMlz){
   mlz = mlz + parseInt(dataMlz);
   $_mlzCur = $('#mlz-cur');
   $_mlzCur.css({'opacity':1}).text(dataMlz+'分');
-  $_mlzCur.animate({'opacity':0},500,function(){
-    $('#mlz-total-num').text(mlz);
-  });
+  setTimeout(function(){
+    $_mlzCur.animate({'opacity':0},500,function(){
+      $('#mlz-total-num').text(mlz);
+    });
+  },500);
 }
 
 //重新开始
