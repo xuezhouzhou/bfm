@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>白富美养成记</title>
+<style type="text/css">
+*{ margin: 0; padding: 0;} 
+html,body{ height: 100% } 
+</style>
+<link href="css/answer.css" rel="stylesheet">
+</head>
+<body>
+<!-- 答题页面 -->
+<div id="answer">
+  <!-- 头部背景 -->
+  <div id="answer-header">
+    <div id="answer-header-inner">
+      <img src="images/answer-header.jpg">
+      <img src="images/answer-header.jpg">
+      <img src="images/answer-header.jpg">
+      <img src="images/answer-header.jpg">
+      <img src="images/answer-header.jpg">
+      <img src="images/answer-header.jpg">    
+    </div>
+  </div>
+
+  <div id="answer-inner">
+    <!-- 题号 -->
+    <div id="que-num"><span>1</span></div>
+
+    <!-- 魅力值 -->
+    <div id="mlz-wrap">
+      <div id="mlz-cur"></div>
+      <div id="mlz-total">
+        <div class="icon"><img src="images/answer-icon-mlz.png"></div>
+        <div class="lab">魅力值&nbsp;<span id="mlz-total-num">20</span></div>
+      </div>
+    </div>
+
+    <!-- 问题 -->
+    <div id="question">18生日寿宴<img src="images/emoji-1.png"><img src="images/emoji-1.png">妈咪给了我500块<img src="images/emoji-2.png">自由发挥，揣着五张毛爷爷想想还有点小激动呢！！</div>
+
+    <!-- 选项 -->
+    <div id="answerA" class="xx text texta">
+      <div class="con">
+        <p class="line3">买一条 blingbling 项链作为18岁的礼物<img src="images/emoji-3.png">“跟着我左手右手，一个慢动作”</p>
+      </div> 
+      <div class="qq"><img src="images/qq-a.png"></div>
+      <div class="yy"><img src="images/yy-yx.png"></div>
+    </div>
+    
+    <div id="answerB" class="xx text textb">
+      <div class="con">
+        <p class="line2"><p class="line2">生日PA一定要打扮得美美美<img src="images/emoji-4.png">买条漂亮的<img src="images/emoji-5.png">吧</p></p>
+      </div>
+      <div class="qq"><img src="images/qq-b.png"></div>
+      <div class="yy zx"><img src="images/yy-zx.png"></div>
+      <div class="yy ys"><img src="images/yy-ys.png"></div>
+    </div>
+
+    <div id="answerC" class="xx text textc">
+      <div class="con">
+        <p class="line2">妈妈从小对我说，勤俭节约是美德，红票子存<img src="images/emoji-6.png">起来~</p>
+      </div>
+      <div class="qq"><img src="images/qq-c.png"></div>
+      <div class="yy"><img src="images/yy-yx.png"></div>
+    </div>
+  </div>
+  
+  <!-- 底部花纹 -->
+  <div id="answer-bottom">
+    <div id="answer-bottom-inner">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png">
+      <img src="images/answer-bottom.png"> 
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/res.js"></script>
+<script src="js/main.js"></script>
+<script>
+var deviceHeight = $('body').height();
+var textAtop = '';
+var textBtop = '';
+var textCtop = '';
+var picAtop = '';
+var picBtop = '';
+var picCtop = '';
+
+if(deviceHeight<=416){
+  textAtop = '200px';
+  textBtop = '265px';
+  textCtop = '330px';
+  picAtop = '225px';
+  picBtop = '210px';
+  picCtop = '225px';
+  $.getScript('js/data-iphone4.js',run); 
+}else if(deviceHeight>416 && deviceHeight<=504){
+  $.getScript('js/data-iphone5.js',run);
+  textAtop = '208px';
+  textBtop = '302px';
+  textCtop = '396px';
+  picAtop = '100px';
+  picBtop = '100px';
+  picCtop = '100px'; 
+}else if(deviceHeight>505 && deviceHeight<=603){
+  $.getScript('js/data-iphone6.js',run);
+  textAtop = '200px';
+  textBtop = '265px';
+  textCtop = '330px';
+}
+</script>
+</body>
+</html>
