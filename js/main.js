@@ -74,7 +74,7 @@ var run = function(){
     $(this).find('img').attr('src','images/out-btn-start-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/out-btn-start.png');
-    initStart();
+    showStart();
   });
 
   //OUT页 我要吐槽
@@ -103,6 +103,12 @@ var run = function(){
     $("#out-content").text(option.content);
     $("#answer").hide();
     $("#out").show();
+  }
+
+  //显示开始页
+  function showStart(){
+    $("#out").hide();
+    $("#start").show();
   }
 
   //显示happy页
@@ -517,6 +523,9 @@ var run = function(){
     //显示第一题
     showQue(que1Data);
   }
+
+
+
   
   //showQue(que15bData);
 }
