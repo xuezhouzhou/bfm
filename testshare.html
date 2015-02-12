@@ -12,12 +12,7 @@
 var signature = localStorage.signature ? localStorage.signature : '';
 var accessToken = localStorage.accessToken ? localStorage.accessToken : '';
 
-
-
-
 if(accessToken!=''){
-  var timestamp = Date.parse(new Date()); 
-  var nonceStr = Math.round() + '';
   //获取accessToken
   $.ajax({
     type: "GET",
@@ -26,6 +21,7 @@ if(accessToken!=''){
     async: false,
     dataType:'json',
     success: function(data){
+      console.log(data);
       //缓存accessToken
       localStorage.accessToken = data.access_token;
       accessToken = data.access_token;
@@ -34,6 +30,10 @@ if(accessToken!=''){
 }
 
 if(signature!="" && accessToken!=""){
+
+  var timestamp = Date.parse(new Date()); 
+  var nonceStr = Math.round() + '';
+
   $.ajax({
     type: "GET",
     url:'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='+ accessToken +'&type=jsapi',
