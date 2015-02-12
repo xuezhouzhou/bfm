@@ -12,6 +12,8 @@ var run = function(){
   //记录用户每部选择的选项
   var step = [];
 
+  //复活机会 默认一次
+  var restart = 1;
 
   //预加载资源
   var totalRes = imgs.length;
@@ -42,30 +44,25 @@ var run = function(){
     $(this).find('.qq img').attr('src','images/qq-bom.png');
 
   }).on('touchend',function(){
-    
+    $(this).removeClass('xx-touch');
+
+    //还原
+    $("#answerA .qq img").attr('src','images/qq-a.png');
+    $("#answerB .qq img").attr('src','images/qq-b.png');
+    $("#answerC .qq img").attr('src','images/qq-c.png');  
+
     var dataKey = $(this).attr('data-key');
     var dataMlz = $(this).attr('data-mlz');
 
-    
-    
     //记录用户的操作
     step.push(dataKey);
     
-    $_this = $(this);
-
     //更新魅力值
-    changeMlz(dataMlz,function(){
-      changeQue(dataKey);
-      $_this.removeClass('xx-touch');
-      //还原
-      $("#answerA .qq img").attr('src','images/qq-a.png');
-      $("#answerB .qq img").attr('src','images/qq-b.png');
-      $("#answerC .qq img").attr('src','images/qq-c.png');
-    });
+    changeMlz(dataMlz);
 
-    //切题
-    //changeQue(dataKey);
-
+    //换下一题
+    changeQue(dataKey);
+    
   });
 
 
@@ -497,16 +494,12 @@ var run = function(){
   }
 
   //改变魅力值
-  function changeMlz(dataMlz,fn){
+  function changeMlz(dataMlz){
     mlz = mlz + parseInt(dataMlz);
     $_mlzCur = $('#mlz-cur');
     $_mlzCur.css({'opacity':1}).text(dataMlz+'分');
-    $_mlzCur.animate({'opacity':0},1000,function(){
-      $('#mlz-total-num').text(mlz);
-      fn();
-    });
-
-    
+    $_mlzCur.animate({'opacity':0},800);
+    $('#mlz-total-num').text(mlz);
   }
 
   //重新开始
