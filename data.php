@@ -48,7 +48,7 @@ if(empty($_SESSION['$access_token'])){
   $access_token = $_SESSION['$access_token'];   
 }
 
-echo 'access_token':$access_token.'<br>';
+echo 'access_token:'.$access_token.'<br>';
 
 
 
@@ -61,6 +61,6 @@ if(empty($_SESSION['ticket'])){
   $ticket = $_SESSION['ticket'];   
 }
 
-echo 'ticket':$ticket;
+echo 'ticket:'.$ticket;
 
 ?>
