@@ -176,4 +176,5 @@ var imgs = [
   'emoji-122.png',
   'emoji-123.png',
   'emoji-124.png',
+  'emoji-125.png',
 ];
