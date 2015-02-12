@@ -2,6 +2,8 @@
 
 session_start();
 
+
+//获取access_token
 function get_access_token($appid,$secret){  
   $url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$secret;  
   $json=http_request_json($url);
@@ -11,7 +13,19 @@ function get_access_token($appid,$secret){
   }else{  
       return "获取access_token错误";  
   }         
-}  
+} 
+
+//获取ticket
+function get_ticket($token){
+  $url= 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$token;.'&type=jsapi;'  
+  $json=http_request_json($url);
+  $data=json_decode($json,true);  
+  if($data['errmsg']=="ok"){  
+    return $data['ticket'];  
+  }else{  
+    return "获取ticket错误";  
+  }
+}
     
 function http_request_json($url){    
   $ch = curl_init();  
@@ -24,6 +38,7 @@ function http_request_json($url){
   return $result;    
 }
 
+
 //判断access_token 是否存在
 if(empty($_SESSION['$access_token'])){
   $access_token = get_access_token('wxd31771b7d224b883','60fd9ce92eb04c67514d9a971484e2d1');
@@ -33,6 +48,19 @@ if(empty($_SESSION['$access_token'])){
   $access_token = $_SESSION['$access_token'];   
 }
 
-echo $access_token;
+echo 'access_token':$access_token.'<br>';
+
+
+
+//判断ticket 是否存在
+if(empty($_SESSION['ticket'])){
+  $ticket = get_ticket($access_token);
+  //缓存ticket
+  $_SESSION['ticket'] = $ticket;   
+}else{
+  $access_token = $_SESSION['ticket'];   
+}
+
+echo 'ticket':$ticket;
 
 ?>
