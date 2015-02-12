@@ -16,7 +16,7 @@ $.ajax({
   url:'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxd31771b7d224b883&secret=60fd9ce92eb04c67514d9a971484e2d1',
   cache: false,
   async: false,
-  dataType:'json',
+  dataType:'JSONP',
   success: function(data){
     console.log(data);
     //缓存accessToken
