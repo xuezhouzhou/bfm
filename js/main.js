@@ -42,25 +42,31 @@ var run = function(){
     $(this).find('.qq img').attr('src','images/qq-bom.png');
 
   }).on('touchend',function(){
-    $(this).removeClass('xx-touch');
+    
     var dataKey = $(this).attr('data-key');
     var dataMlz = $(this).attr('data-mlz');
 
-    //还原
-    $("#answerA .qq img").attr('src','images/qq-a.png');
-    $("#answerB .qq img").attr('src','images/qq-b.png');
-    $("#answerC .qq img").attr('src','images/qq-c.png');
+    
     
     //记录用户的操作
     step.push(dataKey);
     
-    //切题
-    changeQue(dataKey);
-    
-    //更新魅力值
-    changeMlz(dataMlz);
+    $_this = $(this);
 
-  })
+    //更新魅力值
+    changeMlz(dataMlz,function(){
+      changeQue(dataKey);
+      $_this.removeClass('xx-touch');
+      //还原
+      $("#answerA .qq img").attr('src','images/qq-a.png');
+      $("#answerB .qq img").attr('src','images/qq-b.png');
+      $("#answerC .qq img").attr('src','images/qq-c.png');
+    });
+
+    //切题
+    //changeQue(dataKey);
+
+  });
 
 
   //OUT页 回到18岁
@@ -485,15 +491,16 @@ var run = function(){
   }
 
   //改变魅力值
-  function changeMlz(dataMlz){
+  function changeMlz(dataMlz,fn){
     mlz = mlz + parseInt(dataMlz);
     $_mlzCur = $('#mlz-cur');
     $_mlzCur.css({'opacity':1}).text(dataMlz+'分');
-    setTimeout(function(){
-      $_mlzCur.animate({'opacity':0},500,function(){
-        $('#mlz-total-num').text(mlz);
-      });
-    },500);
+    $_mlzCur.animate({'opacity':0},1000,function(){
+      $('#mlz-total-num').text(mlz);
+      fn();
+    });
+
+    
   }
 
   //重新开始
@@ -510,8 +517,6 @@ var run = function(){
     //显示第一题
     showQue(que1Data);
   }
-
   
   //showQue(que15bData);
-
 }
