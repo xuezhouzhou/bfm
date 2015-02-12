@@ -9,6 +9,24 @@
 <script src="js/jquery.min.js"></script>
 <script>
 
+var accessToken;
+
+$.ajax({
+  type: "GET",
+  url:'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxd31771b7d224b883&secret=60fd9ce92eb04c67514d9a971484e2d1',
+  cache: false,
+  async: false,
+  dataType:'json',
+  success: function(data){
+    console.log(data);
+    //缓存accessToken
+    //localStorage.accessToken = data.access_token;
+    accessToken = data.access_token;
+  }
+});
+
+
+/*
 var signature = localStorage.signature ? localStorage.signature : '';
 var accessToken = localStorage.accessToken ? localStorage.accessToken : '';
 
@@ -23,8 +41,8 @@ if(accessToken!=''){
     success: function(data){
       console.log(data);
       //缓存accessToken
-      localStorage.accessToken = data.access_token;
-      accessToken = data.access_token;
+      //localStorage.accessToken = data.access_token;
+      //accessToken = data.access_token;
     }
   });
 }
@@ -43,8 +61,8 @@ if(signature!="" && accessToken!=""){
     success: function(data){
       console.log(data);
       if(data.errmsg=='ok'){
-        localStorage.signature = data.ticket;
-        signature = data.ticket;
+        //localStorage.signature = data.ticket;
+        //signature = data.ticket;
       }
     }
   });  
@@ -71,7 +89,7 @@ wx.onMenuShareTimeline({
     
     link: 'http://download.ichuanyi.com/bfm/', 
     
-    imgUrl: 'http://download.ichuanyi.com/bfm/images/share-test.jpg', 
+    imgUrl: 'http://bfm.xuezz.cn/share-test.jpg', 
     
     success: function () { 
       alert('用户确认分享');
@@ -81,6 +99,7 @@ wx.onMenuShareTimeline({
       alert('用户取消分享');
     }
 });
+*/
 
 </script>
 </body>
