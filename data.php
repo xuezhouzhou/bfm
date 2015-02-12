@@ -63,4 +63,12 @@ if(empty($_SESSION['ticket'])){
 
 echo 'ticket:'.$ticket;
 
+
+$data = array(
+  'access_token':$access_token,
+  'ticket':$ticket
+);
+
+echo json_encode($data);
+
 ?>
