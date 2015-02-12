@@ -17,7 +17,7 @@ function get_access_token($appid,$secret){
 
 //获取ticket
 function get_ticket($token){
-  $url= 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$token;.'&type=jsapi;'  
+  $url= 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$token;.'&type=jsapi';
   $json=http_request_json($url);
   $data=json_decode($json,true);  
   if($data['errmsg']=="ok"){  
