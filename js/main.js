@@ -44,13 +44,6 @@ var run = function(){
     $(this).find('.qq img').attr('src','images/qq-bom.png');
 
   }).on('touchend',function(){
-    $(this).removeClass('xx-touch');
-
-    //还原
-    $("#answerA .qq img").attr('src','images/qq-a.png');
-    $("#answerB .qq img").attr('src','images/qq-b.png');
-    $("#answerC .qq img").attr('src','images/qq-c.png');  
-
     var dataKey = $(this).attr('data-key');
     var dataMlz = $(this).attr('data-mlz');
 
@@ -62,9 +55,7 @@ var run = function(){
 
     //换下一题
     changeQue(dataKey);
-    
   });
-
 
   //OUT页 回到18岁
   $("#out-btn-start").on('touchstart',function(){
@@ -74,6 +65,7 @@ var run = function(){
     showStart();
   });
 
+  
   //OUT页 我要吐槽
   $("#out-btn-tc").on('touchstart',function(){
     $(this).find('img').attr('src','images/out-btn-tc-touch.png');
@@ -91,21 +83,47 @@ var run = function(){
     //炫耀身份后续处理程序。。。。
   });
 
+
+  //警告页 那妞点击
+  $("#warning-btn").on('touchstart',function(){
+
+  }).on('touchend',function(){
+    $('#warning').hide();
+    $("#loading-hover").hide();
+  });
+
   //显示OUT页
-  function showOut(option){
-    $('#out-download').hide();
-    //防止点C选项 OUT的时候 误点下载
-    setTimeout(function(){$('#out-download').fadeIn(500)},500);
-    $("#out-type").text(option.type);
-    $("#out-content").text(option.content);
-    $("#answer").hide();
-    $("#out").show();
+  function showOut(option,status){
+    //没有复活机会直接out
+    if(restart<=0){
+      $('#out-download').hide();
+      //防止点C选项 OUT的时候 误点下载
+      setTimeout(function(){$('#out-download').fadeIn(500)},500);
+      $("#out-type").text(option.type);
+      $("#out-content").text(option.content);
+      $("#answer").hide();
+      $("#out").show();
+    }else{
+      //有复活机会 可以重新选择本题
+      showWarning();
+      $("#answerA,#answerB").show();
+      if(!status){
+        $("#answerC").show();
+      }
+    }
   }
 
   //显示开始页
   function showStart(){
     $("#out").hide();
     $("#start").show();
+  }
+
+  //显示Warning页面
+  function showWarning(){
+    //复活机会减少一次
+    --restart;
+    $("#loading-hover,#warning").show();
   }
 
   //显示happy页
@@ -117,7 +135,6 @@ var run = function(){
     $("#answer").hide();
     $("#happy").show();
   }
-
 
   //显示题目
   function showQue(option){
@@ -153,10 +170,10 @@ var run = function(){
       $_answerC.show();
     }
 
-    $_answerA.css({top:'700px','display':'block'})
+    $_answerA.css({top:deviceHeight+'px','display':'block'})
              .attr('data-key',option.anAdataKey)
              .attr('data-mlz',option.anAdataMlz);
-    $_answerB.css({top:'700px','display':'block'})
+    $_answerB.css({top:deviceHeight+'px','display':'block'})
              .attr('data-key',option.anBdataKey)
              .attr('data-mlz',option.anBdataMlz);
 
@@ -164,7 +181,7 @@ var run = function(){
     $_answerB.find('.con').empty().append(option.anBtext);         
 
     if(option.anNum==3){
-      $_answerC.css({top:'700px','display':'block'})
+      $_answerC.css({top:deviceHeight+'px','display':'block'})
              .attr('data-key',option.anCdataKey)
              .attr('data-mlz',option.anCdataMlz);
 
@@ -193,8 +210,13 @@ var run = function(){
 
   //切换题目
   function changeQue(dataKey){
-    //隐藏选项
-    $("#answer .xx").hide();
+    //隐藏选项 删除touch样式
+    $("#answer .xx").hide().removeClass('xx-touch');
+    
+    //还原气球
+    $("#answerA .qq img").attr('src','images/qq-a.png');
+    $("#answerB .qq img").attr('src','images/qq-b.png');
+    $("#answerC .qq img").attr('src','images/qq-c.png');
     
     switch(dataKey){
       //第1题ABC都切第2题
@@ -247,7 +269,7 @@ var run = function(){
         showOut({
           'type':'被任性的出题人抛弃了',
           'content':'万万没想到，出题的人也这么任性，就是让你out!'
-        });
+        },false);
         break; 
 
       //第5题乙 A out
@@ -255,7 +277,7 @@ var run = function(){
         showOut({
           'type':'被我是歌手淘汰了',
           'content':'真是想太多，既没有AngelaBaby的颜值，也没有韩红大姐的气魄，请问自信是吃白米饭来的吗？'
-        });
+        },false);
         break; 
       
       //第5题乙 BC 切第六题乙 
@@ -292,7 +314,7 @@ var run = function(){
         showOut({
           'type':'被天真的小盆友嫌弃了',
           'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...'
-        });
+        },false);
         break;
         
       //第8题乙 A out
@@ -300,7 +322,7 @@ var run = function(){
         showOut({
           'type':'被天真的小盆友嫌弃了',
           'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...'
-        });
+        },true);
         break;
         
       //第8题 甲B 乙BC  切第9题
@@ -315,7 +337,7 @@ var run = function(){
         showOut({
           'type':'被城管临检了',
           'content':'座山雕？一个字？太爱演了吧...记得好好做个正常人拒绝黄赌毒'
-        });
+        },false);
         break;
         
       //第9题 BC 切第10题  
@@ -351,7 +373,7 @@ var run = function(){
         showOut({
           'type':'被大水冲了龙王庙了',
           'content':'虽然你的婆婆不是雪姨，但也忍不了儿媳妇的裙子那么短吧...真要是雪姨你穿比基尼也没她美'
-        });
+        },false);
         break;
       
       //第12题AB 切13题(需要进一步判断11题 答 甲or乙)
@@ -371,7 +393,7 @@ var run = function(){
         showOut({
           'type':'被老板撕逼了',
           'content':'这位小主定是得了失心疯，哪来的疯丫头，乳臭未干就敢穿小皮草...内心戏太过，抢了老板的风头，就等着老板撕逼吧，拉出去斩了'
-        });
+        },false);
         break;
         
       //13题甲 A 切 14题甲
@@ -384,7 +406,7 @@ var run = function(){
         showOut({
           'type':'被洗衣店敲诈了',
           'content':'羊绒外套只能用专业的药水干洗，太傻太天真，就等着老板发飙炒鱿鱼吧'
-        });
+        },false);
         break;  
       
       //13题乙 A 切 14题乙
@@ -398,7 +420,7 @@ var run = function(){
         showOut({
           'type':'被围观群众丢臭鸡蛋了',
           'content':'人贵在有自知之明，缺点是用来隐藏的，谁让你秀给大家看的...'
-        });
+        },false);
         break;
         
       //14题甲 A 切 15题甲
@@ -419,7 +441,7 @@ var run = function(){
         showOut({
           'type':'被自己蠢哭了',
           'content':'千万不能成为随风倒的墙头草，活了一把年纪却还想不清楚自己究竟要什么，多半是废了'
-        });
+        },false);
         break;      
       
       //14题乙 A 切 endingH  
@@ -435,7 +457,7 @@ var run = function(){
         showOut({
           'type':'被婚纱勒晕了',
           'content':'都要成为人妻了，还想着不醉不归，难道不怕宿醉错过吉时吗...还有温馨小提示：未婚夫是不能存档的'
-        });
+        },false);
         break;  
         
       //14题乙 C 切 15题乙 
@@ -507,6 +529,7 @@ var run = function(){
     //初始化魅力值和用户答题记录
     mlz = 20;
     step = [];
+    restart = 1;
     
     $('#mlz-total-num').text(mlz);
     $("#out,#start").hide();
@@ -516,6 +539,8 @@ var run = function(){
     //显示第一题
     showQue(que1Data);
   }
+
+
 
 
 

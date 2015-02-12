@@ -1,34 +1,35 @@
-#start{
+#warning{
   position:fixed;
   top:0;
   right: 0;
   bottom:0;
   left:0;
-  background:url(../images/start-bg.jpg);
+  background:url(../images/warning-bg.jpg);
   background-size:15%;
-  z-index:7;
+  z-index:9;
+  display: none;
 }
 
-#start-inner{
+#warning-inner{
   margin: 0 auto;
   max-width: 540px;
   overflow: hidden;
 }
 
-#start-kv{
+#warning-kv{
   width:75%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
 }
 
-#start-kv img,
-#start-btn img{
+#warning-kv img,
+#warning-btn img{
   display: block;
   width: 100%;
 }
 
-#start-btn{
+#warning-btn{
   margin-top: 26px;
   width: 75%;
   margin-left: auto;
@@ -37,11 +38,11 @@
 
 /* iphone4 微信中可视区域高度416px */
 @media (min-height:0px) and (max-height:416px)  {
-  #start-kv{
+  #warning-kv{
     width:68%;
     margin-top: 10px;
   }
-  #start-btn{
+  #warning-btn{
     width: 68%;
     margin-top: 12px;
   }
@@ -49,10 +50,10 @@
 
 /* iphone5   微信中可视区域高度504px */
 @media (min-height:417px) and (max-height:504px)  {
-  #start-kv{
+  #warning-kv{
     margin-top: 25px;
   }
-  #start-btn{
+  #warning-btn{
     margin-top: 26px;
   }
 }  
@@ -60,10 +61,10 @@
 
 /* iphone6  微信中可视区域高度603px */
 @media  (min-height:505px) and (max-height:603px)  {
-  #start-kv{
+  #warning-kv{
     margin-top: 30px;
   }
-  #start-btn{
+  #warning-btn{
     margin-top: 36px;
   }
 } 

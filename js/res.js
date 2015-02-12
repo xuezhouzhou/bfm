@@ -49,6 +49,8 @@ var imgs = [
   'happy-xln.png',
   'happy-xs.png',
   'happy-zms.png',
+  'warning-kv.png',
+  'warning-btn.png',
   'yy-yx.png',
   'yy-ys.png',
   'yy-zx.png',

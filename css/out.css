@@ -6,7 +6,7 @@
   left:0;
   background:url(../images/out-bg.jpg);
   background-size:16%;
-  z-index: 6;
+  z-index: 5;
   display: none;  
   /* z-index: 999; */
 }

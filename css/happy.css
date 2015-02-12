@@ -5,7 +5,7 @@
   bottom:0;
   left:0;
   background-color:#f799aa;
-  z-index: 6;
+  z-index: 5;
   display: none;
   /* z-index:999; */
 }
