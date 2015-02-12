@@ -1,3 +1,10 @@
+var textAtop = '208px';
+var textBtop = '302px';
+var textCtop = '396px';
+var picAtop = '280px';
+var picBtop = '260px';
+var picCtop = '280px';
+
 //第1题
 var que1Data = {
   'queNum':'1',
@@ -174,7 +181,7 @@ var que8aData = {
   'queNum':'8a',
   'queText':'究竟是哪里出了错，小仁说我总是任性不懂事<img src="images/emoji-96.png">提出了分手，第一次尝到失恋的痛楚<img src="images/emoji-97.png"><img src="images/emoji-97.png">',
   'anAtext':'<p class="line2">再也不相信爱情，该吃吃该喝喝<img src="images/emoji-98.png"><img src="images/emoji-99.png"><img src="images/emoji-100.png"></p>',
-  'anBtext':'<p class="line2">让穿衣助手(logo)帮我改头换面<img src="images/emoji-101.png">前男友只有追悔莫及的份<img src="images/emoji-102.png"><img src="images/emoji-102.png"></p>',
+  'anBtext':'<p class="line2">让穿衣助手<img src="images/emoji-125.png">帮我改头换面<img src="images/emoji-101.png">前男友只有追悔莫及的份<img src="images/emoji-102.png"><img src="images/emoji-102.png"></p>',
   'anAdataKey':'que8b-an-a',
   'anBdataKey':'que8b-an-b',
   'anAdataMlz':'+0',
@@ -188,7 +195,7 @@ var que8bData = {
   'queNum':'8b',
   'queText':'游乐园是热恋必备环节<img src="images/emoji-59.png">想到要和男朋友一起坐旋转木马<img src="images/emoji-60.png">甜蜜蜜...',
   'anAtext':'<p class="line2">虽然游乐设施都不能玩，但想穿小裙子的心就是这么执著啊<img src="images/emoji-61.png"><img src="images/emoji-62.png"><img src="images/emoji-63.png"></p>',
-  'anBtext':'<p class="line2"><img src="images/emoji-64.png">情侣T+<img src="images/emoji-65.png">是恋爱的最好宣言!</p>',
+  'anBtext':'<p class="line1"><img src="images/emoji-64.png">情侣T+<img src="images/emoji-65.png">是恋爱的最好宣言!</p>',
   'anCtext':'<p class="line2">cosplay小萝莉<img src="images/emoji-66.png">最适合游乐园的画风啦~</p>',
   'anAdataKey':'que8b-an-a',
   'anBdataKey':'que8b-an-b',
@@ -238,9 +245,9 @@ var que10Data = {
 var que11aData = {
   'queNum':'11a',
   'queText':'<img src="images/emoji-75.png"><img src="images/emoji-76.png"><img src="images/emoji-77.png">不知不觉间大家都离开了校园<img src="images/emoji-78.png">今天要参加老同学的聚会，但是听说有前男友...我一定要',
-  'anAtext':'<p class="line1">美美美<img src="images/emoji-79.jpg"></p>',
-  'anBtext':'<p class="line1">美美美<img src="images/emoji-80.jpg"></p>',
-  'anCtext':'<p class="line1">美美美<img src="images/emoji-81.jpg"></p>',
+  'anAtext':'<p class="line1">美美美<img src="images/emoji-79.png"></p>',
+  'anBtext':'<p class="line1">美美美<img src="images/emoji-80.png"></p>',
+  'anCtext':'<p class="line1">美美美<img src="images/emoji-81.png"></p>',
   'anAdataKey':'que11a-an-a',
   'anBdataKey':'que11a-an-b',
   'anCdataKey':'que11a-an-c',
@@ -289,8 +296,8 @@ var que12Data = {
 var que13aData = {
   'queNum':'13a',
   'queText':'不知道是不是年会表现出彩<img src="images/emoji-88.png">得到老板的器重，交给我一件她出席活动要穿的羊绒大衣帮忙清洁<img src="images/emoji-89.png">这可是个表现的机会<img src="images/emoji-90.png">',
-  'anAtext':'<p class="line2">送去专业洗衣店干洗</p>',
-  'anBtext':'<p class="line2">带回家自己亲自清洁</p>',
+  'anAtext':'<p class="line1">送去专业洗衣店干洗</p>',
+  'anBtext':'<p class="line1">带回家自己亲自清洁</p>',
   'anCtext':'<p class="line2">我的衣服都是钟点工阿姨洗的，干净又清香</p>',
   'anAdataKey':'que13a-an-a',
   'anBdataKey':'que13a-an-b',
@@ -342,7 +349,7 @@ var que14bData = {
   'queText':'婚期日渐临近<img src="images/emoji-109.png">也是时候准备最后的<img src="images/emoji-110.png"><img src="images/emoji-110.png">单身派对了',
   'anAtext':'<p class="line2">约上自己的闺蜜<img src="images/emoji-111.png"><img src="images/emoji-111.png">搞一场变装PA<img src="images/emoji-112.png">变身性感猫女喵~</p>',
   'anBtext':'<p class="line2">最后的疯狂，先把未婚夫存档<img src="images/emoji-113.png"><img src="images/emoji-114.png"><img src="images/emoji-115.png"><img src="images/emoji-116.png">来个不醉不归！</p>',
-  'anCtext':'<p class="line2">以派对为借口，实际上相约闺蜜一起制作婚礼蛋糕<img src="images/emoji-117.png"><img src="images/emoji-117.png">给宝贝一个超级大惊喜</p>',
+  'anCtext':'<p class="line3">以派对为借口，实际上相约闺蜜一起制作婚礼蛋糕<img src="images/emoji-117.png"><img src="images/emoji-117.png">给宝贝一个超级大惊喜</p>',
   'anAdataKey':'que14b-an-a',
   'anBdataKey':'que14b-an-b',
   'anCdataKey':'que14b-an-c',

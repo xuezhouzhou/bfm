@@ -1,3 +1,10 @@
+var textAtop = '200px';
+var textBtop = '265px';
+var textCtop = '330px';
+var picAtop = '225px';
+var picBtop = '210px';
+var picCtop = '225px';
+
 //第1题
 var que1Data = {
   'queNum':'1',
@@ -174,7 +181,7 @@ var que8aData = {
   'queNum':'8a',
   'queText':'究竟是哪里出了错，小仁说我总是任性不懂事<img src="images/emoji-96.png">提出了分手，第一次尝到失恋的痛楚<img src="images/emoji-97.png"><img src="images/emoji-97.png">',
   'anAtext':'<p class="line1">再也不相信爱情，该吃吃该喝喝<img src="images/emoji-98.png"><img src="images/emoji-99.png"><img src="images/emoji-100.png"></p>',
-  'anBtext':'<p class="line2">让穿衣助手(logo)帮我改头换面<img src="images/emoji-101.png">前男友只有追悔莫及的份<img src="images/emoji-102.png"><img src="images/emoji-102.png"></p>',
+  'anBtext':'<p class="line2">让穿衣助手<img src="images/emoji-125.png">帮我改头换面<img src="images/emoji-101.png">前男友只有追悔莫及的份<img src="images/emoji-102.png"><img src="images/emoji-102.png"></p>',
   'anAdataKey':'que8b-an-a',
   'anBdataKey':'que8b-an-b',
   'anAdataMlz':'+0',
