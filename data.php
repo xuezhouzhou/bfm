@@ -1,5 +1,7 @@
 <?php
 
+if(empty($_GET['key']) || $_GET['key']!='54dcae6f7a9fc') exit('not access');
+
 session_start();
 
 
@@ -9,9 +11,9 @@ function get_access_token($appid,$secret){
   $json=http_request_json($url);
   $data=json_decode($json,true);  
   if($data['access_token']){  
-      return $data['access_token'];  
+    return $data['access_token'];  
   }else{  
-      return "获取access_token错误";  
+    return "获取access_token错误";  
   }         
 } 
 
@@ -48,7 +50,7 @@ if(empty($_SESSION['$access_token'])){
   $access_token = $_SESSION['$access_token'];   
 }
 
-echo 'access_token:'.$access_token.'<br>';
+//echo 'access_token:'.$access_token.'<br>';
 
 
 
@@ -61,12 +63,12 @@ if(empty($_SESSION['ticket'])){
   $ticket = $_SESSION['ticket'];   
 }
 
-echo 'ticket:'.$ticket;
+//echo 'ticket:'.$ticket;
 
 
 $data = array(
-  'access_token':$access_token,
-  'ticket':$ticket
+  //'access_token'=>$access_token,
+  'ticket'=>$ticket
 );
 
 echo json_encode($data);
