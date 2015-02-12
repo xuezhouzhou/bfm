@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 function get_access_token($appid,$secret){  
   $url="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$secret;  
   $json=http_request_json($url);
@@ -22,7 +24,14 @@ function http_request_json($url){
   return $result;    
 }
 
-$access_token = get_access_token('wxd31771b7d224b883','60fd9ce92eb04c67514d9a971484e2d1');
+//判断access_token 是否存在
+if(empty($_SESSION['$access_token'])){
+  $access_token = get_access_token('wxd31771b7d224b883','60fd9ce92eb04c67514d9a971484e2d1');
+  //缓存access_token
+  $_SESSION['$access_token'] = $access_token;   
+}else{
+  $access_token = $_SESSION['$access_token'];   
+}
 
 echo $access_token;
 
