@@ -58,7 +58,7 @@ if(empty($_SESSION['ticket'])){
   //缓存ticket
   $_SESSION['ticket'] = $ticket;   
 }else{
-  $access_token = $_SESSION['ticket'];   
+  $ticket = $_SESSION['ticket'];   
 }
 
 echo 'ticket':$ticket;
