@@ -85,34 +85,12 @@ html,body{ height: 100% }
 <script src="js/main.js"></script>
 <script>
 var deviceHeight = $('body').height();
-var textAtop = '';
-var textBtop = '';
-var textCtop = '';
-var picAtop = '';
-var picBtop = '';
-var picCtop = '';
-
 if(deviceHeight<=416){
-  textAtop = '200px';
-  textBtop = '265px';
-  textCtop = '330px';
-  picAtop = '225px';
-  picBtop = '210px';
-  picCtop = '225px';
   $.getScript('js/data-iphone4.js',run); 
 }else if(deviceHeight>416 && deviceHeight<=504){
   $.getScript('js/data-iphone5.js',run);
-  textAtop = '208px';
-  textBtop = '302px';
-  textCtop = '396px';
-  picAtop = '100px';
-  picBtop = '100px';
-  picCtop = '100px'; 
 }else if(deviceHeight>505 && deviceHeight<=603){
   $.getScript('js/data-iphone6.js',run);
-  textAtop = '200px';
-  textBtop = '265px';
-  textCtop = '330px';
 }
 </script>
 </body>
