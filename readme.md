@@ -2,6 +2,6 @@
 
 二维码
 
-![](http://bfm.xuezz.cn/ewm.png)
+![](http://bfm.xuezz.cn/bfm.png)
 
 
