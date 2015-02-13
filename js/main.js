@@ -1,7 +1,7 @@
 document.ontouchmove = function(e){ e.preventDefault();}
 document.documentElement.style.webkitTouchCallout = "none";
 
-var run = function(){
+var run = function(fn){
 
   //魅力值
   var mlz = 20;
@@ -563,4 +563,8 @@ var run = function(){
   }
 
   //showQue(que15bData);
+
+  setTimeout(function(){
+    fn();   
+  },500);
 }
