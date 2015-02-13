@@ -95,7 +95,7 @@ var run = function(){
   //显示OUT页
   function showOut(option,status){
     shareText = option.type + '卒！快来测测你是否一样屌丝～';
-    shareImg = 'images/share-out.jpg';
+    shareImg = siteUrl + 'images/share-out.jpg';
     //没有复活机会直接out
     if(restart<=0){
       $('#out-download').hide();
