@@ -201,7 +201,10 @@ wx.ready(function () {
       alert('用户取消分享');
     }
   });
-});  
+}); 
+
+
+console.log(wx); 
 </script>
 </body>
 </html>
