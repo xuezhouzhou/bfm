@@ -1,7 +1,6 @@
 <?php
 
 if(empty($_GET['key']) || $_GET['key']!='54dcae6f7a9fc') exit('not access');
-
 session_start();
 
 
