@@ -73,14 +73,7 @@ var run = function(){
     $(this).find('img').attr('src','images/out-btn-tc.png');
     
     //我要吐槽后续处理程序。。。
-
-    WeixinJSBridge.invoke('shareTimeline',{
-      "title": "吐槽标题",
-      "link": "http://android.yourdream.cc/bfm/",
-      "desc": " 吐槽标题 ",
-      "img_url": "http://android.yourdream.cc/bfm/share-xs.jpg"
-    });
-
+    //貌似没有点击按钮直接分享到朋友圈的接口
     /*wx.onMenuShareTimeline({
       title: '吐槽标题', 
       link: 'http://android.yourdream.cc/bfm/', // 分享链接
