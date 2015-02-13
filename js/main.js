@@ -72,6 +72,11 @@ var run = function(fn){
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/out-btn-tc.png');
     //我要吐槽后续处理程序。。。
+    wx.onMenuShareTimeline({
+      title: '吐槽标题', 
+      link: 'http://android.yourdream.cc/bfm/', // 分享链接
+      imgUrl: 'http://android.yourdream.cc/bfm/share-xs.jpg', // 分享图标
+    });
   });
 
 
