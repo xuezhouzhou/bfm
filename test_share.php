@@ -29,25 +29,27 @@ wx.config({
     'onMenuShareTimeline',
     'onMenuShareAppMessage'
   ]
+});
 
+wx.ready(function(){
+  wx.onMenuShareTimeline({
+
+    title: shareTitle, 
+    
+    link: shareLink, 
+    
+    imgUrl: shareImg, 
+    
+    success: function () { 
+      alert('用户确认分享');
+    },
+    
+    cancel: function () { 
+      alert('用户取消分享');
+    }
+  });
 });
 
 
-wx.onMenuShareTimeline({
-
-  title: shareTitle, 
-  
-  link: shareLink, 
-  
-  imgUrl: shareImg, 
-  
-  success: function () { 
-    alert('用户确认分享');
-  },
-  
-  cancel: function () { 
-    alert('用户取消分享');
-  }
-});
 </script>
 </html>
