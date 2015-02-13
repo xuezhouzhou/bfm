@@ -189,8 +189,10 @@ var imgs = [
   'share-hyf.jpg',
 ];
 
+var siteUrl = 'http://android.yourdream.cc/bfm/';
+
 //分享文字
-var shareText = "默认分享文字";
+var shareText = "白富美养成记(默认分享文字)";
 
 //分享图片
-var shareImg = "images/share-max.jpg";
+var shareImg = siteUrl + "images/share-max.jpg";
