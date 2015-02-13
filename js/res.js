@@ -179,6 +179,14 @@ var imgs = [
   'emoji-123.png',
   'emoji-124.png',
   'emoji-125.png',
+  'share-zms.jpg',
+  'share-xs.jpg',
+  'share-xln.jpg',
+  'share-qsy.jpg',
+  'share-out.jpg',
+  'share-max.jpg',
+  'share-ljl.jpg',
+  'share-hyf.jpg',
 ];
 
 //分享文字
