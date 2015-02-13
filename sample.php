@@ -1,8 +1,12 @@
 <?php
 error_reporting(E_ALL^E_NOTICE);
-require_once "jssdk.php";
+
+require_once "api/jssdk.php";
+
 $jssdk = new JSSDK("wxd31771b7d224b883", "60fd9ce92eb04c67514d9a971484e2d1");
+
 $signPackage = $jssdk->GetSignPackage();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +31,7 @@ $signPackage = $jssdk->GetSignPackage();
    * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
    */
   wx.config({
-    debug: true,
+    debug: false,
     appId: '<?php echo $signPackage["appId"];?>',
     timestamp: <?php echo $signPackage["timestamp"];?>,
     nonceStr: '<?php echo $signPackage["nonceStr"];?>',
@@ -41,6 +45,10 @@ $signPackage = $jssdk->GetSignPackage();
 
   wx.ready(function () {
     // 在这里调用 API
+    
+  });
+
+
     wx.onMenuShareTimeline({
 
       title: '我就是独立自强的Max!美！快来测测你是哪款白富美～', 
@@ -57,6 +65,5 @@ $signPackage = $jssdk->GetSignPackage();
         alert('用户取消分享');
       }
     });
-  });
 </script>
 </html>
