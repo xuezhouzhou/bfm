@@ -1,7 +1,7 @@
 document.ontouchmove = function(e){ e.preventDefault();}
 document.documentElement.style.webkitTouchCallout = "none";
 
-var run = function(fn){
+var run = function(){
 
   //魅力值
   var mlz = 20;
@@ -71,12 +71,21 @@ var run = function(fn){
     $(this).find('img').attr('src','images/out-btn-tc-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/out-btn-tc.png');
+    
     //我要吐槽后续处理程序。。。
-    wx.onMenuShareTimeline({
+
+    WeixinJSBridge.invoke('shareTimeline',{
+      "title": "吐槽标题",
+      "link": "http://android.yourdream.cc/bfm/",
+      "desc": " 吐槽标题 ",
+      "img_url": "http://android.yourdream.cc/bfm/share-xs.jpg"
+    });
+
+    /*wx.onMenuShareTimeline({
       title: '吐槽标题', 
       link: 'http://android.yourdream.cc/bfm/', // 分享链接
       imgUrl: 'http://android.yourdream.cc/bfm/share-xs.jpg', // 分享图标
-    });
+    });*/
   });
 
 
@@ -568,8 +577,4 @@ var run = function(fn){
   }
 
   //showQue(que15bData);
-
-  setTimeout(function(){
-    fn();   
-  },500);
 }
