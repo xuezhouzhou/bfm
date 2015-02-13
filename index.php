@@ -205,6 +205,8 @@ wx.ready(function () {
 
 
 console.log(wx); 
+
+console.log(jWeixin);
 </script>
 </body>
 </html>
