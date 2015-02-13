@@ -15,6 +15,10 @@ var run = function(){
   //复活机会 默认一次
   var restart = 1;
 
+  var shareText = '';
+
+  var shareImg = 'images/';
+
   //预加载资源
   var totalRes = imgs.length;
   var curResNum  = 0;

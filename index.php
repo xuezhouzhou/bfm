@@ -1,3 +1,8 @@
+<?php
+require_once "api/jssdk.php";
+$jssdk = new JSSDK("wxd31771b7d224b883", "60fd9ce92eb04c67514d9a971484e2d1");
+$signPackage = $jssdk->GetSignPackage();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +17,6 @@
 <link href="css/happy.css" rel="stylesheet">
 </head>
 <body>
-
 <!-- Loadind页遮罩层 -->
 <div id="loading-hover"></div>
 
@@ -25,8 +29,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 <!-- 开始页 -->
@@ -151,10 +153,43 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(hm, s);
 })();
 </script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/res.js"></script>
 <script src="js/main.js"></script>
 <script>
+wx.config({
+  debug: true,
+  appId: '<?php echo $signPackage["appId"];?>',
+  timestamp: <?php echo $signPackage["timestamp"];?>,
+  nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+  signature: '<?php echo $signPackage["signature"];?>',
+  jsApiList: [
+    'onMenuShareTimeline',
+    'onMenuShareAppMessage'
+  ]
+});
+
+wx.ready(function () {
+  // 在这里调用 API
+  wx.onMenuShareTimeline({
+
+    title: '我就是独立自强的Max!美！快来测测你是哪款白富美～', 
+    
+    link: 'http://download.ichuanyi.com/bfm/', 
+    
+    imgUrl: 'http://bfm.xuezz.cn/share-test.jpg', 
+    
+    success: function () { 
+      alert('用户确认分享');
+    },
+    
+    cancel: function () { 
+      alert('用户取消分享');
+    }
+  });
+});
+
 var deviceHeight = $('body').height();
 if(deviceHeight<=416){
   $.getScript('js/data-iphone4.js',run); 
