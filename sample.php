@@ -42,10 +42,6 @@ $signPackage = $jssdk->GetSignPackage();
 
   wx.ready(function () {
     // 在这里调用 API
-    
-  });
-
-
     wx.onMenuShareTimeline({
 
       title: '我就是独立自强的Max!美！快来测测你是哪款白富美～', 
@@ -62,5 +58,9 @@ $signPackage = $jssdk->GetSignPackage();
         alert('用户取消分享');
       }
     });
+  });
+
+
+    
 </script>
 </html>
