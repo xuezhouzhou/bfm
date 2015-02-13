@@ -190,11 +190,14 @@ wx.ready(function () {
     
     imgUrl:shareImg, 
     
-    success: function () { 
+    success: function () {
+
       alert('用户确认分享');
     },
     
-    cancel: function () { 
+    cancel: function () {
+      alert(shareText); 
+      alert(link); 
       alert('用户取消分享');
     }
   });
