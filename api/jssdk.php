@@ -46,7 +46,7 @@ class JSSDK {
 
   private function getJsApiTicket() {
     // jsapi_ticket 应该全局存储与更新，以下代码以写入到文件中做示例
-    $data = json_decode(file_get_contents("jsapi_ticket.json"));
+    @$data = json_decode(file_get_contents("jsapi_ticket.json"));
     if ($data->expire_time < time()) {
       $accessToken = $this->getAccessToken();
       // 如果是企业号用以下 URL 获取 ticket
