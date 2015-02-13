@@ -55,7 +55,7 @@ class JSSDK {
       $res = json_decode($this->httpGet($url));
       $ticket = $res->ticket;
       if ($ticket) {
-        $data->expire_time = time() + 7000;
+        @$data->expire_time = time() + 7000;
         $data->jsapi_ticket = $ticket;
         @$fp = fopen("jsapi_ticket.json", "w");
         @fwrite($fp, json_encode($data));
