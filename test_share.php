@@ -25,6 +25,14 @@ $signPackage = $jssdk->GetSignPackage();
    * 邮件主题：【微信JS-SDK反馈】具体问题
    * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
    */
+
+
+var shareTitle = '我就是独立自强的Max!美！快来测测你是哪款白富美～';
+var shareLink = 'http://download.ichuanyi.com/bfm/';
+var shareImg = 'http://bfm.xuezz.cn/share-test.jpg';
+
+
+
   wx.config({
     debug: true,
     appId: '<?php echo $signPackage["appId"];?>',
@@ -38,15 +46,15 @@ $signPackage = $jssdk->GetSignPackage();
     ]
   });
 
-  wx.ready(function () {
+ // wx.ready(function () {
     // 在这里调用 API
-    wx.onMenuShareTimeline({
+   wx.onMenuShareTimeline({
 
-      title: '我就是独立自强的Max!美！快来测测你是哪款白富美～', 
+      title: shareTitle, 
       
-      link: 'http://download.ichuanyi.com/bfm/', 
+      link: shareLink, 
       
-      imgUrl: 'http://bfm.xuezz.cn/share-test.jpg', 
+      imgUrl: shareImg, 
       
       success: function () { 
         alert('用户确认分享');
@@ -56,6 +64,9 @@ $signPackage = $jssdk->GetSignPackage();
         alert('用户取消分享');
       }
     });
-  });
+
+  //});
+
+
 </script>
 </html>
