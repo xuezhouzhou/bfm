@@ -531,7 +531,7 @@ var run = function(){
       case 'que15b-an-c':
         showHappy({
           'kv':'images/happy-hyf.png',//你就是率真果断的胡一菲
-          'content':'爱他就是要跟他一起追寻自由，一步步走遍全世界，看山看水看彼此，小衣坐等集齐全球明信片~' 
+          'content':'爱他就是要跟他一起追寻自由，一步步走遍全世界，看山看水看彼此，小衣坐等集齐全球明信片~', 
           'shartText':'我是率真果断的胡一菲。快来测测你是哪款白富美。',
           'shartImg':'images/share-hyf.jpg'
         });

@@ -140,9 +140,6 @@ $signPackage = $jssdk->GetSignPackage();
   </div>
 </div>
 
-
-
-
 <script>
 //页面统计
 var _hmt = _hmt || [];
@@ -153,10 +150,23 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/res.js"></script>
 <script src="js/main.js"></script>
+<script>
+var deviceHeight = $('body').height();
+if(deviceHeight<=416){
+  $.getScript('js/data-iphone4.js',run); 
+}else if(deviceHeight>416 && deviceHeight<=504){
+  $.getScript('js/data-iphone5.js',run);
+}else if(deviceHeight>505 && deviceHeight<=603){
+  $.getScript('js/data-iphone6.js',run);
+}else{
+  //其他情况暂时按iphone5适配
+  $.getScript('js/data-iphone5.js',run);
+}
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
 wx.config({
   debug: true,
@@ -188,19 +198,7 @@ wx.ready(function () {
       alert('用户取消分享');
     }
   });
-});
-
-var deviceHeight = $('body').height();
-if(deviceHeight<=416){
-  $.getScript('js/data-iphone4.js',run); 
-}else if(deviceHeight>416 && deviceHeight<=504){
-  $.getScript('js/data-iphone5.js',run);
-}else if(deviceHeight>505 && deviceHeight<=603){
-  $.getScript('js/data-iphone6.js',run);
-}else{
-  //其他情况暂时按iphone5适配
-  $.getScript('js/data-iphone5.js',run);
-}
+});  
 </script>
 </body>
 </html>
