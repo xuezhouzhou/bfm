@@ -180,3 +180,9 @@ var imgs = [
   'emoji-124.png',
   'emoji-125.png',
 ];
+
+//分享文字
+var shareText = "默认分享文字";
+
+//分享图片
+var shareImg = "images/share-max.jpg";

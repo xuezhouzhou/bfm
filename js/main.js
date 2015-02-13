@@ -15,10 +15,6 @@ var run = function(){
   //复活机会 默认一次
   var restart = 1;
 
-  var shareText = '';
-
-  var shareImg = 'images/';
-
   //预加载资源
   var totalRes = imgs.length;
   var curResNum  = 0;
@@ -98,6 +94,8 @@ var run = function(){
 
   //显示OUT页
   function showOut(option,status){
+    shareText = option.type + '卒！快来测测你是否一样屌丝～';
+    shareImg = 'images/share-out.jpg';
     //没有复活机会直接out
     if(restart<=0){
       $('#out-download').hide();
@@ -138,7 +136,13 @@ var run = function(){
     $("#happy-kv img").attr('src',option.kv);
     $("#answer").hide();
     $("#happy").show();
+
+    shartText = option.shartText;
+    shartImg = option.shartText;
   }
+
+
+  
 
   //显示题目
   function showQue(option){
@@ -474,6 +478,8 @@ var run = function(){
         showHappy({
           'kv':'images/happy-max.png',//你就是独立自强的Max
           'content':'你的时尚品味卓越而又出众，自己打造的独立品牌也在火热筹备中，小衣无限看好你！'  
+          'shartText':'我是独立自强的Max。快来测测你是哪款白富美。',
+          'shartImg':'images/share-max.jpg' 
         });
         break;
         
@@ -482,6 +488,8 @@ var run = function(){
         showHappy({
           'kv':'images/happy-gl.png',//你就是的霸气干练顾里
           'content':'人美能力强的并不一定就是女魔头，小衣觉得内外兼修的你很快就会当上CEO迎娶高富帅~' 
+          'shartText':'我是霸气干练的顾里。快来测测你是哪款白富美。',
+          'shartImg':'images/share-gl.jpg' 
         });
         break;
         
@@ -490,6 +498,8 @@ var run = function(){
         showHappy({
           'kv':'images/happy-zms.png',//你就是温柔善良的赵默笙
           'content':'不明争不暗斗，那么恬静亲和的你每个人都爱啊，小衣虽然是女的但也忍不住喜欢你，羞羞~' 
+          'shartText':'我是温柔善良的赵默笙。快来测测你是哪款白富美。',
+          'shartImg':'images/share-zms.jpg' 
         });
         break;    
         
@@ -497,7 +507,9 @@ var run = function(){
       case 'que15b-an-a':
         showHappy({
           'kv':'images/happy-xln.png',//你就是超凡脱俗的小龙女
-          'content':'或许相濡以沫就是两人相处的最高境界，小衣也要向你们学习！'  
+          'content':'或许相濡以沫就是两人相处的最高境界，小衣也要向你们学习！'
+          'shartText':'我是超凡脱俗的小龙女。快来测测你是哪款白富美。',
+          'shartImg':'images/share-xln.jpg'  
         });
         break;
         
@@ -506,6 +518,8 @@ var run = function(){
         showHappy({
           'kv':'images/happy-qsy.png',//你就是敢爱敢恨的千颂伊
           'content':'爱就是要全世界都知道，有一种秀恩爱叫羡煞旁人，小衣也是羡慕嫉妒但不恨，满满都是祝福~'  
+          'shartText':'我是敢爱敢恨的千颂伊。快来测测你是哪款白富美。',
+          'shartImg':'images/share-qsy.jpg'
         });
         break;
       
@@ -514,6 +528,8 @@ var run = function(){
         showHappy({
           'kv':'images/happy-hyf.png',//你就是率真果断的胡一菲
           'content':'爱他就是要跟他一起追寻自由，一步步走遍全世界，看山看水看彼此，小衣坐等集齐全球明信片~' 
+          'shartText':'我是率真果断的胡一菲。快来测测你是哪款白富美。',
+          'shartImg':'images/share-hyf.jpg'
         });
         break;
     }
