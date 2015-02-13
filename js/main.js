@@ -137,12 +137,10 @@ var run = function(){
     $("#answer").hide();
     $("#happy").show();
 
-    shartText = option.shartText;
-    shartImg = option.shartText;
+    shartText = siteUrl + option.shartText;
+    shartImg = siteUrl + option.shartText;
   }
 
-
-  
 
   //显示题目
   function showQue(option){
@@ -564,10 +562,5 @@ var run = function(){
     showQue(que1Data);
   }
 
-
-
-
-
-  
   //showQue(que15bData);
 }
