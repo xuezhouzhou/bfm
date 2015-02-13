@@ -1,7 +1,5 @@
 <?php
-
-require_once "api/jssdk.php";
-
+require_once "jssdk.php";
 $jssdk = new JSSDK("wxd31771b7d224b883", "60fd9ce92eb04c67514d9a971484e2d1");
 
 $signPackage = $jssdk->GetSignPackage();
@@ -30,7 +28,7 @@ $signPackage = $jssdk->GetSignPackage();
    * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
    */
   wx.config({
-    debug: false,
+    debug: true,
     appId: '<?php echo $signPackage["appId"];?>',
     timestamp: <?php echo $signPackage["timestamp"];?>,
     nonceStr: '<?php echo $signPackage["nonceStr"];?>',
