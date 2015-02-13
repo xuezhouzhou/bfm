@@ -57,7 +57,7 @@ class JSSDK {
       if ($ticket) {
         $data->expire_time = time() + 7000;
         $data->jsapi_ticket = $ticket;
-        $fp = fopen("jsapi_ticket.json", "w");
+        @$fp = fopen("jsapi_ticket.json", "w");
         @fwrite($fp, json_encode($data));
         @fclose($fp);
       }
@@ -81,7 +81,7 @@ class JSSDK {
         @$data->expire_time = time() + 7000;
         $data->access_token = $access_token;
         @$fp = fopen("access_token.json", "w");
-        fwrite($fp, json_encode($data));
+        @fwrite($fp, json_encode($data));
         @fclose($fp);
       }
     } else {
