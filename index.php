@@ -156,7 +156,7 @@ var _hmt = _hmt || [];
 <script>
 var deviceHeight = $('body').height();
 if(deviceHeight<=416){
-  $.getScript('js/data-iphone4.js',run(weiXinShare); 
+  $.getScript('js/data-iphone4.js',run); 
 }else if(deviceHeight>416 && deviceHeight<=504){
   $.getScript('js/data-iphone5.js',run);
 }else if(deviceHeight>505 && deviceHeight<=603){
