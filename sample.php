@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL^E_NOTICE);
 require_once "jssdk.php";
 $jssdk = new JSSDK("wxd31771b7d224b883", "60fd9ce92eb04c67514d9a971484e2d1");
 $signPackage = $jssdk->GetSignPackage();
@@ -37,7 +38,7 @@ $signPackage = $jssdk->GetSignPackage();
       'onMenuShareAppMessage'
     ]
   });
-  
+
   wx.ready(function () {
     // 在这里调用 API
     wx.onMenuShareTimeline({
