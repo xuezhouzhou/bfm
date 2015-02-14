@@ -15,6 +15,7 @@ $signPackage = $jssdk->GetSignPackage();
 <link href="css/warning.css" rel="stylesheet">
 <link href="css/out.css" rel="stylesheet">
 <link href="css/happy.css" rel="stylesheet">
+<link href="css/share.css" rel="stylesheet">
 </head>
 <body>
 <!-- Loadind页遮罩层 -->
@@ -138,6 +139,11 @@ $signPackage = $jssdk->GetSignPackage();
     <div id="happy-btn"><img src="images/happy-btn.png"></div>
     <a id="happy-download" href="http://ichuanyi.com/get/?f=game"><img src="images/happy-download.png"></a>
   </div>
+</div>
+
+<!--分享提示页面-->
+<div id="share">
+  <h3>请点击右上角按钮，在选择分享到朋友圈或分享给好友</h3>
 </div>
 
 <script>

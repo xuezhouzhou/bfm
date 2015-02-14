@@ -70,22 +70,22 @@ var run = function(){
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/out-btn-tc.png');
     
-    //我要吐槽后续处理程序。。。
-    //貌似没有点击按钮直接分享到朋友圈的接口
-    /*wx.onMenuShareTimeline({
-      title: '吐槽标题', 
-      link: 'http://android.yourdream.cc/bfm/', // 分享链接
-      imgUrl: 'http://android.yourdream.cc/bfm/share-xs.jpg', // 分享图标
-    });*/
+    $('#share,#loading-hover').show();
+    
   });
 
+  $('#share').on('touchstart',function(){
+    $('#share,#loading-hover').hide();
+  })
 
   //HAPPY页炫耀身份
   $("#happy-btn").on('touchstart',function(){
     $(this).find('img').attr('src','images/happy-btn-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/happy-btn.png');
-    //炫耀身份后续处理程序。。。。
+    
+    
+    $('#share').show();
   });
 
 
@@ -462,7 +462,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-xs.png',//你就是的鬼灵精怪的小S
           'content':'没想到派对最后未婚夫突然出现，化身蝙蝠侠，上演浪漫求婚桥段，向所有人宣告你属于他，小衣也想赤条条秀恩爱！',  
-          'shareText':'我是你就是的鬼灵精怪的小S。',
+          'shareText':'我是鬼灵精怪的小S。',
           'shareImg':'images/share-ljl.jpg' 
         });
         break;
