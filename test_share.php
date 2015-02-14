@@ -14,9 +14,12 @@ $signPackage = $jssdk->GetSignPackage();
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
-var shareTitle = '我就是独立自强的Max!美！快来测测你是哪款白富美～';
-var shareLink = 'http://android.yourdream.cc/bfm/';
-var shareImg = 'http://bfm.xuezz.cn/share-test.jpg';
+
+var shareConfig = {
+  'title':'我就是独立自强的Max!美！快来测测你是哪款白富美～',
+  'link':'http://android.yourdream.cc/bfm/',
+  'img':'http://bfm.xuezz.cn/share-test.jpg'
+}
 
 wx.config({
   debug: true,
@@ -31,24 +34,26 @@ wx.config({
   ]
 });
 
-//wx.ready(function(){
+wx.ready(function(){
   wx.onMenuShareTimeline({
 
-    title: shareTitle, 
+    title: shareConfig.title, 
     
-    link: shareLink, 
+    link: shareConfig.link, 
     
-    imgUrl: shareImg, 
+    imgUrl: shareConfig.img, 
     
-    success: function () { 
-      alert('用户确认分享');
+    success: function () {
+      alert(shareConfig.title);
+      //alert('用户确认分享');
     },
     
-    cancel: function () { 
-      alert('用户取消分享');
+    cancel: function () {
+      alert(shareConfig.title); 
+      //alert('用户取消分享');
     }
   });
-//});
+});
 
 setTimeout(function(){
   shareTitle = '白富美养成记(分享文字)';
