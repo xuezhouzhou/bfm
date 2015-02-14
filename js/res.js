@@ -191,9 +191,3 @@ var imgs = [
 
 //网站地址
 var siteUrl = 'http://android.yourdream.cc/bfm/';
-
-//分享文字
-var shareText = "白富美养成记(默认测试分享文字)";
-
-//分享图片
-var shareImg = siteUrl + "images/share-max.jpg";

@@ -99,8 +99,10 @@ var run = function(){
 
   //显示OUT页
   function showOut(option,status){
-    shareText = option.type + '卒！快来测测你是否一样屌丝～';
-    shareImg = siteUrl + 'images/share-out.jpg';
+    var shareText = option.type + '卒！快来测测你是否一样屌丝～';
+    var shareImg = siteUrl + 'images/share-out.jpg';
+    wxShareTimeline(shareText,shareImg);
+    
     //没有复活机会直接out
     if(restart<=0){
       $('#out-download').hide();
@@ -142,8 +144,7 @@ var run = function(){
     $("#answer").hide();
     $("#happy").show();
 
-    shartText = siteUrl + option.shartText;
-    shartImg = siteUrl + option.shartText;
+    wxShareTimeline();
   }
 
 
@@ -565,4 +566,20 @@ var run = function(){
   }
 
   //showQue(que15bData);
+
+  function wxShareTimeline(title,img){
+    wx.onMenuShareTimeline({
+
+      title: title, 
+    
+      link: 'http://android.yourdream.cc/bfm/', 
+    
+      imgUrl: img, 
+    
+      success: function () {
+        //代码统计
+        //alert('用户确认分享');
+      }
+    });
+  }
 }
