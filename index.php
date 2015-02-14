@@ -150,6 +150,21 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(hm, s);
 })();
 </script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+wx.config({
+  debug: true,
+  appId: '<?php echo $signPackage["appId"];?>',
+  timestamp: <?php echo $signPackage["timestamp"];?>,
+  nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+  signature: '<?php echo $signPackage["signature"];?>',
+  jsApiList: [
+    //所有要调用的 API 都要加到这个列表中
+    'onMenuShareTimeline',
+    'onMenuShareAppMessage'
+  ]
+}); 
+</script>
 <script src="js/jquery.min.js"></script>
 <script src="js/res.js"></script>
 <script src="js/main.js"></script>
@@ -166,5 +181,7 @@ if(deviceHeight<=416){
   $.getScript('js/data-iphone5.js',run);
 }
 </script>
+
+
 </body>
 </html>
