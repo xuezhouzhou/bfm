@@ -15,7 +15,7 @@ $signPackage = $jssdk->GetSignPackage();
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
 var shareTitle = '我就是独立自强的Max!美！快来测测你是哪款白富美～';
-var shareLink = 'http://download.ichuanyi.com/bfm/';
+var shareLink = 'http://android.yourdream.cc/bfm/';
 var shareImg = 'http://bfm.xuezz.cn/share-test.jpg';
 
 wx.config({
