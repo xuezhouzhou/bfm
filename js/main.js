@@ -101,8 +101,8 @@ var run = function(){
   function showOut(option,status){
     var shareText = option.type + '卒！快来测测你是否一样屌丝～';
     var shareImg = siteUrl + 'images/share-out.jpg';
-    wxShareTimeline(shareText,shareImg);
-    
+    wxShare(shareText,shareImg);
+
     //没有复活机会直接out
     if(restart<=0){
       $('#out-download').hide();
@@ -126,6 +126,7 @@ var run = function(){
   function showStart(){
     $("#out").hide();
     $("#start").show();
+
   }
 
   //显示Warning页面
@@ -143,8 +144,9 @@ var run = function(){
     $("#happy-kv img").attr('src',option.kv);
     $("#answer").hide();
     $("#happy").show();
-
-    wxShareTimeline();
+    var shareText = option.shareText + '快来测测你是哪款白富美!';
+    var shareImg = siteUrl + option.img;
+    wxShare(shareText,shareImg);
   }
 
 
@@ -442,7 +444,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-ljl.png',//你就是精致优雅的刘嘉玲
           'content':'就是时刻都保持精致的你，认真的时刻最美，最后收获事业爱情双丰收，人生赢家！小衣以你为榜样',  
-          'shartText':'我是精致优雅的刘嘉玲。快来测测你是哪款白富美。',
+          'shartText':'我是精致优雅的刘嘉玲。',
           'shartImg':'images/share-ljl.jpg' 
         });
         break;
@@ -460,7 +462,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-xs.png',//你就是的鬼灵精怪的小S
           'content':'没想到派对最后未婚夫突然出现，化身蝙蝠侠，上演浪漫求婚桥段，向所有人宣告你属于他，小衣也想赤条条秀恩爱！',  
-          'shartText':'我是你就是的鬼灵精怪的小S。快来测测你是哪款白富美。',
+          'shartText':'我是你就是的鬼灵精怪的小S。',
           'shartImg':'images/share-ljl.jpg' 
         });
         break;
@@ -483,7 +485,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-max.png',//你就是独立自强的Max
           'content':'你的时尚品味卓越而又出众，自己打造的独立品牌也在火热筹备中，小衣无限看好你！', 
-          'shartText':'我是独立自强的Max。快来测测你是哪款白富美。',
+          'shartText':'我是独立自强的Max。',
           'shartImg':'images/share-max.jpg' 
         });
         break;
@@ -493,7 +495,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-gl.png',//你就是的霸气干练顾里
           'content':'人美能力强的并不一定就是女魔头，小衣觉得内外兼修的你很快就会当上CEO迎娶高富帅~', 
-          'shartText':'我是霸气干练的顾里。快来测测你是哪款白富美。',
+          'shartText':'我是霸气干练的顾里。',
           'shartImg':'images/share-gl.jpg' 
         });
         break;
@@ -503,7 +505,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-zms.png',//你就是温柔善良的赵默笙
           'content':'不明争不暗斗，那么恬静亲和的你每个人都爱啊，小衣虽然是女的但也忍不住喜欢你，羞羞~', 
-          'shartText':'我是温柔善良的赵默笙。快来测测你是哪款白富美。',
+          'shartText':'我是温柔善良的赵默笙。',
           'shartImg':'images/share-zms.jpg' 
         });
         break;    
@@ -513,7 +515,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-xln.png',//你就是超凡脱俗的小龙女
           'content':'或许相濡以沫就是两人相处的最高境界，小衣也要向你们学习！',
-          'shartText':'我是超凡脱俗的小龙女。快来测测你是哪款白富美。',
+          'shartText':'我是超凡脱俗的小龙女。',
           'shartImg':'images/share-xln.jpg'  
         });
         break;
@@ -523,7 +525,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-qsy.png',//你就是敢爱敢恨的千颂伊
           'content':'爱就是要全世界都知道，有一种秀恩爱叫羡煞旁人，小衣也是羡慕嫉妒但不恨，满满都是祝福~',  
-          'shartText':'我是敢爱敢恨的千颂伊。快来测测你是哪款白富美。',
+          'shartText':'我是敢爱敢恨的千颂伊。',
           'shartImg':'images/share-qsy.jpg'
         });
         break;
@@ -533,7 +535,7 @@ var run = function(){
         showHappy({
           'kv':'images/happy-hyf.png',//你就是率真果断的胡一菲
           'content':'爱他就是要跟他一起追寻自由，一步步走遍全世界，看山看水看彼此，小衣坐等集齐全球明信片~', 
-          'shartText':'我是率真果断的胡一菲。快来测测你是哪款白富美。',
+          'shartText':'我是率真果断的胡一菲。',
           'shartImg':'images/share-hyf.jpg'
         });
         break;
@@ -567,19 +569,17 @@ var run = function(){
 
   //showQue(que15bData);
 
-  function wxShareTimeline(title,img){
+  //分享
+  function wxShare(title,img){
     wx.onMenuShareTimeline({
-
       title: title, 
-    
       link: 'http://android.yourdream.cc/bfm/', 
-    
       imgUrl: img, 
-    
       success: function () {
         //代码统计
         //alert('用户确认分享');
       }
     });
+
   }
 }
