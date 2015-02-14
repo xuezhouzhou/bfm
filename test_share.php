@@ -50,6 +50,11 @@ wx.ready(function(){
   });
 });
 
+setTimeout(function(){
+  shareTitle = '白富美养成记(分享文字)';
+  shareLink = 'http://android.yourdream.cc/bfm/';
+  shareImg = 'http://bfm.xuezz.cn/share-test.jpg';
+},2000);
 
 </script>
 </html>
