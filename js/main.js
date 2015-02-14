@@ -583,7 +583,7 @@ var run = function(){
 
     wx.onMenuShareAppMessage({
       title: '白富美养成记', // 分享标题
-      desc: 'title', // 分享描述
+      desc: title, // 分享描述
       link: siteUrl, // 分享链接
       imgUrl: img, // 分享图标
       type: '', // 分享类型,music、video或link，不填默认为link
