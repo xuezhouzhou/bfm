@@ -99,7 +99,7 @@ var run = function(){
 
   //显示OUT页
   function showOut(option,status){
-    var shareText = option.type + '卒！快来测测你是否一样屌丝～';
+    var shareText = option.type + '。卒！快来测测你是否一样屌丝～';
     var shareImg = siteUrl + 'images/share-out.jpg';
     wxShare(shareText,shareImg);
 
@@ -573,7 +573,7 @@ var run = function(){
   function wxShare(title,img){
     wx.onMenuShareTimeline({
       title: title, 
-      link: 'http://android.yourdream.cc/bfm/', 
+      link: siteUrl, 
       imgUrl: img, 
       success: function () {
         //代码统计
@@ -581,5 +581,19 @@ var run = function(){
       }
     });
 
+    wx.onMenuShareAppMessage({
+      title: '白富美养成记', // 分享标题
+      desc: 'title', // 分享描述
+      link: siteUrl, // 分享链接
+      imgUrl: , // 分享图标
+      type: '', // 分享类型,music、video或link，不填默认为link
+      dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+      success: function () { 
+          // 用户确认分享后执行的回调函数
+      },
+      cancel: function () { 
+          // 用户取消分享后执行的回调函数
+      }
+    });
   }
 }
