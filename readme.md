@@ -2,7 +2,6 @@
 
 二维码
 
-![](http://bfm.xuezz.cn/bfm.png)
+![](http://bfm.xuezz.cn/bfm2.png)
 
-git webhooks test
 
