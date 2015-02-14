@@ -31,7 +31,7 @@ wx.config({
   ]
 });
 
-wx.ready(function(){
+//wx.ready(function(){
   wx.onMenuShareTimeline({
 
     title: shareTitle, 
@@ -48,7 +48,7 @@ wx.ready(function(){
       alert('用户取消分享');
     }
   });
-});
+//});
 
 setTimeout(function(){
   shareTitle = '白富美养成记(分享文字)';
