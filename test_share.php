@@ -34,6 +34,8 @@ wx.config({
   ]
 });
 
+
+
 wx.ready(function(){
   wx.onMenuShareTimeline({
 
@@ -55,11 +57,34 @@ wx.ready(function(){
   });
 });
 
-setTimeout(function(){
-  shareTitle = '白富美养成记(分享文字)';
-  shareLink = 'http://android.yourdream.cc/bfm/';
-  shareImg = 'http://bfm.xuezz.cn/share-test.jpg';
-},2000);
+
+
+
+
+
+
+
+wx.ready(function(){
+  wx.onMenuShareTimeline({
+
+    title: '123', 
+    
+    link: shareConfig.link, 
+    
+    imgUrl: shareConfig.img, 
+    
+    success: function () {
+      alert(shareConfig.title);
+      //alert('用户确认分享');
+    },
+    
+    cancel: function () {
+      alert(shareConfig.title); 
+      //alert('用户取消分享');
+    }
+  });
+});
+
 
 </script>
 </html>
