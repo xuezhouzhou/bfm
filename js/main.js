@@ -1,8 +1,6 @@
 document.ontouchmove = function(e){ e.preventDefault();}
 document.documentElement.style.webkitTouchCallout = "none";
-
 var run = function(){
-
   //魅力值
   var mlz = 20;
 
@@ -316,8 +314,7 @@ var run = function(){
         //4甲BC or 6甲BC 切8题甲   
         if(step[3]=='que4a-an-b' || step[3]=='que4a-an-c' || step[5]=='que6a-an-b' || step[5]=='que6a-an-c'){
           showQue(que8aData);
-        //4甲A 且 6甲A  或 6乙ABC 切8题乙
-        }else if((step[3]=='que4a-an-a' && step[5]=='que6a-an-a') || step[5]=='que6b-an-a' || step[5]=='que6b-an-b' || step[5]=='que6b-an-c'){
+        }else{
           showQue(que8bData);
         }
         break;
@@ -366,8 +363,7 @@ var run = function(){
         //第8题答甲 切11题甲
         if(step[7]=='que8a-an-a' || step[7]=='que8a-an-b'){
           showQue(que11aData);
-        //第8题答乙 切11题乙
-        }else if(step[7]=='que8b-an-a' || step[7]=='que8b-an-b' || step[7]=='que8b-an-c'){
+        }else{
           showQue(que11bData);
         }
         break;
@@ -395,8 +391,7 @@ var run = function(){
         //11题答甲 切13题甲
         if(step[10]=='que11a-an-a' || step[10]=='que11a-an-b' || step[10]=='que11a-an-c'){
           showQue(que13bData);  
-        //11题答乙 切13题乙
-        }else if(step[10]=='que11b-an-a' || step[10]=='que11b-an-b' || step[10]=='que11b-an-c'){
+        }else{
           showQue(que13bData);  
         }
         break;

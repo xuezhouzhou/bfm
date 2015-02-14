@@ -166,48 +166,5 @@ if(deviceHeight<=416){
   $.getScript('js/data-iphone5.js',run);
 }
 </script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script>
-
-var weiXinShare = function(){
-
-
-wx.config({
-  debug: true,
-  appId: '<?php echo $signPackage["appId"];?>',
-  timestamp: <?php echo $signPackage["timestamp"];?>,
-  nonceStr: '<?php echo $signPackage["nonceStr"];?>',
-  signature: '<?php echo $signPackage["signature"];?>',
-  jsApiList: [
-    'onMenuShareTimeline',
-    'onMenuShareAppMessage'
-  ]
-});
-
-//wx.ready(function () {
-  // 在这里调用 API
-  wx.onMenuShareTimeline({
-
-    title: shareText, 
-    
-    link: 'http://android.yourdream.cc/bfm/', 
-    
-    imgUrl:shareImg, 
-    
-    success: function () {
-
-      alert('用户确认分享');
-    },
-    
-    cancel: function () {
-      alert(shareText); 
-      alert(link); 
-      alert('用户取消分享');
-    }
-  });
-//}); 
-
-
-</script>
 </body>
 </html>
