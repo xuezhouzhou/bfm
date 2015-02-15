@@ -113,12 +113,15 @@ var run = function(){
     }else{
       //有复活机会 可以重新选择本题
       showWarning();
-      $("#answerA,#answerB").show();
+      
+      if(!status){
+        $("#answerA,#answerB,#answerC").show();
+      }else{
+        $("#answerA,#answerB").show();
+      }
       //清除用户的out操作
       step.splice(step.length-1,1);
     }
-    
-    if(!status){$("#answerC").show();}
   }
 
   //显示开始页
@@ -324,7 +327,7 @@ var run = function(){
       case 'que8a-an-a':
         showOut({
           'type':'被天真的小盆友嫌弃了',
-          'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...'
+          'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...1'
         },true);
         break;
         
@@ -332,7 +335,7 @@ var run = function(){
       case 'que8b-an-a': 
         showOut({
           'type':'被天真的小盆友嫌弃了',
-          'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...'
+          'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...2'
         },false);
         break;
         
