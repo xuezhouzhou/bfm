@@ -89,7 +89,7 @@ var run = function(){
   });
 
 
-  //警告页 那妞点击
+  //警告页按钮点击
   $("#warning-btn").on('touchstart',function(){
 
   }).on('touchend',function(){
@@ -129,7 +129,6 @@ var run = function(){
   function showStart(){
     $("#out").hide();
     $("#start").show();
-
   }
 
   //显示Warning页面
@@ -366,8 +365,8 @@ var run = function(){
       case 'que10-an-a':
       case 'que10-an-b':
       case 'que10-an-c':
-        //第8题答甲 切11题甲
-        if(step[7]=='que8a-an-a' || step[7]=='que8a-an-b'){
+        //第8题答甲 (这里因为答A OUT 所以只判断是否答B) 切11题甲
+        if(step[7]=='que8a-an-b'){
           showQue(que11aData);
         }else{
           showQue(que11bData);
