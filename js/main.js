@@ -114,13 +114,11 @@ var run = function(){
       //有复活机会 可以重新选择本题
       showWarning();
       $("#answerA,#answerB").show();
-      if(!status){
-        $("#answerC").show();
-      }
-
       //清除用户的out操作
       step.splice(step.length-1,1);
     }
+    
+    if(!status){$("#answerC").show();}
   }
 
   //显示开始页
