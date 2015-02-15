@@ -119,6 +119,9 @@ var run = function(){
       if(!status){
         $("#answerC").show();
       }
+
+      //清除用户的out操作
+      step.splice(step.length-1,1);
     }
   }
 
