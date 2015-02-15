@@ -189,6 +189,7 @@ var imgs = [
   'share-max.jpg',
   'share-ljl.jpg',
   'share-hyf.jpg',
+  'share-gl.jpg',
   'share-default.jpg',
 ];
 
