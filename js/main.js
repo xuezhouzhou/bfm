@@ -394,7 +394,7 @@ var run = function(){
       case 'que12-an-b':
         //11题答甲 切13题甲
         if(step[10]=='que11a-an-a' || step[10]=='que11a-an-b' || step[10]=='que11a-an-c'){
-          showQue(que13bData);  
+          showQue(que13aData);  
         }else{
           showQue(que13bData);  
         }
