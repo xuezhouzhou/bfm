@@ -55,7 +55,7 @@ var run = function(){
     changeQue(dataKey);
   });
 
-  //OUT页 回到18岁
+  //OUT页 重回18岁
   $("#out-btn-start").on('touchstart',function(){
     $(this).find('img').attr('src','images/out-btn-start-touch.png');
   }).on('touchend',function(){
@@ -69,10 +69,9 @@ var run = function(){
     $(this).find('img').attr('src','images/out-btn-tc-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/out-btn-tc.png');
-    
     $('#share,#loading-hover').show();
-    
   });
+
 
   $('#share').on('touchstart',function(){
     $('#share,#loading-hover').hide();
@@ -83,16 +82,15 @@ var run = function(){
     $(this).find('img').attr('src','images/happy-btn-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/happy-btn.png');
-    
-    
     $('#share').show();
   });
 
 
   //警告页按钮点击
   $("#warning-btn").on('touchstart',function(){
-
+    $(this).find('img').attr('src','images/warning-btn-touch.png');
   }).on('touchend',function(){
+    $(this).find('img').attr('src','images/warning-btn.png');
     $('#warning').hide();
     $("#loading-hover").hide();
   });
@@ -579,7 +577,6 @@ var run = function(){
       imgUrl: img, 
       success: function () {
         //代码统计
-        //alert('用户确认分享');
       }
     });
 
@@ -591,7 +588,7 @@ var run = function(){
       type: '', // 分享类型,music、video或link，不填默认为link
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       success: function () { 
-        // 用户确认分享后执行的回调函数
+        //用户确认分享后执行的回调函数
       },
     });
   }
