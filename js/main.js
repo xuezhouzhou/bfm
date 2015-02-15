@@ -327,7 +327,7 @@ var run = function(){
         showOut({
           'type':'被天真的小盆友嫌弃了',
           'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...'
-        },false);
+        },true);
         break;
         
       //第8题乙 A out
@@ -335,7 +335,7 @@ var run = function(){
         showOut({
           'type':'被天真的小盆友嫌弃了',
           'content':'你就等着坐过山车时裙子掀到脸上吧！内裤还是大妈肉色款，怎么好意思呢...'
-        },true);
+        },false);
         break;
         
       //第8题 甲B 乙BC  切第9题
