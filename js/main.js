@@ -414,7 +414,8 @@ var run = function(){
         break;
         
       //13题甲 BC OUT
-      case 'que13a-an-a': 
+      case 'que13a-an-b':
+      case 'que13a-an-c':  
         showOut({
           'type':'被洗衣店敲诈了',
           'content':'羊绒外套只能用专业的药水干洗，太傻太天真，就等着老板发飙炒鱿鱼吧'
