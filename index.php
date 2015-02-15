@@ -143,7 +143,9 @@ $signPackage = $jssdk->GetSignPackage();
 
 <!--分享提示页面-->
 <div id="share">
-  <h3>请点击右上角按钮，在选择分享到朋友圈或分享给好友</h3>
+  <div id="share-tips">
+    <img src="images/share-tips.png">
+  </div>
 </div>
 
 <script>
