@@ -598,5 +598,8 @@ var run = function(){
   }
 
   //默认分享设置
-  wxShare('成就白富美谈何容易，快来试试最强速成宝典~',siteUrl+'images/share-default.jpg');
+  setTimeout(function(){
+    wxShare('成就白富美谈何容易，快来试试最强速成宝典~',siteUrl+'images/share-default.jpg');
+  },1000);
+  
 }
