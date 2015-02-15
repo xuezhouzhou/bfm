@@ -188,6 +188,7 @@ if(deviceHeight<=416){
   //其他情况暂时按iphone5适配
   $.getScript('js/data-iphone5.js',run);
 }
+console.log(imgs.length);
 </script>
 
 

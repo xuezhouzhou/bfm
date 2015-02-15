@@ -51,6 +51,8 @@ var imgs = [
   'happy-zms.png',
   'warning-kv.png',
   'warning-btn.png',
+  'warning-btn-touch.png',
+  'share-tips.png',
   'yy-yx.png',
   'yy-ys.png',
   'yy-zx.png',
@@ -187,6 +189,7 @@ var imgs = [
   'share-max.jpg',
   'share-ljl.jpg',
   'share-hyf.jpg',
+  'share-default.jpg',
 ];
 
 //网站地址
