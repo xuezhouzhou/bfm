@@ -72,7 +72,7 @@ var run = function(){
     $('#share,#loading-hover').show();
   });
 
-
+  //隐藏分享提示
   $('#share').on('touchstart',function(){
     $('#share,#loading-hover').hide();
   })
@@ -82,7 +82,7 @@ var run = function(){
     $(this).find('img').attr('src','images/happy-btn-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/happy-btn.png');
-    $('#share').show();
+    $('#share,#loading-hover').show();
   });
 
 
