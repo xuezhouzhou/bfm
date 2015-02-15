@@ -466,7 +466,7 @@ var run = function(){
           'kv':'images/happy-xs.png',//你就是的鬼灵精怪的小S
           'content':'没想到派对最后未婚夫突然出现，化身蝙蝠侠，上演浪漫求婚桥段，向所有人宣告你属于他，小衣也想赤条条秀恩爱！',  
           'shareText':'我是鬼灵精怪的小S。',
-          'shareImg':'images/share-ljl.jpg' 
+          'shareImg':'images/share-xs.jpg' 
         });
         break;
         

@@ -157,20 +157,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script>
-wx.config({
-  debug: false,
-  appId: '<?php echo $signPackage["appId"];?>',
-  timestamp: <?php echo $signPackage["timestamp"];?>,
-  nonceStr: '<?php echo $signPackage["nonceStr"];?>',
-  signature: '<?php echo $signPackage["signature"];?>',
-  jsApiList: [
-    //所有要调用的 API 都要加到这个列表中
-    'onMenuShareTimeline',
-    'onMenuShareAppMessage'
-  ]
-}); 
-</script>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/res.js"></script>
 <script src="js/main.js"></script>
@@ -188,6 +175,43 @@ if(deviceHeight<=416){
 }
 </script>
 
+<script>
+wx.config({
+  debug: false,
+  appId: '<?php echo $signPackage["appId"];?>',
+  timestamp: <?php echo $signPackage["timestamp"];?>,
+  nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+  signature: '<?php echo $signPackage["signature"];?>',
+  jsApiList: [
+    //所有要调用的 API 都要加到这个列表中
+    'onMenuShareTimeline',
+    'onMenuShareAppMessage'
+  ]
+});
 
+//默认分享到朋友圈
+wx.onMenuShareTimeline({
+  title: '成就白富美谈何容易，快来试试最强速成宝典~', 
+  link: siteUrl, 
+  imgUrl: 'images/share-default.jpg', 
+  success: function () {
+    //代码统计
+    //alert('用户确认分享');
+  }
+});
+
+//默认发送给朋友
+wx.onMenuShareAppMessage({
+  title: '白富美养成记', // 分享标题
+  desc: '成就白富美谈何容易，快来试试最强速成宝典~', // 分享描述
+  link: siteUrl, // 分享链接
+  imgUrl: 'images/share-default.jpg', // 分享图标
+  type: '', // 分享类型,music、video或link，不填默认为link
+  dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+  success: function () { 
+    // 用户确认分享后执行的回调函数
+  },
+}); 
+</script>
 </body>
 </html>
