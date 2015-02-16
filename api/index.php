@@ -1,28 +1,9 @@
 <?php
-function httpGet($url) {
-  $curl = curl_init();
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($curl, CURLOPT_TIMEOUT, 500);
-  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-  curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-  curl_setopt($curl, CURLOPT_URL, $url);
-
-  $res = curl_exec($curl);
-  curl_close($curl);
-    
-  return $res;
-}
-
-$res = httpGet('http://android.yourdream.cc/bfm/api/data.php');
-
-$signPackage = json_decode($res);
-
-var_dump($signPackage);
-
-exit(); 
-
+$cdnUrl = "http://download.yourdream.cc/bfm/1.0.4/";
+require_once "jssdk.php";
+$jssdk = new JSSDK("wxd31771b7d224b883", "60fd9ce92eb04c67514d9a971484e2d1");
+$signPackage = $jssdk->GetSignPackage();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
