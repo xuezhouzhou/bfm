@@ -101,7 +101,10 @@ var run = function(){
   function showOut(option,status){
     var shareText = option.type + '。卒！快来测测你是否一样屌丝～';
     var shareImg = siteUrl + 'images/share-out.jpg';
-    wxShare(shareText,shareImg);
+
+    
+
+    wxShare(shareText,shareImg,option.type);
 
     //没有复活机会直接out
     if(restart<=0){
@@ -581,6 +584,7 @@ var run = function(){
       imgUrl: img, 
       success: function () {
         //代码统计
+        _hmt.push(['_trackEvent', 'bfm', title]);
       }
     });
 
@@ -592,7 +596,8 @@ var run = function(){
       type: '', // 分享类型,music、video或link，不填默认为link
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       success: function () { 
-        //用户确认分享后执行的回调函数
+        //代码统计
+        _hmt.push(['_trackEvent', 'bfm', title]);
       },
     });
   }
