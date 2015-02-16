@@ -582,7 +582,7 @@ var run = function(){
       imgUrl: img, 
       success: function () {
         //代码统计
-        _hmt.push(['_trackEvent', 'bfm', type]);
+        _hmt.push(['_trackEvent', 'bfm', '朋友圈:' + type]);
       }
     });
 
@@ -595,7 +595,7 @@ var run = function(){
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       success: function () { 
         //代码统计
-        _hmt.push(['_trackEvent', 'bfm', type]);
+        _hmt.push(['_trackEvent', 'bfm', '发送好友:' + type]);
       },
     });
   }
