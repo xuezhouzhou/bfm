@@ -33,7 +33,7 @@ wx.config({
 wx.checkJsApi({
   jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'],
   success: function(res) {
-    console.log(res);
+    alert(res);
     // 以键值对的形式返回，可用的api值true，不可用为false
     // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
   }
