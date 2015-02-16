@@ -18,7 +18,7 @@ var run = function(){
   var curResNum  = 0;
   for(var i=0;i<totalRes;i++){
     var image = new Image(); 
-    image.src = "images/" + imgs[i];
+    image.src = siteUrl + "images/" + imgs[i];
 
     image.onload = function(){
       curResNum++;
