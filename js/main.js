@@ -102,8 +102,6 @@ var run = function(){
     var shareText = option.type + '。卒！快来测测你是否一样屌丝～';
     var shareImg = siteUrl + 'images/share-out.jpg';
 
-    
-
     wxShare(shareText,shareImg,option.type);
 
     //没有复活机会直接out
@@ -152,7 +150,7 @@ var run = function(){
     $("#happy").show();
     var shareText = option.shareText + '快来测测你是哪款白富美!';
     var shareImg = siteUrl + option.shareImg;
-    wxShare(shareText,shareImg);
+    wxShare(shareText,shareImg,option.shareText);
   }
 
 
@@ -577,14 +575,14 @@ var run = function(){
   //showQue(que15bData);
 
   //分享
-  function wxShare(title,img){
+  function wxShare(title,img,type){
     wx.onMenuShareTimeline({
       title: title, 
       link: document.URL, 
       imgUrl: img, 
       success: function () {
         //代码统计
-        _hmt.push(['_trackEvent', 'bfm', title]);
+        _hmt.push(['_trackEvent', 'bfm', type]);
       }
     });
 
@@ -597,7 +595,7 @@ var run = function(){
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       success: function () { 
         //代码统计
-        _hmt.push(['_trackEvent', 'bfm', title]);
+        _hmt.push(['_trackEvent', 'bfm', type]);
       },
     });
   }
