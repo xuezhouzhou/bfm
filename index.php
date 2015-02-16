@@ -17,7 +17,7 @@ $res = httpGet('http://android.yourdream.cc/bfm/api/data.php');
 
 $signPackage = json_decode($res);
 
-$cdnUrl = 'http://android.yourdream.cc/bfm/v1.0.5/';
+$cdnUrl = 'http://download.yourdream.cc/bfm/1.0.4/';
 
 ?>
 <!DOCTYPE html>
