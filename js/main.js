@@ -57,19 +57,19 @@ var run = function(){
 
   //OUT页 重回18岁
   $("#out-btn-start").on('touchstart',function(){
-    $(this).find('img').attr('src','images/out-btn-start-touch.png');
+    $(this).find('img').attr('src',siteUrl + 'images/out-btn-start-touch.png');
   }).on('touchend',function(){
-    $(this).find('img').attr('src','images/out-btn-start.png');
+    $(this).find('img').attr('src',siteUrl + 'images/out-btn-start.png');
     showStart();
   });
 
   
   //OUT页 我要吐槽
   $("#out-btn-tc").on('touchstart',function(){
-    $(this).find('img').attr('src','images/out-btn-tc-touch.png');
+    $(this).find('img').attr('src',siteUrl+'images/out-btn-tc-touch.png');
   }).on('touchend',function(){
-    $(this).find('img').attr('src','images/out-btn-tc.png');
-    $("#share-tips img").attr('src','images/share-tips-tc.png');
+    $(this).find('img').attr('src',siteUrl+'images/out-btn-tc.png');
+    $("#share-tips img").attr('src',siteUrl+'images/share-tips-tc.png');
     $('#share,#loading-hover').show();
   });
 
@@ -80,19 +80,19 @@ var run = function(){
 
   //HAPPY页炫耀身份
   $("#happy-btn").on('touchstart',function(){
-    $(this).find('img').attr('src','images/happy-btn-touch.png');
+    $(this).find('img').attr('src',siteUrl+'images/happy-btn-touch.png');
   }).on('touchend',function(){
-    $(this).find('img').attr('src','images/happy-btn.png');
-    $("#share-tips img").attr('src','images/share-tips.png');
+    $(this).find('img').attr('src',siteUrl+'images/happy-btn.png');
+    $("#share-tips img").attr('src',siteUrl+'images/share-tips.png');
     $('#share,#loading-hover').show();
   });
 
 
   //警告页按钮点击
   $("#warning-btn").on('touchstart',function(){
-    $(this).find('img').attr('src','images/warning-btn-touch.png');
+    $(this).find('img').attr('src',siteUrl+'images/warning-btn-touch.png');
   }).on('touchend',function(){
-    $(this).find('img').attr('src','images/warning-btn.png');
+    $(this).find('img').attr('src',siteUrl+'images/warning-btn.png');
     $('#warning').hide();
     $("#loading-hover").hide();
   });
@@ -144,7 +144,7 @@ var run = function(){
     $('#happy-download').hide();
     setTimeout(function(){$('#happy-download').fadeIn(500)},500);
     $("#happy-content").text(option.content);
-    $("#happy-kv img").attr('src',option.kv);
+    $("#happy-kv img").attr('src',siteUrl+option.kv);
     $("#answer").hide();
     $("#happy").show();
     var shareText = option.shareText + '快来测测你是哪款白富美!';
@@ -218,9 +218,9 @@ var run = function(){
 
   //开始页 重回18岁按钮
   $("#start-btn").on('touchstart',function(){
-    $(this).find('img').attr('src','images/start-btn-touch.png');
+    $(this).find('img').attr('src',siteUrl+'images/start-btn-touch.png');
   }).on('touchend',function(){
-    $(this).find('img').attr('src','images/start-btn.png');
+    $(this).find('img').attr('src',siteUrl+'images/start-btn.png');
     initStart();
   });
 
@@ -231,9 +231,9 @@ var run = function(){
     $("#answer .xx").hide().removeClass('xx-touch');
     
     //还原气球
-    $("#answerA .qq img").attr('src','images/qq-a.png');
-    $("#answerB .qq img").attr('src','images/qq-b.png');
-    $("#answerC .qq img").attr('src','images/qq-c.png');
+    $("#answerA .qq img").attr('src',siteUrl+'images/qq-a.png');
+    $("#answerB .qq img").attr('src',siteUrl+'images/qq-b.png');
+    $("#answerC .qq img").attr('src',siteUrl+'images/qq-c.png');
     
     switch(dataKey){
       //第1题ABC都切第2题
