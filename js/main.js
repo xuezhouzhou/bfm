@@ -39,7 +39,7 @@ var run = function(){
     $(this).addClass('xx-touch');
 
     //气球爆掉
-    $(this).find('.qq img').attr('src','images/qq-bom.png');
+    $(this).find('.qq img').attr('src',cdnUrl+'images/qq-bom.png');
 
   }).on('touchend',function(){
     var dataKey = $(this).attr('data-key');

@@ -39,7 +39,7 @@ var run = function(){
     $(this).addClass('xx-touch');
 
     //气球爆掉
-    $(this).find('.qq img').attr('src','images/qq-bom.png');
+    $(this).find('.qq img').attr('src',cdnUrl+'images/qq-bom.png');
 
   }).on('click',function(){
     var dataKey = $(this).attr('data-key');
@@ -57,19 +57,19 @@ var run = function(){
 
   //OUT页 重回18岁
   $("#out-btn-start").on('touchstart',function(){
-    $(this).find('img').attr('src','images/out-btn-start-touch.png');
+    $(this).find('img').attr('src',cdnUrl+'images/out-btn-start-touch.png');
   }).on('click',function(){
-    $(this).find('img').attr('src','images/out-btn-start.png');
+    $(this).find('img').attr('src',cdnUrl+'images/out-btn-start.png');
     showStart();
   });
 
   
   //OUT页 我要吐槽
   $("#out-btn-tc").on('touchstart',function(){
-    $(this).find('img').attr('src','images/out-btn-tc-touch.png');
+    $(this).find('img').attr('src',cdnUrl+'images/out-btn-tc-touch.png');
   }).on('click',function(){
-    $(this).find('img').attr('src','images/out-btn-tc.png');
-    $("#share-tips img").attr('src','images/share-tips-tc.png');
+    $(this).find('img').attr('src',cdnUrl+'images/out-btn-tc.png');
+    $("#share-tips img").attr('src',cdnUrl+'images/share-tips-tc.png');
     $('#share,#loading-hover').show();
   });
 
@@ -80,19 +80,19 @@ var run = function(){
 
   //HAPPY页炫耀身份
   $("#happy-btn").on('touchstart',function(){
-    $(this).find('img').attr('src','images/happy-btn-touch.png');
+    $(this).find('img').attr('src',cdnUrl+'images/happy-btn-touch.png');
   }).on('click',function(){
-    $(this).find('img').attr('src','images/happy-btn.png');
-    $("#share-tips img").attr('src','images/share-tips.png');
+    $(this).find('img').attr('src',cdnUrl+'images/happy-btn.png');
+    $("#share-tips img").attr('src',cdnUrl+'images/share-tips.png');
     $('#share,#loading-hover').show();
   });
 
 
   //警告页按钮点击
   $("#warning-btn").on('touchstart',function(){
-    $(this).find('img').attr('src','images/warning-btn-touch.png');
+    $(this).find('img').attr('src',cdnUrl+'images/warning-btn-touch.png');
   }).on('click',function(){
-    $(this).find('img').attr('src','images/warning-btn.png');
+    $(this).find('img').attr('src',cdnUrl+'images/warning-btn.png');
     $('#warning').hide();
     $("#loading-hover").hide();
   });
@@ -218,9 +218,9 @@ var run = function(){
 
   //开始页 重回18岁按钮
   $("#start-btn").on('touchstart',function(){
-    $(this).find('img').attr('src','images/start-btn-touch.png');
+    $(this).find('img').attr('src',cdnUrl+'images/start-btn-touch.png');
   }).on('click',function(){
-    $(this).find('img').attr('src','images/start-btn.png');
+    $(this).find('img').attr('src',cdnUrl+'images/start-btn.png');
     initStart();
   });
 
@@ -231,9 +231,9 @@ var run = function(){
     $("#answer .xx").hide().removeClass('xx-touch');
     
     //还原气球
-    $("#answerA .qq img").attr('src','images/qq-a.png');
-    $("#answerB .qq img").attr('src','images/qq-b.png');
-    $("#answerC .qq img").attr('src','images/qq-c.png');
+    $("#answerA .qq img").attr('src',cdnUrl+'images/qq-a.png');
+    $("#answerB .qq img").attr('src',cdnUrl+'images/qq-b.png');
+    $("#answerC .qq img").attr('src',cdnUrl+'images/qq-c.png');
     
     switch(dataKey){
       //第1题ABC都切第2题
