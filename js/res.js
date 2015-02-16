@@ -192,10 +192,7 @@ var imgs = [
   'emoji-123.png',
   'emoji-124.png',
   'emoji-125.png',
-  
 ];
 
 //网站地址
 var siteUrl = cdnUrl ? cdnUrl : 'http://android.yourdream.cc/bfm/'
-
-

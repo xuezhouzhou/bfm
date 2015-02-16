@@ -135,7 +135,7 @@ $signPackage = $jssdk->GetSignPackage();
 <!-- happy ending -->
 <div id="happy">
   <div id="happy-inner">
-    <div id="happy-kv"><img src="<?php echo $cdnUrl;?>"></div>
+    <div id="happy-kv"><img src=""></div>
     <div id="happy-content"></div>
     <div id="happy-btn"><img src="<?php echo $cdnUrl;?>images/happy-btn.png"></div>
     <a id="happy-download" href="http://ichuanyi.com/get/?f=game"><img src="<?php echo $cdnUrl;?>images/happy-download.png"></a>
