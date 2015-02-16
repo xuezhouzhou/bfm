@@ -577,7 +577,7 @@ var run = function(){
   function wxShare(title,img){
     wx.onMenuShareTimeline({
       title: title, 
-      link: siteUrl, 
+      link: document.URL, 
       imgUrl: img, 
       success: function () {
         //代码统计
@@ -587,7 +587,7 @@ var run = function(){
     wx.onMenuShareAppMessage({
       title: '白富美养成记', // 分享标题
       desc: title, // 分享描述
-      link: siteUrl, // 分享链接
+      link: document.URL, // 分享链接
       imgUrl: img, // 分享图标
       type: '', // 分享类型,music、video或link，不填默认为link
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
