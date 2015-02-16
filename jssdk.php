@@ -1,6 +1,5 @@
 <?php
 error_reporting(E_ALL^E_NOTICE);
-
 class JSSDK {
   private $appId;
   private $appSecret;
@@ -47,7 +46,7 @@ class JSSDK {
 
   private function getJsApiTicket() {
     // jsapi_ticket 应该全局存储与更新，以下代码以写入到文件中做示例
-    @$data = json_decode(file_get_contents("json/jsapi_ticket.json"));
+    @$data = json_decode(file_get_contents("jsapi_ticket.json"));
     if ($data->expire_time < time()) {
       $accessToken = $this->getAccessToken();
       // 如果是企业号用以下 URL 获取 ticket
@@ -58,7 +57,7 @@ class JSSDK {
       if ($ticket) {
         @$data->expire_time = time() + 7000;
         $data->jsapi_ticket = $ticket;
-        @$fp = fopen("json/jsapi_ticket.json", "w");
+        @$fp = fopen("jsapi_ticket.json", "w");
         @fwrite($fp, json_encode($data));
         @fclose($fp);
       }
@@ -71,7 +70,7 @@ class JSSDK {
 
   private function getAccessToken() {
     // access_token 应该全局存储与更新，以下代码以写入到文件中做示例
-    @$data = json_decode(file_get_contents("json/access_token.json"));
+    @$data = json_decode(file_get_contents("access_token.json"));
     if ($data->expire_time < time()) {
       // 如果是企业号用以下URL获取access_token
       // $url = "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=$this->appId&corpsecret=$this->appSecret";
@@ -81,7 +80,7 @@ class JSSDK {
       if ($access_token) {
         @$data->expire_time = time() + 7000;
         $data->access_token = $access_token;
-        @$fp = fopen("json/access_token.json", "w");
+        @$fp = fopen("access_token.json", "w");
         @fwrite($fp, json_encode($data));
         @fclose($fp);
       }
@@ -105,3 +104,4 @@ class JSSDK {
     return $res;
   }
 }
+

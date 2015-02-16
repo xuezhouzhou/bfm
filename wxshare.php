@@ -1,12 +1,9 @@
 <?php
-
 $cdnUrl = "";
 require_once "api/jssdk.php";
 $jssdk = new JSSDK("wxd31771b7d224b883", "60fd9ce92eb04c67514d9a971484e2d1");
 $signPackage = $jssdk->GetSignPackage();
-
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,17 +26,26 @@ wx.config({
   ]
 });
 
-
-wx.checkJsApi({
-  jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'],
-  success: function(res) {
-    alert(res);
-    // 以键值对的形式返回，可用的api值true，不可用为false
-    // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+wx.onMenuShareTimeline({
+  title: '成就白富美谈何容易，快来试试最强速成宝典~', 
+  link: document.URL, 
+  imgUrl:'http://android.yourdream.cc/bfm/images/share-default.jpg' , 
+  success: function () {
+    //代码统计
   }
 });
 
-
+wx.onMenuShareAppMessage({
+  title: '白富美养成记', // 分享标题
+  desc: '成就白富美谈何容易，快来试试最强速成宝典~', // 分享描述
+  link: document.URL, // 分享链接
+  imgUrl: 'http://android.yourdream.cc/bfm/images/share-default.jpg', // 分享图标
+  type: '', // 分享类型,music、video或link，不填默认为link
+  dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+  success: function () { 
+    
+  },
+});
 </script>
 </body>
 </html>
