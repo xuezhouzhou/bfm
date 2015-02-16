@@ -1,4 +1,5 @@
 <?php
+
 function httpGet($url) {
   $curl = curl_init();
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -17,8 +18,13 @@ $res = httpGet('http://android.yourdream.cc/bfm/api/data.php');
 
 $signPackage = json_decode($res);
 
-$cdnUrl = 'http://download.yourdream.cc/bfm/1.0.4/';
+var_dump($signPackage);
 
+echo $signPackage->appid; 
+
+
+//$cdnUrl = 'http://download.yourdream.cc/bfm/1.0.5/';
+exit();
 ?>
 <!DOCTYPE html>
 <html lang="en">
