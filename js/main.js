@@ -69,6 +69,7 @@ var run = function(){
     $(this).find('img').attr('src','images/out-btn-tc-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/out-btn-tc.png');
+    $("#share-tips img").attr('src','images/share-tips.png');
     $('#share,#loading-hover').show();
   });
 
@@ -82,6 +83,7 @@ var run = function(){
     $(this).find('img').attr('src','images/happy-btn-touch.png');
   }).on('touchend',function(){
     $(this).find('img').attr('src','images/happy-btn.png');
+    $("#share-tips img").attr('src','images/share-tips.png');
     $('#share,#loading-hover').show();
   });
 

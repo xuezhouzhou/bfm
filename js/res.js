@@ -53,6 +53,7 @@ var imgs = [
   'warning-btn.png',
   'warning-btn-touch.png',
   'share-tips.png',
+  'share-tips-tc.png',
   'yy-yx.png',
   'yy-ys.png',
   'yy-zx.png',
