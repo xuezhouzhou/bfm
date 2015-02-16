@@ -58,7 +58,7 @@ var que3Data = {
 
 //第4题 甲
 var que4aData = {
-  'queNum':'4',
+  'queNum':'4a',
   'queText':'夏天夏天悄悄过去留下小秘密<img src="images/emoji-19.png"><img src="images/emoji-19.png">就这样展开了我们的甜蜜爱恋<img src="images/emoji-20.png">好期待第一次约会~该穿什么好呢<img src="images/emoji-21.png">',
   'anAtext':'<img src="images/ques-4a-a.jpg">',
   'anBtext':'<img src="images/ques-4a-b.jpg">',
@@ -75,7 +75,7 @@ var que4aData = {
 
 //第4题 乙
 var que4bData = {
-  'queNum':'4',
+  'queNum':'4b',
   'queText':'我和小仁终究还是渐行渐远<img src="images/emoji-22.png"><img src="images/emoji-23.png">接下来孤身一人闯江湖，一大波社团面试正在接近<img src="images/emoji-24.png">怎么穿<img src="images/emoji-21.png">',
   'anAtext':'<img src="images/ques-4b-a.jpg">',
   'anBtext':'<img src="images/ques-4b-b.jpg">',
@@ -92,7 +92,7 @@ var que4bData = {
 
 //第5题 甲
 var que5aData = {
-  'queNum':'5',
+  'queNum':'5a',
   'queText':'大学生活远比想象中五光十色丰富多彩<img src="images/emoji-25.png">小仁参加了学生会叫我一起去...',
   'anAtext':'<p class="line2">我只想安静低调地当个小学妹，默默陪伴<img src="images/emoji-26.png">小仁<img src="images/emoji-26.png"></p>',
   'anBtext':'<p class="line1">我和小仁是CP<img src="images/emoji-27.png">情侣装穿起来</p>',
@@ -109,7 +109,7 @@ var que5aData = {
 
 //第5题 乙
 var que5bData = {
-  'queNum':'5',
+  'queNum':'5b',
   'queText':'从小就觉得自己有艺术家的气质<img src="images/emoji-30.png">万丈光芒挡不住<img src="images/emoji-31.png"><img src="images/emoji-31.png">明天就要在社团登台表演啦...怎么装扮自己呢<img src="images/emoji-21.png">',
   'anAtext':'<p class="line2">天生丽质难自弃<img src="images/emoji-32.png">日常服也能HOLD住全场</p>',
   'anBtext':'<p class="line1">省吃俭用特地准备一条美裙备战<img src="images/emoji-33.png"><img src="images/emoji-33.png"></p>',
@@ -127,7 +127,7 @@ var que5bData = {
 
 //第6题 甲
 var que6aData = {
-  'queNum':'6',
+  'queNum':'6a',
   'queText':'感情不断升温<img src="images/emoji-35.png"><img src="images/emoji-36.png"><img src="images/emoji-37.png"><img src="images/emoji-38.png">我们就是彼此的JackRose。小仁决定要带我去见他最好的兄弟——小明<img src="images/emoji-39.png">这下要穿<img src="images/emoji-21.png">',
   'anAtext':'<p class="line2">当然要给小仁涨面子雪纺<img src="images/emoji-40.png">最容易营造小鸟依人感<img src="images/emoji-40.png"></p>',
   'anBtext':'<p class="line1">怎么美怎么穿<img src="images/emoji-5.png">新买了V领连衣裙呀</p>',
@@ -144,7 +144,7 @@ var que6aData = {
 
 //第6题 乙
 var que6bData = {
-  'queNum':'6',
+  'queNum':'6b',
   'queText':'<p>热闹的社团活动特别容易营造恋爱氛围<img src="images/emoji-42.png"><img src="images/emoji-43.png"><img src="images/emoji-10.png">我也遇见了那个他...我们互生情愫<img src="images/emoji-44.png">除了是小花园的常客，周末也要一起去看电影<img src="images/emoji-45.png"></p>',
   'anAtext':'<p class="line1">坚持自己的休闲风<img src="images/emoji-46.png">自然真实最重要</p>',
   'anBtext':'<p class="line2">听说学长喜欢萝莉风<img src="images/emoji-47.png">这次就为他打造一番<img src="images/emoji-48.png"></p>',
@@ -178,12 +178,12 @@ var que7Data = {
 
 //第8题 甲
 var que8aData = {
-  'queNum':'8',
+  'queNum':'8a',
   'queText':'究竟是哪里出了错，小仁说我总是任性不懂事<img src="images/emoji-96.png">提出了分手，第一次尝到失恋的痛楚<img src="images/emoji-97.png"><img src="images/emoji-97.png">',
   'anAtext':'<p class="line1">再也不相信爱情，该吃吃该喝喝<img src="images/emoji-98.png"><img src="images/emoji-99.png"><img src="images/emoji-100.png"></p>',
   'anBtext':'<p class="line2">让穿衣助手<img src="images/emoji-125.png">帮我改头换面<img src="images/emoji-101.png">前男友只有追悔莫及的份<img src="images/emoji-102.png"><img src="images/emoji-102.png"></p>',
-  'anAdataKey':'que8b-an-a',
-  'anBdataKey':'que8b-an-b',
+  'anAdataKey':'que8a-an-a',
+  'anBdataKey':'que8a-an-b',
   'anAdataMlz':'+0',
   'anBdataMlz':'+50',
   'type':'text',
@@ -192,7 +192,7 @@ var que8aData = {
 
 //第8题 乙
 var que8bData = {
-  'queNum':'8',
+  'queNum':'8b',
   'queText':'游乐园是热恋必备环节<img src="images/emoji-59.png">想到要和男朋友一起坐旋转木马<img src="images/emoji-60.png">甜蜜蜜...',
   'anAtext':'<p class="line2">虽然游乐设施都不能玩，但想穿小裙子的心就是这么执著啊<img src="images/emoji-61.png"><img src="images/emoji-62.png"><img src="images/emoji-63.png"></p>',
   'anBtext':'<p class="line1"><img src="images/emoji-64.png">情侣T+<img src="images/emoji-65.png">是恋爱的最好宣言!</p>',
@@ -243,7 +243,7 @@ var que10Data = {
 
 //第11题 甲
 var que11aData = {
-  'queNum':'11',
+  'queNum':'11a',
   'queText':'<img src="images/emoji-75.png"><img src="images/emoji-76.png"><img src="images/emoji-77.png">不知不觉间大家都离开了校园<img src="images/emoji-78.png">今天要参加老同学的聚会，但是听说有前男友...我一定要',
   'anAtext':'<p class="line1">美美美<img src="images/emoji-79.png"></p>',
   'anBtext':'<p class="line1">美美美<img src="images/emoji-80.png"></p>',
@@ -260,7 +260,7 @@ var que11aData = {
 
 //第11题 乙
 var que11bData = {
-  'queNum':'11',
+  'queNum':'11b',
   'queText':'事业爱情都已经走上正轨<img src="images/emoji-82.png">宝贝说周末要带我去见他父母<img src="images/emoji-83.png"><img src="images/emoji-84.png">好紧张，裙子应该穿多长呢？',
   'anAtext':'<img src="images/ques-11b-a.jpg">',
   'anBtext':'<img src="images/ques-11b-b.jpg">',
@@ -294,7 +294,7 @@ var que12Data = {
 
 //第13题 甲
 var que13aData = {
-  'queNum':'13',
+  'queNum':'13a',
   'queText':'不知道是不是年会表现出彩<img src="images/emoji-88.png">得到老板的器重，交给我一件她出席活动要穿的羊绒大衣帮忙清洁<img src="images/emoji-89.png">这可是个表现的机会<img src="images/emoji-90.png">',
   'anAtext':'<p class="line1">送去专业洗衣店干洗</p>',
   'anBtext':'<p class="line1">带回家自己亲自清洁</p>',
@@ -311,7 +311,7 @@ var que13aData = {
 
 //第13题 乙
 var que13bData = {
-  'queNum':'13',
+  'queNum':'13b',
   'queText':'终于我的爱情也开花结果<img src="images/emoji-91.png">明天要去拍婚纱照<img src="images/emoji-92.png">可是我腰好粗...',
   'anAtext':'<p class="line1">高腰大蓬裙的设计<img src="images/emoji-93.png"><img src="images/emoji-93.png">胸下面就是腿</p>',
   'anBtext':'<p class="line1">超长鱼尾裙，足以引开注意的焦点<img src="images/emoji-94.png"></p>',
@@ -328,7 +328,7 @@ var que13bData = {
 
 //14题 甲
 var que14aData = {
-  'queNum':'14',
+  'queNum':'14a',
   'queText':'工作顺风顺水<img src="images/emoji-103.png"><img src="images/emoji-103.png">母上大人却按捺不住了，着急火燎地给我安排相亲<img src="images/emoji-104.png">',
   'anAtext':'<p class="line2">相亲这种老派的桥段怎么能靠谱<img src="images/emoji-105.png">买菜套装敷衍一下可以吗</p>',
   'anBtext':'<p class="line2">母亲果然懂我，找对象一定要认真对待<img src="images/emoji-106.png"><img src="images/emoji-107.png">要使出桃花妆大绝招啦</p>',
@@ -345,7 +345,7 @@ var que14aData = {
 
 //14题 乙
 var que14bData = {
-  'queNum':'14',
+  'queNum':'14b',
   'queText':'婚期日渐临近<img src="images/emoji-109.png">也是时候准备最后的<img src="images/emoji-110.png"><img src="images/emoji-110.png">单身派对了',
   'anAtext':'<p class="line2">约上自己的闺蜜<img src="images/emoji-111.png"><img src="images/emoji-111.png">搞一场变装PA<img src="images/emoji-112.png">变身性感猫女喵~</p>',
   'anBtext':'<p class="line2">最后的疯狂，先把未婚夫存档<img src="images/emoji-113.png"><img src="images/emoji-114.png"><img src="images/emoji-115.png"><img src="images/emoji-116.png">来个不醉不归！</p>',
@@ -362,7 +362,7 @@ var que14bData = {
 
 //15题 甲
 var que15aData = {
-  'queNum':'15',
+  'queNum':'15a',
   'queText':'一切努力都是值得的，老板最后给了我升职的机会<img src="images/emoji-118.png">为了感谢大家，我一定要组织一场庆祝party<img src="images/emoji-119.png">',
   'anAtext':'<img src="images/ques-15a-a.jpg">',
   'anBtext':'<img src="images/ques-15a-b.jpg">',
@@ -379,7 +379,7 @@ var que15aData = {
 
 //15题乙
 var que15bData = {
-  'queNum':'15',
+  'queNum':'15b',
   'queText':'婚礼上最动人的画面就是交换<img src="images/emoji-120.png">...',
   'anAtext':'<p class="line2">只要光面对戒，里面刻上我们的名字<img src="images/emoji-121.png"><img src="images/emoji-121.png">是独属于我们的意义</p>',
   'anBtext':'<p class="line2">当然要3克拉的<img src="images/emoji-109.png">，满满幸福都要溢出来了</p>',
