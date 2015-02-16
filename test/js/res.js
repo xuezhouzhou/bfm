@@ -193,4 +193,4 @@ var imgs = [
 ];
 
 //网站地址
-var siteUrl = 'http://android.yourdream.cc/bfm/';
+var siteUrl = cdnUrl ? cdnUrl : 'http://android.yourdream.cc/bfm/';
