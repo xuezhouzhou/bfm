@@ -1,0 +1,20 @@
+#share{
+  display: none;
+  position: fixed;
+  left:0;
+  top:0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+#share-tips{
+  widows: 246px;
+  height: 148px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+#share-tips img{
+  width:246px;
+  height:148px;
+}
