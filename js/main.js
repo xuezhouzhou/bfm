@@ -41,7 +41,7 @@ var run = function(){
     //气球爆掉
     $(this).find('.qq img').attr('src','images/qq-bom.png');
 
-  }).on('touchend',function(){
+  }).on('click',function(){
     var dataKey = $(this).attr('data-key');
     var dataMlz = $(this).attr('data-mlz');
 
@@ -58,7 +58,7 @@ var run = function(){
   //OUT页 重回18岁
   $("#out-btn-start").on('touchstart',function(){
     $(this).find('img').attr('src','images/out-btn-start-touch.png');
-  }).on('touchend',function(){
+  }).on('click',function(){
     $(this).find('img').attr('src','images/out-btn-start.png');
     showStart();
   });
@@ -67,7 +67,7 @@ var run = function(){
   //OUT页 我要吐槽
   $("#out-btn-tc").on('touchstart',function(){
     $(this).find('img').attr('src','images/out-btn-tc-touch.png');
-  }).on('touchend',function(){
+  }).on('click',function(){
     $(this).find('img').attr('src','images/out-btn-tc.png');
     $("#share-tips img").attr('src','images/share-tips-tc.png');
     $('#share,#loading-hover').show();
@@ -81,7 +81,7 @@ var run = function(){
   //HAPPY页炫耀身份
   $("#happy-btn").on('touchstart',function(){
     $(this).find('img').attr('src','images/happy-btn-touch.png');
-  }).on('touchend',function(){
+  }).on('click',function(){
     $(this).find('img').attr('src','images/happy-btn.png');
     $("#share-tips img").attr('src','images/share-tips.png');
     $('#share,#loading-hover').show();
@@ -91,7 +91,7 @@ var run = function(){
   //警告页按钮点击
   $("#warning-btn").on('touchstart',function(){
     $(this).find('img').attr('src','images/warning-btn-touch.png');
-  }).on('touchend',function(){
+  }).on('click',function(){
     $(this).find('img').attr('src','images/warning-btn.png');
     $('#warning').hide();
     $("#loading-hover").hide();
@@ -219,7 +219,7 @@ var run = function(){
   //开始页 重回18岁按钮
   $("#start-btn").on('touchstart',function(){
     $(this).find('img').attr('src','images/start-btn-touch.png');
-  }).on('touchend',function(){
+  }).on('click',function(){
     $(this).find('img').attr('src','images/start-btn.png');
     initStart();
   });

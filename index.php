@@ -163,7 +163,7 @@ var _hmt = _hmt || [];
 wx.config({
   debug: false,
   appId: '<?php echo $signPackage["appId"];?>',
-  timestamp: <?php echo $signPackage["timestamp"];?>,
+  timestamp: '<?php echo $signPackage["timestamp"];?>',
   nonceStr: '<?php echo $signPackage["nonceStr"];?>',
   signature: '<?php echo $signPackage["signature"];?>',
   jsApiList: [
@@ -182,15 +182,12 @@ if(deviceHeight<=416){
   $.getScript('js/data-iphone4.js',run); 
 }else if(deviceHeight>416 && deviceHeight<=504){
   $.getScript('js/data-iphone5.js',run);
-}else if(deviceHeight>505 && deviceHeight<=603){
+}else if(deviceHeight>504 && deviceHeight<=603){
   $.getScript('js/data-iphone6.js',run);
 }else{
   //其他情况暂时按iphone5适配
   $.getScript('js/data-iphone5.js',run);
 }
-console.log(imgs.length);
 </script>
-
-
 </body>
 </html>
