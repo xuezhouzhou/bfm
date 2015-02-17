@@ -1,4 +1,5 @@
 <?php
+header('Location:http://www.yourdream.cc/index.php');
 exit();
 $cdnUrl = "http://download.yourdream.cc/bfm/1.0.6/";
 require_once "jssdk.php";
