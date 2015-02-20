@@ -9,7 +9,7 @@ if (ua.indexOf("CYZS")>-1){
     cyzsShareObj = {
         shareLink : document.URL,
         title:"白富美养成记",
-        imgUrl:cdnUrl+'images/share-default.jpg',
+        imageUrl:cdnUrl+'images/share-default.jpg',
         callback:cyzsShareCallback
     };
 }
@@ -173,6 +173,7 @@ var run = function(){
     $("#happy").show();
     var shareText = option.shareText + '快来测测你是哪款白富美!';
     var shareImg = siteUrl + option.shareImg;
+
     wxShare(shareText,shareImg,option.shareText);
   }
 
@@ -601,8 +602,8 @@ var run = function(){
   function wxShare(title,img,type){
     wx.onMenuShareTimeline({
       title: title, 
-      link: document.URL, 
-      imgUrl: img, 
+      link: document.URL,
+      imgUrl: img,
       success: function () {
         //代码统计
         _hmt.push(['_trackEvent', 'bfm', '朋友圈:' + type]);
@@ -627,7 +628,7 @@ var run = function(){
                 shareLink : document.URL,
                 title:"白富美养成记",
                 content:title,
-                imgUrl:img,
+                imageUrl:img,
                 callback:cyzsShareCallback
             };
             cyzs.webview.share(cyzsShareObj);
