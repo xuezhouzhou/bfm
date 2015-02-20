@@ -2,7 +2,7 @@ document.ontouchmove = function(e){ e.preventDefault();}
 document.documentElement.style.webkitTouchCallout = "none";
 var isCYZS = false; // 是否在应用内
 var  cyzsShareObj = {};
-var ua = document.userAgent;
+var ua = navigator.userAgent;
 if (ua.indexOf("CYZS")>-1){
     isCYZS = true;
     cyzsShareObj = {
