@@ -3,6 +3,7 @@ document.documentElement.style.webkitTouchCallout = "none";
 var isCYZS = false; // 是否在应用内
 var  cyzsShareObj = {};
 var ua = navigator.userAgent;
+var cyzsShareCallback = function(){};
 if (ua.indexOf("CYZS")>-1){
     isCYZS = true;
     cyzsShareObj = {
