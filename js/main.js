@@ -1,5 +1,18 @@
 document.ontouchmove = function(e){ e.preventDefault();}
 document.documentElement.style.webkitTouchCallout = "none";
+var isCYZS = false; // 是否在应用内
+var  cyzsShareObj = {};
+var ua = document.userAgent;
+if (ua.indexOf("CYZS")>-1){
+    isCYZS = true;
+    cyzsShareObj = {
+        shareLink : document.URL,
+        title:"白富美养成记",
+        imgUrl:cdnUrl+'images/share-default.jpg',
+        callback:cyzsShareCallback
+    };
+}
+
 var run = function(){
   //魅力值
   var mlz = 20;
@@ -70,7 +83,12 @@ var run = function(){
   }).on('touchend',function(){
     $(this).find('img').attr('src',siteUrl+'images/out-btn-tc.png');
     $("#share-tips img").attr('src',siteUrl+'images/share-tips-tc.png');
+      if(isCYZS){
+          window.cyzsNative.share(cyzsShareObj);
+          return;
+      }
     $('#share,#loading-hover').show();
+
   });
 
   //隐藏分享提示
@@ -82,9 +100,14 @@ var run = function(){
   $("#happy-btn").on('touchstart',function(){
     $(this).find('img').attr('src',siteUrl+'images/happy-btn-touch.png');
   }).on('touchend',function(){
-    $(this).find('img').attr('src',siteUrl+'images/happy-btn.png');
-    $("#share-tips img").attr('src',siteUrl+'images/share-tips.png');
-    $('#share,#loading-hover').show();
+        $(this).find('img').attr('src',siteUrl+'images/happy-btn.png');
+        $("#share-tips img").attr('src',siteUrl+'images/share-tips.png');
+        if(isCYZS){
+            window.cyzsNative.share(cyzsShareObj);
+            return;
+        }
+        $('#share,#loading-hover').show();
+
   });
 
 
@@ -101,7 +124,6 @@ var run = function(){
   function showOut(option,status){
     var shareText = option.type + '。卒！快来测测你是否一样屌丝～';
     var shareImg = siteUrl + 'images/share-out.jpg';
-
     wxShare(shareText,shareImg,option.type);
 
     //没有复活机会直接out
@@ -596,8 +618,25 @@ var run = function(){
       success: function () { 
         //代码统计
         _hmt.push(['_trackEvent', 'bfm', '发送好友:' + type]);
-      },
+      }
     });
+    if(isCYZS){
+        try{
+            cyzsShareObj = {
+                shareLink : document.URL,
+                title:"白富美养成记",
+                content:title,
+                imgUrl:img,
+                callback:cyzsShareCallback
+            };
+            cyzs.webview.share(cyzsShareObj);
+        }catch(e) {
+
+        }
+    }
+    window.cyzsShareCallback = function(){
+       _hmt.push(['_trackEvent', 'bfm', '发送好友:' + type]);
+    };
   }
 
   //默认分享设置
