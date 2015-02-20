@@ -1,6 +1,5 @@
 <?php
 exit('测试服务器更新状态');
-
 //header('Location:http://www.yourdream.cc/index.php');
 //exit();
 $cdnUrl = "http://download.yourdream.cc/bfm/1.0.7/";
