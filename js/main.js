@@ -646,4 +646,4 @@ var run = function(){
     wxShare('成就白富美谈何容易，快来试试最强速成宝典~',siteUrl+'images/share-default.jpg');
   },1000);
   
-}
+};
