@@ -1,7 +1,5 @@
 <?php
-header('Location:http://www.yourdream.cc/index.php');
-exit();
-$cdnUrl = "http://download.yourdream.cc/bfm/1.0.7/";
+$cdnUrl = "";
 require_once "jssdk.php";
 $jssdk = new JSSDK("wxd31771b7d224b883", "60fd9ce92eb04c67514d9a971484e2d1");
 $signPackage = $jssdk->GetSignPackage();
@@ -189,7 +187,7 @@ if(deviceHeight<=416){
 }else if(deviceHeight>504 && deviceHeight<=603){
   $.getScript('<?php echo $cdnUrl;?>js/data-iphone6.js',run);
 }else{
-  //其他情况暂时按iphone5适配
+  //其他情况按iphone5适配
   $.getScript('<?php echo $cdnUrl;?>js/data-iphone5.js',run);
 }
 </script>
